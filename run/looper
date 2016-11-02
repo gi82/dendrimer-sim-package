@@ -1,0 +1,9 @@
+a=a+1
+set term x11 0
+plot 'rg.dat' us 1:3
+set term x11 1
+plot 'rg.dat' us 1:4
+set term x11 2
+plot 'rg.dat' us 1:5
+pause 30
+if(a<1000000000) reread

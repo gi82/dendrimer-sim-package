@@ -1,0 +1,352 @@
+/* 
+ * File:   Widom.c
+
+ *
+ * Created on October 3, 2011, 3:18 PM
+ */
+#include <stdio.h>
+#include <stdlib.h>
+#include "system.h"
+#include <math.h>
+#include "ran250.h"
+#ifdef _OPENMP
+    #include <omp.h>
+#endif
+#define FILE_IDX_LEN(F) (#F)
+
+typedef unsigned long long int ULONG;
+
+int     DendType;
+ULONG   Nsample1;
+ULONG   Nsample2;
+int     NDecor;
+int     histSize;
+double  rmin,rmax;
+double *averageHist,*averageHistSq,*errorbars,*pairpotential,*dumat;
+double  deltaR;
+double  averRg;
+double  averRg1,averRg2;
+char    filename[100];
+int     numOfTotalParams=10;
+
+FILE        *pfile;    
+int          curfilenum=0,nextfilenum=0; 
+const char  *f_prefix = "pot_"; 
+const char  *f_suffix = ".dat"; 
+char        *fname; // allocate space for filenames
+
+void ReadInput(const char[]);
+void Decorrelate(int, int);
+void PlaceDend(int, VecR);
+int  Mcmv(int);
+void Write(FILE *,ULONG , ULONG);
+void PotentialSetup(int);
+static double DU(void);
+
+int main(int argc, char** argv) {
+    ReadInput(argv[1]);
+    if ((DendType>=1) && (DendType<=50)){
+        PotentialSetup(DendType);
+    }else{
+        fprintf(stderr,"unknown interaction type\n");
+        exit(EXIT_FAILURE);
+    }
+    Initialize();
+#ifdef _OPENMP
+    printf("openmp:Running parallel energy calculations\n");
+#endif
+	fname    = (char*)malloc(sizeof(char)*(strlen(f_prefix)
+			   						     + strlen(FILE_IDX_LEN(numOfXYZfiles))
+									     + strlen(f_suffix)));
+    FILE *pfile;
+    deltaR =(rmax-rmin)/histSize;
+    ULONG i,j;
+    int ri;
+    VecR vecr0 = {0.0,0.0,0.0};
+
+    VecR vecr1;
+    double radius;
+    double beta_DU;
+	double dummyexp;
+    averageHist=(double*)malloc(histSize*sizeof(double));
+    averageHistSq=(double*)malloc(histSize*sizeof(double));
+
+    pairpotential=(double*)malloc(histSize*sizeof(double));
+	errorbars=(double*)malloc(histSize*sizeof(double));
+
+    dumat=(double*)malloc(histSize*sizeof(double));
+    NumofAttempts = 0;
+    NumofAcceptedMoves = 0;
+    for (ri=0;ri<histSize;ri++){
+        averageHist[ri]=0.0;
+		averageHistSq[ri]=0.0;
+		errorbars[ri]=0.0;
+    }
+    printf("Decorrelating 1st time...\n");
+    Decorrelate(0,50000);
+    Decorrelate(1,50000);
+    RunningEnergy = DU();
+	printf("initial running energy:%lf\n",RunningEnergy);
+    printf("Start Sampling...\n");
+    for(i=0;i<Nsample1;i++){
+        Decorrelate(0,NDecor);
+        Decorrelate(1,NDecor);
+        PlaceDend(0,vecr0);
+        for(j=0;j<Nsample2;j++){
+            radius =rmax*dr250();
+            RandomVector(&vecr1,radius);
+            PlaceDend(1,vecr1);
+//            beta_DU = InterDend(dendrimer, (dendrimer+1));
+            beta_DU = Beta*DU();
+            ri = (int) floor(radius/deltaR);
+	        dumat[ri]=beta_DU;
+			dummyexp = exp(-beta_DU);
+            averageHist[ri]+=dummyexp;
+			averageHistSq[ri]+=dummyexp*dummyexp;
+        }
+        if (i%5000==0) {
+            fprintf(stdout,"%ld/%ld\n",i,Nsample1);
+			fflush(stdout);
+            sprintf(filename,"potD%1d.hs.%-3d.dat",DendType,histSize);
+            pfile = fopen(filename,"w");
+            Write(pfile,i,j);
+			fflush(pfile);
+            fclose(pfile);            
+        }
+
+    }
+    sprintf(filename,"potD%1d.hs.%-3d.dat",DendType,histSize);
+    pfile = fopen(filename,"w");
+    Write(pfile,Nsample1,Nsample2);
+    fclose(pfile);
+
+    return (EXIT_SUCCESS);
+}
+static double DU(){
+    int     mon1, mon2;
+    int     typem1,typem2;
+    VecR    dr;
+    double  rsq, result;
+    int     interType =-1;
+    MorseParams *pmrs;
+    result =0.0;
+    // LOOP OVER ALL MONOMERS OF DENDRIMERS 1 & 2
+    for (mon1 =0;mon1<dendrimer[0].numOfMonomers;mon1++){
+        typem1 = dendrimer[0].monomer[mon1].type;
+#ifdef _OPENMP
+    //#pragma omp parallel for private (mon2,typem1,typem2) shared (result)
+#endif
+        for (mon2 = 0 ;mon2 < dendrimer[1].numOfMonomers;mon2++){
+                typem2 = dendrimer[1].monomer[mon2].type;
+                if (typem1 == typem2){
+                    if (typem1 == B || typem2 == C ) {
+                        interType = CC;
+                        pmrs=&MrsCC;
+                    }else if (typem1 == S){
+                        interType = SS;
+                        pmrs=&MrsSS;
+                    }
+                }else if (typem1 != typem2){
+                    if (typem1 == S || typem2 == S) {
+                        interType = CS;
+                        pmrs=&MrsCS;
+                    }else{
+                        interType = CC;
+                        pmrs=&MrsCC;
+                    }
+                }
+                dr.x = dendrimer[0].monomer[mon1].pos.x - dendrimer[1].monomer[mon2].pos.x;
+                dr.y = dendrimer[0].monomer[mon1].pos.y - dendrimer[1].monomer[mon2].pos.y;
+                dr.z = dendrimer[0].monomer[mon1].pos.z - dendrimer[1].monomer[mon2].pos.z;
+                rsq  = SQR(dr.x)+SQR(dr.y)+SQR(dr.z);
+                if (rsq < SQR(pmrs->RCut)){
+#ifdef _OPENMP
+                    //#pragma omp atomic
+#endif
+                    result +=Morse(pmrs,sqrt(rsq))-Morse(pmrs,(pmrs->RCut));
+                }
+        }
+    }
+    return result;
+}
+
+void Write(FILE *poutfile,ULONG n1,ULONG n2){
+
+    int ri;
+    double r;
+    double dummy;
+	double dummysqrt;
+    
+    
+    averRg1 = dendrimer[0].Rg.sum/dendrimer[0].Rg.count;
+    averRg2 = dendrimer[1].Rg.sum/dendrimer[1].Rg.count;
+    fprintf(poutfile,"#D%1d, Ns1:%ld, Ns2:%ld, hs:%3d, min:%lf, max:%lf\n",
+            DendType,Nsample1,Nsample2,histSize,rmin,rmax);
+    fprintf(poutfile,"#D%1d, Ns1:%ld, Ns2:%ld, hs:%3d, min:%lf, max:%lf\n",
+            DendType,n1,n2,histSize,rmin,rmax);
+    fprintf(poutfile,"#1:rindex, 2:deltaR, 3:r, 4:r/Rg,5:Rg1,6:Rg2,7:pot,8:pot_shift_to_zero,9:error,10:histogram,11:square histogram 12:DU\n");
+    for (ri=0;ri<histSize;ri++){
+        dummy =(double) (averageHist[ri]/(n1*n2));
+		dummysqrt = (double) sqrt ( averageHistSq[ri]/ (n1*n2));
+        pairpotential[ri]  =  -log(dummy);
+		errorbars[ri]= fabs(-log(dummysqrt) + log(dummy));
+    }
+    double set_to_zero = pairpotential[histSize-2];
+    
+    for (ri=0;ri<histSize;ri++){
+        r=((double)ri+0.5)*deltaR;
+        fprintf(poutfile,"%3d\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\t%lf\n",
+		ri,deltaR,r,r/(averRg1/2.0+averRg2/2.0),averRg1,averRg2,pairpotential[ri],pairpotential[ri]-set_to_zero,errorbars[ri],averageHist[ri],averageHistSq[ri],dumat[ri]);
+    }
+	fflush(poutfile);
+}
+
+void Decorrelate(int dendid, int tries){
+    for (int i=0;i<tries;i++){
+        NumofAttempts      += tries;
+        NumofAcceptedMoves += Mcmv(dendid);
+    }
+}
+void PlaceDend(int dendid, VecR vecr){
+    int mon;
+    int numtotmon;
+    VecR tvecr;
+    
+    // Calculate Centre of Mass
+    dendrimer[dendid].CMass.x = 0.0;
+    dendrimer[dendid].CMass.y = 0.0;
+    dendrimer[dendid].CMass.z = 0.0;
+
+    numtotmon = dendrimer[dendid].numOfMonomers;
+
+    for (mon = 0; mon < numtotmon; mon++) {
+        dendrimer[dendid].CMass.x += dendrimer[dendid].monomer[mon].pos.x;
+        dendrimer[dendid].CMass.y += dendrimer[dendid].monomer[mon].pos.y;
+        dendrimer[dendid].CMass.z += dendrimer[dendid].monomer[mon].pos.z;
+    }
+
+    dendrimer[dendid].CMass.x /= (double) dendrimer[dendid].numOfMonomers;
+    dendrimer[dendid].CMass.y /= (double) dendrimer[dendid].numOfMonomers;
+    dendrimer[dendid].CMass.z /= (double) dendrimer[dendid].numOfMonomers;
+
+    tvecr.x = -dendrimer[dendid].CMass.x + vecr.x;
+    tvecr.y = -dendrimer[dendid].CMass.y + vecr.y;
+    tvecr.z = -dendrimer[dendid].CMass.z + vecr.z;
+
+    for (int mon = 0; mon < numtotmon; mon++) {
+        dendrimer[dendid].monomer[mon].pos.x +=tvecr.x;
+        dendrimer[dendid].monomer[mon].pos.y +=tvecr.y;
+        dendrimer[dendid].monomer[mon].pos.z +=tvecr.z;
+    }
+    dendrimer[dendid].CMass.x += tvecr.x;
+    dendrimer[dendid].CMass.y += tvecr.y;
+    dendrimer[dendid].CMass.z += tvecr.z;
+
+    double rg, rg2;
+    for (mon = 0; mon < numtotmon; mon++) {
+        rg2 += SQR(dendrimer[dendid].monomer[mon].pos.x - dendrimer[dendid].CMass.x) +
+               SQR(dendrimer[dendid].monomer[mon].pos.y - dendrimer[dendid].CMass.y) +
+               SQR(dendrimer[dendid].monomer[mon].pos.z - dendrimer[dendid].CMass.z);
+    }
+    
+    rg2 /= numtotmon;
+    rg = sqrt(rg2);
+    dendrimer[dendid].Rg2.val = rg2;
+    dendrimer[dendid].Rg.val = rg;
+
+
+    dendrimer[dendid].Rg2.sum += rg2;
+    dendrimer[dendid].Rg2.count++;
+    dendrimer[dendid].Rg.sum += rg;
+    dendrimer[dendid].Rg.count++;
+
+}
+
+int Mcmv(int dendid){
+    int        displ,mtrial,accepted;
+    Monomer   *pm;
+    Dendrimer *pd;
+    VecR      *poldPos,newPos;
+    double     energyOld,energyNew,dE=0.0;
+    int        NumofDispl;
+    accepted = 0;
+
+    pd = dendrimer+dendid;
+    NumofDispl = pd->numOfMonomers;
+
+    for(displ=0;displ<NumofDispl;displ++){
+        // RANDOM DENDRIMER RANDOM MONOMER
+        mtrial = r250n(pd->numOfMonomers);
+        pm     = (pd->monomer)  + mtrial;
+        // set old position as the position
+        // of the selected monomer
+        poldPos=&pm->pos;
+
+        energyOld = PotMonIntraDend(pm,poldPos,0);
+/*
+        printf("energy old:%lf\n",energyOld);
+        printf("position old:");
+        WriteVecR(*poldPos,stdout);
+*/
+
+        MonTrialMove(&newPos,poldPos);
+
+        energyNew = PotMonIntraDend(pm,&newPos,0);
+
+/*
+        printf("energy new:%lf\n",energyNew);
+        printf("position new:");
+        WriteVecR(newPos,stdout);
+*/
+
+        dE=energyNew-energyOld;
+/*
+        printf("dE:%lf\n",dE);
+*/
+        if (dE<0) {
+            poldPos->x=newPos.x;
+            poldPos->y=newPos.y;
+            poldPos->z=newPos.z;
+            RunningEnergy+=dE;
+            accepted++;
+        }
+
+        else if ( (dr250())<(exp(-Beta*dE)) ){
+            poldPos->x=newPos.x;
+            poldPos->y=newPos.y;
+            poldPos->z=newPos.z;
+            RunningEnergy+=dE;
+            accepted++;
+        }
+    }
+     
+    return (accepted);
+}
+
+void ReadInput(const char inFileName[]){
+    int count=0; // count parameters read
+    numOfDendrimers = 2;
+    seed=0;
+    Temp = 0.7;Box.x =100; Box.y=100;Box.z = 100;
+    MaxStep=0.3;
+    numOfIniConfigFiles = 0;
+    FILE *pInFile;
+    // file format:
+    // dendrimer type
+    //
+    if ((pInFile=fopen(inFileName,"r"))!=NULL){
+        count+=fscanf(pInFile,"%d\n",&DendType);
+        count+=fscanf(pInFile,"%d\n",&G);
+        count+=fscanf(pInFile,"%d\n",&F);
+        //count+=fscanf(pInFile,"%lf\n",&Temp);
+        count+=fscanf(pInFile,"%ld\n",&Nsample1);
+        count+=fscanf(pInFile,"%ld\n",&Nsample2);
+        count+=fscanf(pInFile,"%d\n",&NDecor);
+        count+=fscanf(pInFile,"%d\n",&histSize);
+        count+=fscanf(pInFile,"%lf\n",&rmin);
+        count+=fscanf(pInFile,"%lf\n",&rmax);
+    }
+    if (count!=numOfTotalParams){
+        fprintf(stderr,"num of params read:%2d, expected:%2d",count,numOfTotalParams);
+    }
+}

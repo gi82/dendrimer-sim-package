@@ -1,0 +1,1 @@
+for i in $(seq 0.0 0.5 20.0); do j=$(echo $i+0.6|bc);b=$(printf "%4.1f" $i);e=$(printf "%4.1f" $j);echo $b $e; done

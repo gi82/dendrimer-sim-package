@@ -1,0 +1,44 @@
+
+//**************************************//
+//             Cell Lists               //
+//**************************************//
+extern double  maxRc; // maximum cutoff of all Morse potential
+struct strCell{
+    int index;
+    int numOfNeigh;
+    struct strMonomer *first;
+    int numOfElements;
+    int neighbours[125];
+};
+
+typedef struct strCell Cell;
+extern  struct strCell *cells;
+extern VecI    cellNI;                   // number of cells in directions x,y,z;
+extern int     cellNYZ;                  // cellNx * cellNy
+extern VecR    cellSizeR, cellInvSizeR;  // size and inverse size of cell in each direction
+extern int     cellTotalNumber;          // Total number of cells in the box
+
+#define IFLOAT(a,L) ( (int) floor( (a)/(L)) )
+#define DCELLINDX(ax,ay,az,CS) CELLINDX(IFLOAT(ax,(CS).x),IFLOAT(ay,(CS).y),IFLOAT(az,(CS).z),cellNI)
+// index = cx + cy * Lx + cz*Lx*Ly
+#define CELLINDX(xx,yy,zz,CN) ( (xx) + (yy)*((CN).x) + (zz)*((CN).x)*((CN).y) )
+// cx = mod (index,Lx), cy=mod[(index/ Lx),Ly] ,cz = index/(Lx*Ly)
+#define CELLCOORDS(VI,cindx,CN)                       \
+{   VI.x =    (cindx) % (CN).x;                       \
+    VI.y =  ( (cindx) / ((CN).x) ) % ((CN).y);        \
+    VI.z =    (cindx) / ( ((CN).y) * ((CN).z) );}     \
+
+#define VCELLINDX(a) DCELLINDX((a).x,(a).y,(a).z,CS)
+
+void CellListSetup(VecI,double);
+void CellAlloc(void);
+void CellDeAlloc(void);
+void CellNewBuild(void);
+void CellUpdateMon(struct strMonomer*);
+void CellUpdateAll(struct strDendrimer*);
+int  CellUpdateList();// update all dendrimers
+void CellAddElement(int, struct strMonomer*);
+void CellDelElement(int, struct strMonomer*);
+void CellTest(void);
+double CellInterDend(void);
+void CellOutElements(int);

@@ -1,0 +1,60 @@
+EXECDIR  = ../run
+OBJDIR   = ../obj
+PROG     = $(EXECDIR)/dendrimer
+PROG2    = $(EXECDIR)/interdend
+SINGLE   = $(EXECDIR)/single
+
+CC          = icc
+CLINKER     = icc
+
+CFLAGS      = -std=c99 -Wall -O2 -g #-static
+LIBS        = -lm
+DEPEND      = makedepend
+PROFILE     = -pg
+# INTEL MATH LIBRARY
+
+MKLPATH=$(MKLROOT)/lib/ia32
+MKLINCLUDE=$(MKLROOT)/include
+# DIRECTORIES
+
+SRC      = readInput.c system.c initialize.c dendrimers.c \
+ran250.c potential.c moves.c energy.c  mc.c cellLists.c
+
+OBJS     =$(SRC:.c=.o)
+# cellLists.o readInput.o system.o initialize.o dendrimers.o\
+# ran250.o  potential.o moves.o energy.o  mc.o
+
+default: interdend
+
+all:
+
+single:singledend.o $(OBJS)
+	$(CLINKER) $(CFLAGS) -o $(SINGLE) singledend.o $(OBJS) $(LIBS)
+
+interdend: MCinterdend.o $(OBJS)
+	  $(CLINKER) $(CFLAGS) -o $(PROG2) MCinterdend.o $(OBJS) $(LIBS)
+
+dendrimer:  MCdendeff.o $(OBJS)
+	  $(CLINKER) $(CFLAGS) -o $(PROG) MCdendeff.o $(OBJS) $(LIBS)
+
+clean:
+	rm -f *.o *~ $(PROG) $(PROG2)
+veryclean:
+	rm -f *.o *~ *.dat *.xyz *.vmd $(PROG) $(PROG2)
+.c.o:
+	$(CC) $(CFLAGS) -c $*.c
+MCinterdend.o   : system.h ran250.h preprocessor.h
+MCdendeff.o     : system.h ran250.h preprocessor.h
+singledend.o     : system.h ran250.h preprocessor.h
+dendrimers.o    : system.h ran250.h
+system.o        : system.h
+initialize.o    : system.h preprocessor.h ran250.h
+readInput.o     : system.h
+mc.o            : system.h ran250.h preprocessor.h
+potential.o     : system.h
+ran250.o        : ran250.h
+potential.o     : system.h
+moves.o         : system.h ran250.h
+energy.o        : system.h preprocessor.h
+cellLists.o     : system.h preprocessor.h
+

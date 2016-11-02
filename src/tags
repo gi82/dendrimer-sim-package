@@ -1,0 +1,1733 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+A	system.h	56;"	d
+ANNEAL	Makefile	/^ANNEAL       = $(EXECDIR)\/anneal$/;"	m
+ANNEAL_OBJS	Makefile	/^ANNEAL_OBJS =$(patsubst %.c,$(OBJDIR)\/%.o,$(ANNEAL_SRC))$/;"	m
+ANNEAL_SRC	Makefile	/^ANNEAL_SRC  = MCanneal.c $(SRC)$/;"	m
+AcceptanceRatio	system.c	/^double   AcceptanceRatio;$/;"	v
+AdjustStep	mc.c	/^void AdjustStep(const double accRatio){$/;"	f	signature:(const double accRatio)
+AdjustStep	mcdend_v2.c	/^void AdjustStep(double accRatio){$/;"	f	signature:(double accRatio)
+AdjustStep	system.h	/^void AdjustStep(const double);$/;"	p	signature:(const double)
+AdjustStep_	mc.c	/^void AdjustStep_(const double accRatio){$/;"	f	signature:(const double accRatio)
+AllocArrays	mcdend_v2.c	/^void AllocArrays(){$/;"	f
+AllocMat	system.h	55;"	d
+Allocate	initialize.c	/^void Allocate(){$/;"	f
+Allocate	system.h	/^void Allocate(void);$/;"	p	signature:(void)
+ApplyBoundaryConditions	energy.c	/^void ApplyBoundaryConditions(){$/;"	f
+ApplyBoundaryConditions	system.h	/^void ApplyBoundaryConditions(void);$/;"	p	signature:(void)
+B	calc.cpp	85;"	d	file:
+B	system.h	19;"	d
+BB	calc.cpp	92;"	d	file:
+BB	system.h	218;"	d
+Beta	system.c	/^double Beta;$/;"	v
+Box	dummy.c	/^VecI Box;$/;"	v
+Box	system.c	/^VecI   Box;$/;"	v
+Boxbackup	MCanneal.c	/^		VecI Boxbackup = {Box.x, Box.y, Box.z};$/;"	l
+Boxbackup	MCinterdend.c	/^		VecI Boxbackup = {Box.x, Box.y, Box.z};$/;"	l
+Boxl	umbrella.c	/^	int Boxl;$/;"	l
+BuildCellList	mcdend_v2.c	/^void BuildCellList (void){$/;"	f	signature:(void)
+C	calc.cpp	86;"	d	file:
+C	system.h	20;"	d
+CC	Makefile	/^CC           = icpc$/;"	m
+CC	calc.cpp	89;"	d	file:
+CC	system.h	215;"	d
+CELLCOORDS	system.h	333;"	d
+CELLINDX	system.h	331;"	d
+CFLAGS	Makefile	/^CFLAGS       = -std=c99 -Wall  -O3 -w1 -mp1 -g  #-static$/;"	m
+CLINKER	Makefile	/^CLINKER      = icpc$/;"	m
+CMass	calc.cpp	/^    VecR   CMass;$/;"	m	struct:__anon10	file:	access:public
+CMass	calc.cpp	/^VecR   CMass;$/;"	v
+CMass	system.h	/^    VecR    CMass;$/;"	m	struct:strDendrimer	access:public
+CMass0	calc.cpp	/^    VecR CMass0, CMass1, vCMass0, vCMass1;$/;"	l
+CMass1	calc.cpp	/^    VecR CMass0, CMass1, vCMass0, vCMass1;$/;"	l
+CS	calc.cpp	90;"	d	file:
+CS	system.h	216;"	d
+CUBE	calc.cpp	21;"	d	file:
+CUBE	system.h	49;"	d
+CalcCMass	calc.cpp	/^void CalcCMass(const vector<VecR> &pvcoords,VecR & rCMass);$/;"	p	file:	signature:(const vector<VecR> &pvcoords,VecR & rCMass)
+CalcCMass	calc.cpp	/^void CalcCMass(const vector<VecR> &pvcoords,VecR& rCMass){$/;"	f	signature:(const vector<VecR> &pvcoords,VecR& rCMass)
+CalcCMass	mcdend_v2.c	/^void CalcCMass (){$/;"	f
+CalcDp	calc.cpp	/^void CalcDp(const int& ,const double, const VecR& ,const vector<VecR> &, vector< vector< vector<double> > > &);$/;"	p	file:	signature:(const int& ,const double, const VecR& ,const vector<VecR> &, vector< vector< vector<double> > > &)
+CalcDp	calc.cpp	/^void CalcDp(const int& dendid,const double dprange, const VecR& CMass,const vector<VecR> &rvcoords, vector< vector< vector<double> > > &hist){$/;"	f	signature:(const int& dendid,const double dprange, const VecR& CMass,const vector<VecR> &rvcoords, vector< vector< vector<double> > > &hist)
+CalcDp	mcdend_v2.c	/^void CalcDp (){$/;"	f
+CalcDpNew	mcdend_v2.c	/^void CalcDpNew(){$/;"	f
+CalcEigen	calc.cpp	/^void CalcEigen(const vector<VecR>& pvcoords,int mysize,VecDoub&d,MatDoub&v);$/;"	p	file:	signature:(const vector<VecR>& pvcoords,int mysize,VecDoub&d,MatDoub&v)
+CalcEigen	calc.cpp	/^void CalcEigen(const vector<VecR>& pvcoords,int mysize,VecDoub&d,MatDoub&v){$/;"	f	signature:(const vector<VecR>& pvcoords,int mysize,VecDoub&d,MatDoub&v)
+CalcForce	calc.cpp	/^double CalcForce(Dend& d1, Dend& d2);$/;"	p	file:	signature:(Dend& d1, Dend& d2)
+CalcForce	calc.cpp	/^double CalcForce(Dend& d1, Dend& d2){$/;"	f	signature:(Dend& d1, Dend& d2)
+CalcInterForce	energy.c	/^void CalcInterForce(Dendrimer* d1, Dendrimer* d2,VecR *forceCM1,VecR *forceCM2){$/;"	f	signature:(Dendrimer* d1, Dendrimer* d2,VecR *forceCM1,VecR *forceCM2)
+CalcInterForce	system.h	/^void CalcInterForce(Dendrimer* , Dendrimer* ,VecR*,VecR*);$/;"	p	signature:(Dendrimer* , Dendrimer* ,VecR*,VecR*)
+CalcMsdCM	calc.cpp	/^void CalcMsdCM(VecR& ,VecR& ,double &);$/;"	p	file:	signature:(VecR& ,VecR& ,double &)
+CalcMsdCM	calc.cpp	/^void CalcMsdCM(VecR& rcurCMass,VecR& rrefCMass,double &rdblMsdCM){$/;"	f	signature:(VecR& rcurCMass,VecR& rrefCMass,double &rdblMsdCM)
+CalcMsdMon	calc.cpp	/^void CalcMsdMon(const vector<VecR>& ,const VecR& ,const vector<VecR>& ,const VecR& ,double &);$/;"	p	file:	signature:(const vector<VecR>& ,const VecR& ,const vector<VecR>& ,const VecR& ,double &)
+CalcMsdMon	calc.cpp	/^void CalcMsdMon(const vector<VecR>& pvcoords,const VecR& rCMass, $/;"	f	signature:(const vector<VecR>& pvcoords,const VecR& rCMass, const vector<VecR>& pvrefcoords,const VecR& rrefCMass, double &rdblMsdMon)
+CalcP2	calc.cpp	/^void CalcP2(vector<double>& pvP2,vector< vector<int> >& order,vector<Dend>& myD,int numOfPairs);$/;"	p	file:	signature:(vector<double>& pvP2,vector< vector<int> >& order,vector<Dend>& myD,int numOfPairs)
+CalcP2	calc.cpp	/^void CalcP2(vector<double>& pvP2,vector< vector<int> >& order,vector<Dend>& myD,int numOfPairs){$/;"	f	signature:(vector<double>& pvP2,vector< vector<int> >& order,vector<Dend>& myD,int numOfPairs)
+CalcProps	mcdend_v2.c	/^void CalcProps (FILE *pProps,FILE *pCMass){$/;"	f	signature:(FILE *pProps,FILE *pCMass)
+CalcRg	calc.cpp	/^void CalcRg(const vector<VecR>& pvcoords,const VecR* pCMass){$/;"	f	signature:(const vector<VecR>& pvcoords,const VecR* pCMass)
+CalcRg	calc.cpp	/^void CalcRg(const vector<VecR>&,const VecR* );$/;"	p	file:	signature:(const vector<VecR>&,const VecR* )
+CalcRg	mcdend_v2.c	/^void CalcRg (){$/;"	f
+Cell	system.h	/^typedef struct strCell Cell;$/;"	t	typeref:struct:strCell
+CellAddElement	cellLists.c	/^void CellAddElement(int cellindex, struct strMonomer *pmon){$/;"	f	signature:(int cellindex, struct strMonomer *pmon)
+CellAddElement	system.h	/^void CellAddElement(int, struct strMonomer*);$/;"	p	signature:(int, struct strMonomer*)
+CellAlloc	cellLists.c	/^void CellAlloc(){$/;"	f
+CellAlloc	system.h	/^void CellAlloc(void);$/;"	p	signature:(void)
+CellDeAlloc	cellLists.c	/^void CellDeAlloc(){$/;"	f
+CellDeAlloc	system.h	/^void CellDeAlloc(void);$/;"	p	signature:(void)
+CellDelElement	cellLists.c	/^void CellDelElement(int cellindex, struct strMonomer *pmon){$/;"	f	signature:(int cellindex, struct strMonomer *pmon)
+CellDelElement	system.h	/^void CellDelElement(int, struct strMonomer*);$/;"	p	signature:(int, struct strMonomer*)
+CellInterDend	cellLists.c	/^double CellInterDend(){$/;"	f
+CellInterDend	system.h	/^double CellInterDend(void);$/;"	p	signature:(void)
+CellListSetup	cellLists.c	/^void CellListSetup(VecI vBox,double rangemax){$/;"	f	signature:(VecI vBox,double rangemax)
+CellListSetup	system.h	/^void CellListSetup(VecI,double);$/;"	p	signature:(VecI,double)
+CellListSizeMaxrad	system.c	/^double CellListSizeMaxrad;$/;"	v
+CellNewBuild	cellLists.c	/^void CellNewBuild(){$/;"	f
+CellNewBuild	system.h	/^void CellNewBuild(void);$/;"	p	signature:(void)
+CellOutElements	cellLists.c	/^void CellOutElements(int cellindex){$/;"	f	signature:(int cellindex)
+CellOutElements	system.h	/^void CellOutElements(int);$/;"	p	signature:(int)
+CellPeriodic	cellLists.c	/^static int CellPeriodic(int ix, int iy, int iz, VecI cellni){$/;"	f	file:	signature:(int ix, int iy, int iz, VecI cellni)
+CellPeriodic1	cellLists.c	/^static  int CellPeriodic1(int x,int NCells){$/;"	f	file:	signature:(int x,int NCells)
+CellTest	cellLists.c	/^void CellTest(){$/;"	f
+CellTest	system.h	/^void CellTest(void);$/;"	p	signature:(void)
+CellUpdateAll	cellLists.c	/^void CellUpdateAll(struct strDendrimer *pd){$/;"	f	signature:(struct strDendrimer *pd)
+CellUpdateAll	system.h	/^void CellUpdateAll(struct strDendrimer*);$/;"	p	signature:(struct strDendrimer*)
+CellUpdateList	cellLists.c	/^int CellUpdateList(){$/;"	f
+CellUpdateList	system.h	/^int  CellUpdateList();\/\/ update all dendrimers$/;"	p	signature:()
+CellUpdateMon	cellLists.c	/^void CellUpdateMon(struct strMonomer *pmon){$/;"	f	signature:(struct strMonomer *pmon)
+CellUpdateMon	system.h	/^void CellUpdateMon(struct strMonomer*);$/;"	p	signature:(struct strMonomer*)
+CelldESingleMonMove	energy.c	/^double CelldESingleMonMove(Monomer* pmon1, VecR *monpos){$/;"	f	signature:(Monomer* pmon1, VecR *monpos)
+CelldESingleMonMove	system.h	/^double CelldESingleMonMove(Monomer* , VecR *);$/;"	p	signature:(Monomer* , VecR *)
+CheckFrequency	umbrella.c	/^int    OutputFrequency, CheckFrequency;$/;"	v
+CloseOutFiles	mcdend_v2.c	/^void   CloseOutFiles(){$/;"	f
+D	calc.cpp	/^    vector<Dend>  D(numOfDendrimers);$/;"	p	file:	signature:(numOfDendrimers)
+DCELLINDX	system.h	329;"	d
+DEBUG_CELL_LIST	preprocessor.h	11;"	d
+DEBUG_MC	preprocessor.h	17;"	d
+DEBUG_MON_ENERGY	preprocessor.h	12;"	d
+DECORRELATION	system.h	272;"	d
+DEPEND	Makefile	/^DEPEND       = makedepend$/;"	m
+DU	mc.c	/^    double DU; \/\/interdendrimer energy $/;"	l
+DU	umbrella.c	/^static double DU(void);$/;"	p	file:	signature:(void)
+DU	widom.c	/^static double DU(){$/;"	f	file:
+DU	widom.c	/^static double DU(void);$/;"	p	file:	signature:(void)
+Decorrelate	umbrella.c	/^void Decorrelate(int ,int);$/;"	p	file:	signature:(int ,int)
+Decorrelate	umbrella.c	/^void Decorrelate(int dendid, int tries){$/;"	f	signature:(int dendid, int tries)
+Decorrelate	umbrella.c	/^void Decorrelate(int, int);$/;"	p	file:	signature:(int, int)
+Decorrelate	widom.c	/^void Decorrelate(int dendid, int tries){$/;"	f	signature:(int dendid, int tries)
+Decorrelate	widom.c	/^void Decorrelate(int, int);$/;"	p	file:	signature:(int, int)
+DefineBonds	mcdend_v2.c	/^void DefineBonds (){$/;"	f
+DefineLookUpTables	mcdend_v2.c	/^void   DefineLookUpTables (void){$/;"	f	signature:(void)
+Dend	calc.cpp	/^}Dend;$/;"	t	typeref:struct:__anon10	file:
+DendCalcCMass	dendrimers.c	/^void DendCalcCMass (Dendrimer *pd) {$/;"	f	signature:(Dendrimer *pd)
+DendCalcCMass	system.h	/^void    DendCalcCMass(Dendrimer* );$/;"	p	signature:(Dendrimer* )
+DendCalcRg	dendrimers.c	/^void DendCalcRg(Dendrimer * pD) {$/;"	f	signature:(Dendrimer * pD)
+DendCalcRg	system.h	/^void    DendCalcRg(Dendrimer* );$/;"	p	signature:(Dendrimer* )
+DendCheckBox	dendrimers.c	/^int DendCheckBox() {$/;"	f
+DendCheckBox	system.h	/^int     DendCheckBox(void);$/;"	p	signature:(void)
+DendDefineBondsTypes	dendrimers.c	/^void DendDefineBondsTypes(Dendrimer *pD) {$/;"	f	signature:(Dendrimer *pD)
+DendDefineBondsTypes	system.h	/^void    DendDefineBondsTypes(Dendrimer* );$/;"	p	signature:(Dendrimer* )
+DendGyrTensor	dendrimers.c	/^double *DendGyrTensor(Dendrimer *pD){$/;"	f	signature:(Dendrimer *pD)
+DendGyrTensor	system.h	/^double *DendGyrTensor(Dendrimer*);$/;"	p	signature:(Dendrimer*)
+DendInitConfig	dendrimers.c	/^void DendInitConfig(int dendid, const VecR *pvecr) {$/;"	f	signature:(int dendid, const VecR *pvecr)
+DendInitConfig	system.h	/^void    DendInitConfig(int , const VecR*);$/;"	p	signature:(int , const VecR*)
+DendInitConfig2	system.h	/^void    DendInitConfig2(int , const VecR*);$/;"	p	signature:(int , const VecR*)
+DendMaxRad	dendrimers.c	/^double DendMaxRad(const Dendrimer *pd) {$/;"	f	signature:(const Dendrimer *pd)
+DendMaxRad	system.h	/^double  DendMaxRad(const Dendrimer *pd );$/;"	p	signature:(const Dendrimer *pd )
+DendMoveCMass	moves.c	/^void DendMoveCMass(Dendrimer *pd, VecR vecr) {$/;"	f	signature:(Dendrimer *pd, VecR vecr)
+DendMoveCMass	system.h	/^void DendMoveCMass(Dendrimer *,VecR);$/;"	p	signature:(Dendrimer *,VecR)
+DendPBCunwrap	dummy.c	/^static void DendPBCunwrap(VecR* pos, const VecR *refpos);$/;"	p	file:	signature:(VecR* pos, const VecR *refpos)
+DendPBCunwrap	dummy.c	/^static void DendPBCunwrap(VecR* pos, const VecR *refpos){$/;"	f	file:	signature:(VecR* pos, const VecR *refpos)
+DendPBCunwrap	system.h	/^void    DendPBCunwrap(VecR*, const VecR*);$/;"	p	signature:(VecR*, const VecR*)
+DendPlaceCMass	moves.c	/^void DendPlaceCMass(Dendrimer *pd,VecR vecr){$/;"	f	signature:(Dendrimer *pd,VecR vecr)
+DendPlaceCMass	system.h	/^void DendPlaceCMass(Dendrimer*, VecR);$/;"	p	signature:(Dendrimer*, VecR)
+DendReadCoords	dendrimers.c	/^int DendReadCoords(const char inFileName[],int pbc){$/;"	f	signature:(const char inFileName[],int pbc)
+DendReadCoords	system.h	/^int 	DendReadCoords(const char inFileName[],int);$/;"	p	signature:(const char inFileName[],int)
+DendSaveConfig	dendrimers.c	/^int DendSaveConfig(const char outFileName[],int pbc){$/;"	f	signature:(const char outFileName[],int pbc)
+DendSaveConfig	system.h	/^int     DendSaveConfig(const char outFileName[],int);$/;"	p	signature:(const char outFileName[],int)
+DendSetnpos	dendrimers.c	/^void DendSetnpos(Dendrimer *pd){$/;"	f	signature:(Dendrimer *pd)
+DendSetnpos	system.h	/^void    DendSetnpos(Dendrimer*);$/;"	p	signature:(Dendrimer*)
+DendSetpos	dendrimers.c	/^void DendSetpos(Dendrimer *pd){$/;"	f	signature:(Dendrimer *pd)
+DendSetpos	system.h	/^void    DendSetpos(Dendrimer*);$/;"	p	signature:(Dendrimer*)
+DendSetup	dendrimers.c	/^void DendSetup() {$/;"	f
+DendSetup	system.h	/^void    DendSetup(void);$/;"	p	signature:(void)
+DendType	umbrella.c	/^int    DendType;$/;"	v
+DendType	widom.c	/^int     DendType;$/;"	v
+DendUnfoldXYZ	system.h	/^void    DendUnfoldXYZ(void);$/;"	p	signature:(void)
+DendWriteBonds	dendrimers.c	/^void DendWriteBonds(FILE* pFile) {$/;"	f	signature:(FILE* pFile)
+DendWriteBonds	system.h	/^void    DendWriteBonds (FILE*);$/;"	p	signature:(FILE*)
+DendWriteProps	dendrimers.c	/^void DendWriteProps(const Dendrimer *pD, FILE * pOutFile) {$/;"	f	signature:(const Dendrimer *pD, FILE * pOutFile)
+DendWriteProps	system.h	/^void    DendWriteProps(const Dendrimer*, FILE * );$/;"	p	signature:(const Dendrimer*, FILE * )
+DendWriteXYZ	system.h	/^void    DendWriteXYZ(void);$/;"	p	signature:(void)
+DendWriteXYZCommon	dendrimers.c	/^void DendWriteXYZCommon(FILE *pOutFile,int pbc) {$/;"	f	signature:(FILE *pOutFile,int pbc)
+DendWriteXYZCommon	system.h	/^void    DendWriteXYZCommon(FILE*,int);$/;"	p	signature:(FILE*,int)
+DendWriteinlmp	dendrimers.c	/^void DendWriteinlmp(const char outfilename[],const char outfilename2[],const int pbc){$/;"	f	signature:(const char outfilename[],const char outfilename2[],const int pbc)
+DendWriteinlmp	system.h	/^void	DendWriteinlmp(const char outfilename[],const int);$/;"	p	signature:(const char outfilename[],const int)
+Dendrimer	system.h	/^typedef struct strDendrimer Dendrimer;$/;"	t	typeref:struct:strDendrimer
+Density	system.c	/^double Density;$/;"	v
+EFFECTIVE	Makefile	/^EFFECTIVE    = $(EXECDIR)\/eff$/;"	m
+EFFECTIVE_OBJS	Makefile	/^EFFECTIVE_OBJS =$(patsubst %.c,$(OBJDIR)\/%.o,$(EFFECTIVE_SRC))$/;"	m
+EFFECTIVE_SRC	Makefile	/^EFFECTIVE_SRC  = MCdendeff.c $(SRC)$/;"	m
+EQUILIBRATION	system.h	273;"	d
+EXECDIR	Makefile	/^EXECDIR      = ..\/run$/;"	m
+EnergyCheck	energy.c	/^void EnergyCheck(){$/;"	f
+EnergyCheck	system.h	/^void    EnergyCheck(void);$/;"	p	signature:(void)
+EnergyDend	energy.c	/^double EnergyDend (Dendrimer* pd){$/;"	f	signature:(Dendrimer* pd)
+EnergyDend	system.h	/^double EnergyDend (Dendrimer*);$/;"	p	signature:(Dendrimer*)
+EnergyMonomer	energy.c	/^double EnergyMonomer (VecR pos,Monomer *pm,int mb){$/;"	f	signature:(VecR pos,Monomer *pm,int mb)
+EnergyMonomer	mcdend_v2.c	/^void EnergyMonomer (VecR pos,int mcur,int mb,double*Ener){$/;"	f	signature:(VecR pos,int mcur,int mb,double*Ener)
+EnergyMonomer	system.h	/^double EnergyMonomer (VecR pos,Monomer *pm,int mb);$/;"	p	signature:(VecR pos,Monomer *pm,int mb)
+EnergySystem	energy.c	/^double EnergySystem(){$/;"	f
+EnergySystem	mcdend_v2.c	/^void EnergySystem (){$/;"	f
+EnergySystem	system.h	/^double EnergySystem(void);\/\/ Calculates total energy of system of$/;"	p	signature:(void)
+EnergySystem2	energy.c	/^double EnergySystem2(){$/;"	f
+EnergySystem2	system.h	/^double EnergySystem2(void);$/;"	p	signature:(void)
+EnergySystem3	energy.c	/^double EnergySystem3(){$/;"	f
+EnergySystem3	system.h	/^double EnergySystem3(void);$/;"	p	signature:(void)
+EnergyTotal	system.c	/^double EnergyTotal;$/;"	v
+EnergyTotaltest	mc.c	/^				double EnergyTotaltest = EnergySystem3();$/;"	l
+EnergyTotaltest	mc.c	/^        double EnergyTotaltest = EnergySystem3();$/;"	l
+F	calc.cpp	/^    histfilename<<"hist_DP_d"<<dendid+1<<"g"<<G<<"f"<<F<<".dat";$/;"	l
+F	calc.cpp	/^int    numOfDendrimers, G, F, pottype;$/;"	v
+F	system.c	/^int    G,F;$/;"	v
+F01	calc.cpp	/^	VecR F01={0.0,0.0,0.0};$/;"	l
+F01fr	calc.cpp	/^	VecR F01fr={0.0,0.0,0.0};$/;"	l
+F10	calc.cpp	/^	VecR F10={0.0,0.0,0.0};$/;"	l
+F10fr	calc.cpp	/^	VecR F10fr={0.0,0.0,0.0};$/;"	l
+FABS	calc.cpp	25;"	d	file:
+FALSE	system.h	46;"	d
+FILE_IDX_LEN	mc.c	7;"	d	file:
+FILE_IDX_LEN	widom.c	15;"	d	file:
+FLUTDeltaRsq	system.c	/^        *FLUTDeltaRsq = NULL ,*FLUTInvDeltaRsq = NULL,*FLUTPhiRsqMin = NULL,$/;"	v
+FLUTInvDeltaRsq	system.c	/^        *FLUTDeltaRsq = NULL ,*FLUTInvDeltaRsq = NULL,*FLUTPhiRsqMin = NULL,$/;"	v
+FLUTPhiRsqMax	system.c	/^        *FLUTPhiRsqMax = NULL;$/;"	v
+FLUTPhiRsqMin	system.c	/^        *FLUTDeltaRsq = NULL ,*FLUTInvDeltaRsq = NULL,*FLUTPhiRsqMin = NULL,$/;"	v
+FLUTRsqMax	system.c	/^double **FeneLUT = NULL, *FLUTRsqMin = NULL, *FLUTRsqMax = NULL ,$/;"	v
+FLUTRsqMin	system.c	/^double **FeneLUT = NULL, *FLUTRsqMin = NULL, *FLUTRsqMax = NULL ,$/;"	v
+Fene	mcdend_v2.c	/^double Fene(FeneParams *fnp,double r){$/;"	f	signature:(FeneParams *fnp,double r)
+Fene	potential.c	/^double Fene (FeneParams *fnp,double r){$/;"	f	signature:(FeneParams *fnp,double r)
+Fene	system.h	/^double Fene(FeneParams* ,double);     \/\/exact calculation of FENE potential$/;"	p	signature:(FeneParams* ,double)
+FeneEnergy	energy.c	/^double FeneEnergy(Monomer *pm,VecR *monpos,int mb){$/;"	f	signature:(Monomer *pm,VecR *monpos,int mb)
+FeneEnergy	system.h	/^double FeneEnergy(Monomer*,VecR*,int);$/;"	p	signature:(Monomer*,VecR*,int)
+FeneForce	calc.cpp	/^void FeneForce(VecR& ff,VecR& dr);$/;"	p	file:	signature:(VecR& ff,VecR& dr)
+FeneForce	calc.cpp	/^void FeneForce(VecR& ff,VecR& dr){$/;"	f	signature:(VecR& ff,VecR& dr)
+FeneLUT	system.c	/^double **FeneLUT = NULL, *FLUTRsqMin = NULL, *FLUTRsqMax = NULL ,$/;"	v
+FeneParams	calc.cpp	/^}FeneParams;$/;"	t	typeref:struct:__anon11	file:
+FeneParams	system.h	/^}FeneParams;$/;"	t	typeref:struct:__anon5
+FeneTotal	system.c	/^double MorseTotal, FeneTotal;$/;"	v
+FramesFrequency	system.c	/^int      FramesFrequency;$/;"	v
+G	calc.cpp	/^int    numOfDendrimers, G, F, pottype;$/;"	v
+G	system.c	/^int    G,F;$/;"	v
+Hist	umbrella.c	/^double *Hist;$/;"	v
+HistBackUp	umbrella.c	/^double *HistBackUp;$/;"	v
+HistRange	umbrella.c	/^double *HistRange;$/;"	v
+HistSize	umbrella.c	/^int     HistSize;$/;"	v
+IFLOAT	system.h	328;"	d
+INC	Makefile	/^INC          = $(MKLROOT)\/include$/;"	m
+INTERACTING	Makefile	/^INTERACTING  = $(EXECDIR)\/inter$/;"	m
+INTERACTING_OBJS	Makefile	/^INTERACTING_OBJS =$(patsubst %.c,$(OBJDIR)\/%.o,$(INTERACTING_SRC))$/;"	m
+INTERACTING_SRC	Makefile	/^INTERACTING_SRC  = MCinterdend.c $(SRC)$/;"	m
+InitConfig	mcdend_v2.c	/^void InitConfig(){$/;"	f
+Initialize	initialize.c	/^void Initialize(){$/;"	f
+Initialize	mcdend_v2.c	/^void Initialize (){$/;"	f
+Initialize	system.h	/^void Initialize(void);$/;"	p	signature:(void)
+InterDend	energy.c	/^double InterDend(Dendrimer *pd1, Dendrimer *pd2){$/;"	f	signature:(Dendrimer *pd1, Dendrimer *pd2)
+InterDend	system.h	/^double InterDend(Dendrimer*, Dendrimer*);$/;"	p	signature:(Dendrimer*, Dendrimer*)
+InterDendId	system.h	/^double InterDendId(int, int);$/;"	p	signature:(int, int)
+InterDendRef	system.h	/^double InterDendRef(Dendrimer, Dendrimer);$/;"	p	signature:(Dendrimer, Dendrimer)
+IntraDend	energy.c	/^double IntraDend(Dendrimer *pd){$/;"	f	signature:(Dendrimer *pd)
+IntraDend	system.h	/^double IntraDend(Dendrimer*);$/;"	p	signature:(Dendrimer*)
+IsEqual	energy.c	/^int IsEqual(double a, double b, double tol){$/;"	f	signature:(double a, double b, double tol)
+IsEqual	system.h	/^int     IsEqual(double, double, double);$/;"	p	signature:(double, double, double)
+K	calc.cpp	/^	double K,R,b,L0;$/;"	l
+K	calc.cpp	/^    double K;$/;"	m	struct:__anon11	file:	access:public
+K	system.h	/^    double K;$/;"	m	struct:__anon5	access:public
+L	mcdend_v2.c	/^    int L;$/;"	l
+L0	calc.cpp	/^	double K,R,b,L0;$/;"	l
+L0	calc.cpp	/^    double L0;$/;"	m	struct:__anon11	file:	access:public
+L0	system.h	/^    double L0;$/;"	m	struct:__anon5	access:public
+LIB	Makefile	/^LIB          = $(MKLROOT)\/lib\/intel64 $/;"	m
+LIBS	Makefile	/^LIBS         = -lm$/;"	m
+LUTFeneAllocate	potential.c	/^void LUTFeneAllocate (){$/;"	f
+LUTFeneAllocate	system.h	/^void   LUTFeneAllocate(void);$/;"	p	signature:(void)
+LUTFeneBuild	potential.c	/^void LUTFeneBuild (double factor){$/;"	f	signature:(double factor)
+LUTFeneBuild	system.h	/^void   LUTFeneBuild(double);     \/\/ calculate values of LUT$/;"	p	signature:(double)
+LUTFeneOutputSetup	potential.c	/^void LUTFeneOutputSetup(const char outFileName[]){$/;"	f	signature:(const char outFileName[])
+LUTFeneOutputSetup	system.h	/^void   LUTFeneOutputSetup(const char[]);$/;"	p	signature:(const char[])
+LUTFeneOutputTables	potential.c	/^void LUTFeneOutputTables (const char outFileName[], double rmin, double rmax,double rstep){$/;"	f	signature:(const char outFileName[], double rmin, double rmax,double rstep)
+LUTFeneOutputTables	system.h	/^void   LUTFeneOutputTables(const char[],double,double,double);$/;"	p	signature:(const char[],double,double,double)
+LUTFeneValue	potential.c	/^double LUTFeneValue (int interType,double rsq){$/;"	f	signature:(int interType,double rsq)
+LUTFeneValue	system.h	/^double LUTFeneValue(int ,double);$/;"	p	signature:(int ,double)
+LUTMorseAllocate	potential.c	/^void LUTMorseAllocate (){$/;"	f
+LUTMorseAllocate	system.h	/^void   LUTMorseAllocate(void); \/\/ allocate look-up tables tables$/;"	p	signature:(void)
+LUTMorseBuild	potential.c	/^void LUTMorseBuild (int shift){$/;"	f	signature:(int shift)
+LUTMorseBuild	system.h	/^void   LUTMorseBuild(int);     \/\/ calculate values of LUT$/;"	p	signature:(int)
+LUTMorseOutputSetup	potential.c	/^void LUTMorseOutputSetup(const char outFileName[]){$/;"	f	signature:(const char outFileName[])
+LUTMorseOutputSetup	system.h	/^void   LUTMorseOutputSetup(const char[]);$/;"	p	signature:(const char[])
+LUTMorseOutputTables	potential.c	/^void LUTMorseOutputTables (const char outFileName[], double rmin, double rmax,double rstep){$/;"	f	signature:(const char outFileName[], double rmin, double rmax,double rstep)
+LUTMorseOutputTables	system.h	/^void   LUTMorseOutputTables(const char[],double,double,double);$/;"	p	signature:(const char[],double,double,double)
+LUTMorseValue	potential.c	/^double LUTMorseValue (int interType,double rsq){$/;"	f	signature:(int interType,double rsq)
+LUTMorseValue	system.h	/^double LUTMorseValue(int ,double); \/\/ input: interaction type ,squared distance,$/;"	p	signature:(int ,double)
+LUT_FENE_SIZE	system.h	354;"	d
+LUT_MORSE_SIZE	system.h	353;"	d
+LeftBoundary	umbrella.c	/^double RightBoundary, LeftBoundary, MaximumDisplacement;$/;"	v
+MAX	system.h	51;"	d
+MAX3	system.h	52;"	d
+MC	mc.c	/^void MC(void){$/;"	f	signature:(void)
+MC	system.h	/^void MC(void);$/;"	p	signature:(void)
+MCPropEnergy	mc.c	/^void MCPropEnergy(FILE *pOutEnergy){$/;"	f	signature:(FILE *pOutEnergy)
+MCPropEnergy	system.h	/^void MCPropEnergy(FILE*);$/;"	p	signature:(FILE*)
+MCProps	mc.c	/^void MCProps(FILE *pOutFile, FILE *pOutEnergy,FILE *pOutIntraEnergy,FILE *pOutGyr){$/;"	f	signature:(FILE *pOutFile, FILE *pOutEnergy,FILE *pOutIntraEnergy,FILE *pOutGyr)
+MCProps	system.h	/^void MCProps(FILE*, FILE*, FILE*, FILE*);$/;"	p	signature:(FILE*, FILE*, FILE*, FILE*)
+MC_multi	system.h	/^void MC_multi(void);$/;"	p	signature:(void)
+MCanneal	mc.c	/^void MCanneal(double tmax,double tlow, double tstep){ $/;"	f	signature:(double tmax,double tlow, double tstep)
+MCanneal	system.h	/^void MCanneal(double ,double , double );$/;"	p	signature:(double ,double , double )
+MCequil	mc.c	/^void MCequil(int numiter, int numofcycles){$/;"	f	signature:(int numiter, int numofcycles)
+MCequil	system.h	/^void MCequil(int , int );$/;"	p	signature:(int , int )
+MIN	system.h	50;"	d
+MKLINCLUDE	Makefile	/^MKLINCLUDE=$(MKLROOT)\/include$/;"	m
+MKLPATH	Makefile	/^MKLPATH=$(MKLROOT)\/lib\/ia32$/;"	m
+MLUTDeltaRsq	system.c	/^        *MLUTDeltaRsq = NULL,*MLUTInvDeltaRsq = NULL,*MLUTRsqCut = NULL,$/;"	v
+MLUTInvDeltaRsq	system.c	/^        *MLUTDeltaRsq = NULL,*MLUTInvDeltaRsq = NULL,*MLUTRsqCut = NULL,$/;"	v
+MLUTPhiCutoff	system.c	/^        *MLUTPhiCutoff = NULL;$/;"	v
+MLUTRCut	system.c	/^double **MorseLUT = NULL,*MLUTRCut = NULL,*MLUTRsqMin = NULL,$/;"	v
+MLUTRsqCut	system.c	/^        *MLUTDeltaRsq = NULL,*MLUTInvDeltaRsq = NULL,*MLUTRsqCut = NULL,$/;"	v
+MLUTRsqMin	system.c	/^double **MorseLUT = NULL,*MLUTRCut = NULL,*MLUTRsqMin = NULL,$/;"	v
+MSQR	calc.cpp	22;"	d	file:
+MYFLAGS	Makefile	/^MYFLAGS      = -DLJ=0 #-DLUT_MORSE -DLUT_FENE$/;"	m
+MaxStep	system.c	/^double MaxStep;$/;"	v
+MaximumDisplacement	umbrella.c	/^double RightBoundary, LeftBoundary, MaximumDisplacement;$/;"	v
+Maxlines	umbrella.c	/^	int Maxlines=6000;$/;"	l
+McMove	mc.c	/^int McMove (int NumofDispl){$/;"	f	signature:(int NumofDispl)
+McMove	mcdend_v2.c	/^int McMove (int NumofDispl){$/;"	f	signature:(int NumofDispl)
+McMove	system.h	/^int  McMove(int);$/;"	p	signature:(int)
+McMove_t	system.h	/^int  McMove_t(int);$/;"	p	signature:(int)
+McMove_two	mc.c	/^int McMove_two(int NumofDispl){$/;"	f	signature:(int NumofDispl)
+McMove_two	system.h	/^int  McMove_two(int);$/;"	p	signature:(int)
+Mcmv	umbrella.c	/^int Mcmv(int dendid){$/;"	f	signature:(int dendid)
+Mcmv	umbrella.c	/^int Mcmv(int);$/;"	p	file:	signature:(int)
+Mcmv	widom.c	/^int  Mcmv(int);$/;"	p	file:	signature:(int)
+Mcmv	widom.c	/^int Mcmv(int dendid){$/;"	f	signature:(int dendid)
+MonSingleMove	moves.c	/^void MonSingleMove(Monomer *pm, VecR* pvecr, int FixedCMass) {$/;"	f	signature:(Monomer *pm, VecR* pvecr, int FixedCMass)
+MonSingleMove	system.h	/^void MonSingleMove (Monomer *, VecR*, int);$/;"	p	signature:(Monomer *, VecR*, int)
+MonTrialMove	moves.c	/^void MonTrialMove(VecR *pnewPos, const VecR* poldPos) {$/;"	f	signature:(VecR *pnewPos, const VecR* poldPos)
+MonTrialMove	system.h	/^void MonTrialMove(VecR*, const VecR*); \/\/ option to keep centre of mass fixed$/;"	p	signature:(VecR*, const VecR*)
+MonTrialMoveFixedCMass	moves.c	/^void MonTrialMoveFixedCMass(Monomer *pm){$/;"	f	signature:(Monomer *pm)
+MonTrialMoveFixedCMass	system.h	/^void MonTrialMoveFixedCMass(Monomer *);$/;"	p	signature:(Monomer *)
+MonTrialMove_All	moves.c	/^void MonTrialMove_All(VecR *pnewPBCpos, const VecR *poldPBCpos,$/;"	f	signature:(VecR *pnewPBCpos, const VecR *poldPBCpos, VecR* pnewNpos, const VecR *poldNpos)
+MonTrialMove_All	system.h	/^void MonTrialMove_All(VecR *, const VecR *,VecR* , const VecR *);$/;"	p	signature:(VecR *, const VecR *,VecR* , const VecR *)
+Monomer	system.h	/^typedef struct strMonomer Monomer;$/;"	t	typeref:struct:strMonomer
+Montype	calc.cpp	/^int  Montype(vector<int> & pvcormon,vector<int>& pvshellmon,int dendid,int monid);$/;"	p	file:	signature:(vector<int> & pvcormon,vector<int>& pvshellmon,int dendid,int monid)
+Montype	calc.cpp	/^int Montype(vector<int> & pvcormon,vector<int>& pvshellmon,int dendid,int monid){$/;"	f	signature:(vector<int> & pvcormon,vector<int>& pvshellmon,int dendid,int monid)
+Morse	mcdend_v2.c	/^double Morse (MorseParams* mrsp,double r){$/;"	f	signature:(MorseParams* mrsp,double r)
+Morse	potential.c	/^double Morse (MorseParams* mrsp,double r){$/;"	f	signature:(MorseParams* mrsp,double r)
+Morse	system.h	/^double Morse (MorseParams* ,double ); \/\/exact calculation of Morse potential$/;"	p	signature:(MorseParams* ,double )
+MorseEnergy	energy.c	/^double MorseEnergy(Monomer *pm, VecR *monpos){$/;"	f	signature:(Monomer *pm, VecR *monpos)
+MorseEnergy	system.h	/^double MorseEnergy(Monomer*, VecR*);$/;"	p	signature:(Monomer*, VecR*)
+MorseForce	calc.cpp	/^double  MorseForce(MorseParams* pmrs,VecR& dr){$/;"	f	signature:(MorseParams* pmrs,VecR& dr)
+MorseForce	calc.cpp	/^void MorseForce(MorseParams& pmrs,VecR& dr);$/;"	p	file:	signature:(MorseParams& pmrs,VecR& dr)
+MorseForce	energy.c	/^double  MorseForce(MorseParams* pmrs,VecR dr){$/;"	f	signature:(MorseParams* pmrs,VecR dr)
+MorseForce	system.h	/^double  MorseForce(MorseParams* ,VecR);$/;"	p	signature:(MorseParams* ,VecR)
+MorseLUT	system.c	/^double **MorseLUT = NULL,*MLUTRCut = NULL,*MLUTRsqMin = NULL,$/;"	v
+MorseOutputValues	potential.c	/^void MorseOutputValues(FILE* outFile){$/;"	f	signature:(FILE* outFile)
+MorseOutputValues	system.h	/^void   MorseOutputValues(FILE*);$/;"	p	signature:(FILE*)
+MorseParams	calc.cpp	/^}MorseParams;$/;"	t	typeref:struct:__anon12	file:
+MorseParams	system.h	/^}MorseParams;$/;"	t	typeref:struct:__anon6
+MorseTotal	system.c	/^double MorseTotal, FeneTotal;$/;"	v
+MrsCC	calc.cpp	/^MorseParams MrsCC,MrsCS,MrsSS;$/;"	v
+MrsCC	system.c	/^MorseParams MrsCC,MrsCS,MrsSS;$/;"	v
+MrsCS	calc.cpp	/^MorseParams MrsCC,MrsCS,MrsSS;$/;"	v
+MrsCS	system.c	/^MorseParams MrsCC,MrsCS,MrsSS;$/;"	v
+MrsSS	calc.cpp	/^MorseParams MrsCC,MrsCS,MrsSS;$/;"	v
+MrsSS	system.c	/^MorseParams MrsCC,MrsCS,MrsSS;$/;"	v
+NDecor	widom.c	/^int     NDecor;$/;"	v
+NTYPE	system.h	18;"	d
+N_TYPE_FENE	system.h	210;"	d
+N_TYPE_MORSE	system.h	209;"	d
+Nbincor	calc.cpp	/^    int    Nbincor = 0; \/\/ number of bins to correct$/;"	l
+Ngf	dendrimers.c	/^    int Ngf, Ngl, mnext, nbond;$/;"	l
+Ngf	dendrimers.c	/^    int mnext, nbond, ngen, Ngf, Ngl;$/;"	l
+Ngf	mcdend_v2.c	/^    int    countmon,m,i,mnext,nbond,ngen,Ngf,Ngl;$/;"	l
+Ngf	mcdend_v2.c	/^    int Ngf,Ngl,mnext,nbond;  \/\/ number of first and last monomer of current generation$/;"	l
+Ngl	dendrimers.c	/^    int Ngf, Ngl, mnext, nbond;$/;"	l
+Ngl	dendrimers.c	/^    int mnext, nbond, ngen, Ngf, Ngl;$/;"	l
+Ngl	mcdend_v2.c	/^    int    countmon,m,i,mnext,nbond,ngen,Ngf,Ngl;$/;"	l
+Ngl	mcdend_v2.c	/^    int Ngf,Ngl,mnext,nbond;  \/\/ number of first and last monomer of current generation$/;"	l
+Nsample1	widom.c	/^ULONG   Nsample1;$/;"	v
+Nsample2	widom.c	/^ULONG   Nsample2;$/;"	v
+Numlines	umbrella.c	/^	int Numlines=0;$/;"	l
+NumofAcceptedMoves	system.c	/^long int NumofAcceptedMoves;$/;"	v
+NumofAttempts	system.c	/^long int NumofAttempts;$/;"	v
+NumofCycles	system.c	/^long int NumofCycles;$/;"	v
+NumofDecorrelationCycles	system.c	/^long int NumofDecorrelationCycles;$/;"	v
+NumofDispPerCycle	system.c	/^int      NumofDispPerCycle;$/;"	v
+NumofDispl	umbrella.c	/^    int        NumofDispl;$/;"	l
+NumofDispl	widom.c	/^    int        NumofDispl;$/;"	l
+NumofEquilibrationCycles	system.c	/^long int NumofEquilibrationCycles;$/;"	v
+NumofProductionCycles	system.c	/^long int NumofProductionCycles;$/;"	v
+OBJDIR	Makefile	/^OBJDIR       = ..\/obj$/;"	m
+OBJS	Makefile	/^OBJS = $(patsubst %.c,$(OBJDIR)\/%.o,$(SRC))$/;"	m
+OpenCppFileExists	calc.cpp	/^bool OpenCppFileExists(const string& filename)$/;"	f	signature:(const string& filename)
+OpenCppFileExists	calc.cpp	/^bool OpenCppFileExists(const string& filename);$/;"	p	file:	signature:(const string& filename)
+OpenOutFiles	mcdend_v2.c	/^void   OpenOutFiles(){$/;"	f
+OutputFrequency	umbrella.c	/^int    OutputFrequency, CheckFrequency;$/;"	v
+OutputInputParams	readInput.c	/^void OutputInputParams(){$/;"	f
+OutputInputParams	system.h	/^void OutputInputParams(void);$/;"	p	signature:(void)
+P2	calc.cpp	/^	int P2;$/;"	m	struct:__anon10	file:	access:public
+P2	calc.cpp	/^    vector<double> P2(numOfDendPairs,0.0);    $/;"	p	file:	signature:(numOfDendPairs,0.0)
+P2counter	calc.cpp	/^    static long int P2counter=0;$/;"	l	file:
+PBC1	dummy.c	32;"	d	file:
+PBC1	system.h	70;"	d
+PBC1_BOX	dummy.c	28;"	d	file:
+PBC1_New	dummy.c	22;"	d	file:
+PBC1_halb	dummy.c	24;"	d	file:
+PBCAll	dummy.c	33;"	d	file:
+PBCAll	system.h	72;"	d
+PBC_	system.h	76;"	d
+PI	system.h	23;"	d
+PREPROCESSOR_H	preprocessor.h	9;"	d
+PRODUCTION	system.h	274;"	d
+PlaceDend	widom.c	/^void PlaceDend(int dendid, VecR vecr){$/;"	f	signature:(int dendid, VecR vecr)
+PlaceDend	widom.c	/^void PlaceDend(int, VecR);$/;"	p	file:	signature:(int, VecR)
+PotDendDend	energy.c	/^double PotDendDend(Dendrimer *pd1, Dendrimer *pd2){$/;"	f	signature:(Dendrimer *pd1, Dendrimer *pd2)
+PotDendDend	system.h	/^double PotDendDend(Dendrimer *, Dendrimer*);$/;"	p	signature:(Dendrimer *, Dendrimer*)
+PotMonIntraDend	energy.c	/^double  PotMonIntraDend(Monomer* pm, VecR *monpos,int mb){$/;"	f	signature:(Monomer* pm, VecR *monpos,int mb)
+PotMonIntraDend	system.h	/^double PotMonIntraDend(Monomer*, VecR * ,int);$/;"	p	signature:(Monomer*, VecR * ,int)
+PotMonNextDend	energy.c	/^double PotMonNextDend(Monomer *pm, VecR *monpos, Dendrimer *pd){$/;"	f	signature:(Monomer *pm, VecR *monpos, Dendrimer *pd)
+PotMonNextDend	system.h	/^double PotMonNextDend(Monomer*, VecR * , Dendrimer*);$/;"	p	signature:(Monomer*, VecR * , Dendrimer*)
+PotType	system.c	/^int    PotType;$/;"	v
+PotentialSetup	calc.cpp	/^void PotentialSetup(int dt){$/;"	f	signature:(int dt)
+PotentialSetup	calc.cpp	/^void PotentialSetup(int);$/;"	p	file:	signature:(int)
+PotentialSetup	potential.c	/^void PotentialSetup(int dt){$/;"	f	signature:(int dt)
+PotentialSetup	system.h	/^void   PotentialSetup(int);            \/\/ the seven Mladek Potentials$/;"	p	signature:(int)
+PotentialSetup	widom.c	/^void PotentialSetup(int);$/;"	p	file:	signature:(int)
+R	calc.cpp	/^	double K,R,b,L0;$/;"	l
+R	calc.cpp	/^    double R;$/;"	m	struct:__anon11	file:	access:public
+R	system.h	/^    double R;$/;"	m	struct:__anon5	access:public
+RAN250_H	ran250.h	2;"	d
+RCut	calc.cpp	/^    double RCut;$/;"	m	struct:__anon12	file:	access:public
+RCut	system.h	/^    double RCut;$/;"	m	struct:__anon6	access:public
+RLow	calc.cpp	/^    double RLow;$/;"	m	struct:__anon12	file:	access:public
+RLow	system.h	/^    double RLow;$/;"	m	struct:__anon6	access:public
+RandomLimits	dendrimers.c	/^static double RandomLimits(double , double);$/;"	p	file:	signature:(double , double)
+RandomLimits	dendrimers.c	/^static double RandomLimits(double dblmin,double dblmax){$/;"	f	file:	signature:(double dblmin,double dblmax)
+RandomRotateCoords	calc.cpp	/^void RandomRotateCoords(vector<VecR>& );$/;"	p	file:	signature:(vector<VecR>& )
+RandomRotateCoords	calc.cpp	/^void RandomRotateCoords(vector<VecR>& rvcoords){$/;"	f	signature:(vector<VecR>& rvcoords)
+RandomSpherePoint	calc.cpp	/^void RandomSpherePoint(vector<VecR>& ,int,double );$/;"	p	file:	signature:(vector<VecR>& ,int,double )
+RandomSpherePoint	calc.cpp	/^void RandomSpherePoint(vector<VecR>& rvcoords,int numofmon,double radius){$/;"	f	signature:(vector<VecR>& rvcoords,int numofmon,double radius)
+RandomVector	calc.cpp	/^void RandomVector(VecR& , double ) ;$/;"	p	file:	signature:(VecR& , double )
+RandomVector	calc.cpp	/^void RandomVector(VecR& rvecr, double radius) {$/;"	f	signature:(VecR& rvecr, double radius)
+RandomVector	mcdend_v2.c	/^void RandomVector (VecR* vecr,double radius){$/;"	f	signature:(VecR* vecr,double radius)
+RandomVector	moves.c	/^void RandomVector(VecR* pvecr, double radius) {$/;"	f	signature:(VecR* pvecr, double radius)
+RandomVector	system.h	/^void RandomVector(VecR*,double);$/;"	p	signature:(VecR*,double)
+ReadInput	umbrella.c	/^void ReadInput(const char inFileName[]){$/;"	f	signature:(const char inFileName[])
+ReadInput	umbrella.c	/^void ReadInput(const char[]);$/;"	p	file:	signature:(const char[])
+ReadInput	widom.c	/^void ReadInput(const char inFileName[]){$/;"	f	signature:(const char inFileName[])
+ReadInput	widom.c	/^void ReadInput(const char[]);$/;"	p	file:	signature:(const char[])
+ReadInputData	mcdend_v2.c	/^void ReadInputData(){$/;"	f
+ReadPotential	readInput.c	/^void ReadPotential(int pottype,const char inFileName[]){$/;"	f	signature:(int pottype,const char inFileName[])
+ReadPotential	system.h	/^void ReadPotential(int ,const char []);$/;"	p	signature:(int ,const char [])
+ReadSimParams	readInput.c	/^void ReadSimParams(const char inFileName[]){$/;"	f	signature:(const char inFileName[])
+ReadSimParams	system.h	/^void ReadSimParams(const char []);$/;"	p	signature:(const char [])
+ReadSimParamsAnneal	readInput.c	/^void ReadSimParamsAnneal(const char inFileName[]){$/;"	f	signature:(const char inFileName[])
+ReadSimParamsAnneal	system.h	/^void ReadSimParamsAnneal(const char []);$/;"	p	signature:(const char [])
+Restart	system.c	/^int  Restart;$/;"	v
+Rg	calc.cpp	/^    double Rg,b,c,k2;$/;"	m	struct:__anon10	file:	access:public
+Rg	calc.cpp	/^double   Rg;$/;"	v
+Rg	system.h	/^    dbProp  Rg;$/;"	m	struct:strDendrimer	access:public
+Rg2	system.h	/^    dbProp  Rg2;$/;"	m	struct:strDendrimer	access:public
+RgC	calc.cpp	/^    double RgC,bC,cC,k2C;$/;"	m	struct:__anon10	file:	access:public
+RgS	calc.cpp	/^    double RgS,bS,cS,k2S;$/;"	m	struct:__anon10	file:	access:public
+Rgsq	calc.cpp	/^    double Rgsq, normadot, b, c, k2, angle;$/;"	l
+Rgsq	system.h	/^	double  b,c,k2,Rgsq;$/;"	m	struct:strDendrimer	access:public
+RgsqC	calc.cpp	/^    double RgsqC, bC, cC, k2C,angleC;$/;"	l
+RgsqS	calc.cpp	/^    double RgsqS, bS, cS, k2S,angleS;$/;"	l
+RightBoundary	umbrella.c	/^double RightBoundary, LeftBoundary, MaximumDisplacement;$/;"	v
+RsqCut	system.c	/^double *RsqCut;$/;"	v
+RunningEnergy	system.c	/^double RunningEnergy;$/;"	v
+S	calc.cpp	87;"	d	file:
+S	system.h	21;"	d
+SINGLE	Makefile	/^SINGLE       = $(EXECDIR)\/singlenocell$/;"	m
+SINGLE_OBJS	Makefile	/^SINGLE_OBJS =$(patsubst %.c,$(OBJDIR)\/%.o,$(SINGLE_SRC))$/;"	m
+SINGLE_SRC	Makefile	/^SINGLE_SRC = singledend.c $(SRC)$/;"	m
+SQR	system.h	48;"	d
+SRC	Makefile	/^SRC = readInput.c system.c initialize.c dendrimers.c \\$/;"	m
+SS	calc.cpp	91;"	d	file:
+SS	system.h	217;"	d
+SYSTEM_H	system.h	9;"	d
+SamplingFrequency	system.c	/^int      SamplingFrequency;$/;"	v
+ScaleDP	calc.cpp	/^void ScaleDP(const int& , const int &,const double ,vector< vector< vector<double> > > &);$/;"	p	file:	signature:(const int& , const int &,const double ,vector< vector< vector<double> > > &)
+ScaleDP	calc.cpp	/^void ScaleDP(const int& dendid, const int &frames,const double dprange,vector< vector< vector<double> > > &hist){$/;"	f	signature:(const int& dendid, const int &frames,const double dprange,vector< vector< vector<double> > > &hist)
+SetParams	initialize.c	/^void SetParams(void){$/;"	f	signature:(void)
+SetParams	mcdend_v2.c	/^void SetParams(void){$/;"	f	signature:(void)
+SetParams	system.h	/^void SetParams(void);$/;"	p	signature:(void)
+TEST	calc.cpp	24;"	d	file:
+TRUE	system.h	45;"	d
+TaskID	system.c	/^int  TaskID;$/;"	v
+Temp	system.c	/^double Temp, TempHigh,TempLow,TempStep;$/;"	v
+TempHigh	system.c	/^double Temp, TempHigh,TempLow,TempStep;$/;"	v
+TempLow	system.c	/^double Temp, TempHigh,TempLow,TempStep;$/;"	v
+TempStep	system.c	/^double Temp, TempHigh,TempLow,TempStep;$/;"	v
+TestDp	calc.cpp	/^void TestDp (double , vector< vector< vector<double> > > &);$/;"	p	file:	signature:(double , vector< vector< vector<double> > > &)
+TestDp	calc.cpp	/^void TestDp (double dprange, vector< vector< vector<double> > > &hist){$/;"	f	signature:(double dprange, vector< vector< vector<double> > > &hist)
+TestDp	mcdend_v2.c	/^void TestDp (FILE* pFile){$/;"	f	signature:(FILE* pFile)
+TestDpNew	mcdend_v2.c	/^void TestDpNew (FILE* pFile){$/;"	f	signature:(FILE* pFile)
+TestIniConfig	mcdend_v2.c	/^void TestIniConfig(FILE * pOut){$/;"	f	signature:(FILE * pOut)
+TrialMove	mcdend_v2.c	/^void TrialMove (VecR *newPos, const VecR* oldPos){$/;"	f	signature:(VecR *newPos, const VecR* oldPos)
+ULONG	umbrella.c	/^typedef unsigned long long int ULONG;$/;"	t	file:
+ULONG	widom.c	/^typedef unsigned long long int ULONG;$/;"	t	file:
+UMBRELLA	Makefile	/^UMBRELLA     = $(EXECDIR)\/umbrella$/;"	m
+UMBRELLABIAS	Makefile	/^UMBRELLABIAS = $(EXECDIR)\/umbrellabias$/;"	m
+UMBRELLA_OBJS	Makefile	/^UMBRELLA_OBJS =$(patsubst %.c,$(OBJDIR)\/%.o,$(UMBRELLA_SRC))$/;"	m
+UMBRELLA_SRC	Makefile	/^UMBRELLA_SRC  = umbrella.c $(SRC)$/;"	m
+VCELLINDX	system.h	338;"	d
+VCopy	system.h	33;"	d
+VDot	system.h	41;"	d
+VLen	system.h	44;"	d
+VLenSq	system.h	43;"	d
+VSub	system.h	37;"	d
+VWrap	dummy.c	5;"	d	file:
+VWrap	system.h	61;"	d
+VWrapAll	dummy.c	8;"	d	file:
+VWrapAll	system.h	65;"	d
+VecI	dummy.c	/^} VecI;$/;"	t	typeref:struct:__anon8	file:
+VecI	system.h	/^typedef struct {int x, y, z;}  VecI;$/;"	t	typeref:struct:__anon2
+VecR	calc.cpp	/^}VecR;$/;"	t	typeref:struct:__anon9	file:
+VecR	dummy.c	/^}  VecR ;$/;"	t	typeref:struct:__anon7	file:
+VecR	system.h	/^typedef struct {double x,y,z;} VecR;$/;"	t	typeref:struct:__anon3
+VecTest	system.h	/^typedef struct{int x;} VecTest;$/;"	t	typeref:struct:__anon1
+WIDOM	Makefile	/^WIDOM        = $(EXECDIR)\/widom$/;"	m
+WIDOM_OBJS	Makefile	/^WIDOM_OBJS =$(patsubst %.c,$(OBJDIR)\/%.o,$(WIDOM_SRC))$/;"	m
+WIDOM_SRC	Makefile	/^WIDOM_SRC  = widom.c $(SRC)$/;"	m
+Write	umbrella.c	/^void Write(const char outFileName[],int stepfiles,ULONG cycles);$/;"	p	file:	signature:(const char outFileName[],int stepfiles,ULONG cycles)
+Write	umbrella.c	/^void Write(const char outFileName[],int stepfiles,ULONG cycles){$/;"	f	signature:(const char outFileName[],int stepfiles,ULONG cycles)
+Write	widom.c	/^void Write(FILE *,ULONG , ULONG);$/;"	p	file:	signature:(FILE *,ULONG , ULONG)
+Write	widom.c	/^void Write(FILE *poutfile,ULONG n1,ULONG n2){$/;"	f	signature:(FILE *poutfile,ULONG n1,ULONG n2)
+WriteBondVmd	dendrimers.c	/^void WriteBondVmd (const char outfilename[]){$/;"	f	signature:(const char outfilename[])
+WriteBondVmd	mcdend_v2.c	/^void WriteBondVmd (FILE* pFile){$/;"	f	signature:(FILE* pFile)
+WriteBondVmd	system.h	/^void    WriteBondVmd (FILE* );$/;"	p	signature:(FILE* )
+WriteCMass	mcdend_v2.c	/^void WriteCMass (FILE *pCMass){$/;"	f	signature:(FILE *pCMass)
+WriteDp	mcdend_v2.c	/^void WriteDp(int t){$/;"	f	signature:(int t)
+WriteDpNew	mcdend_v2.c	/^void   WriteDpNew(int ngen){$/;"	f	signature:(int ngen)
+WriteFene	potential.c	/^void WriteFene(int intertype,double rmin,double rmax,double dr,const char outFileName[]){$/;"	f	signature:(int intertype,double rmin,double rmax,double dr,const char outFileName[])
+WriteFene	system.h	/^void   WriteFene(int, double, double, double, const char[]);$/;"	p	signature:(int, double, double, double, const char[])
+WriteVecI	moves.c	/^void WriteVecI(VecI veci, FILE *pOutFile) {$/;"	f	signature:(VecI veci, FILE *pOutFile)
+WriteVecI	system.h	/^void WriteVecI(VecI, FILE*);$/;"	p	signature:(VecI, FILE*)
+WriteVecR	moves.c	/^void WriteVecR(VecR vecr, FILE *pOutFile) {$/;"	f	signature:(VecR vecr, FILE *pOutFile)
+WriteVecR	system.h	/^void WriteVecR(VecR, FILE*);$/;"	p	signature:(VecR, FILE*)
+WriteXYZ	mcdend_v2.c	/^void WriteXYZ (FILE *pFile){$/;"	f	signature:(FILE *pFile)
+_PI	calc.cpp	23;"	d	file:
+__anon10::CMass	calc.cpp	/^    VecR   CMass;$/;"	m	struct:__anon10	file:	access:public
+__anon10::P2	calc.cpp	/^	int P2;$/;"	m	struct:__anon10	file:	access:public
+__anon10::Rg	calc.cpp	/^    double Rg,b,c,k2;$/;"	m	struct:__anon10	file:	access:public
+__anon10::RgC	calc.cpp	/^    double RgC,bC,cC,k2C;$/;"	m	struct:__anon10	file:	access:public
+__anon10::RgS	calc.cpp	/^    double RgS,bS,cS,k2S;$/;"	m	struct:__anon10	file:	access:public
+__anon10::b	calc.cpp	/^    double Rg,b,c,k2;$/;"	m	struct:__anon10	file:	access:public
+__anon10::bC	calc.cpp	/^    double RgC,bC,cC,k2C;$/;"	m	struct:__anon10	file:	access:public
+__anon10::bS	calc.cpp	/^    double RgS,bS,cS,k2S;$/;"	m	struct:__anon10	file:	access:public
+__anon10::c	calc.cpp	/^    double Rg,b,c,k2;$/;"	m	struct:__anon10	file:	access:public
+__anon10::cC	calc.cpp	/^    double RgC,bC,cC,k2C;$/;"	m	struct:__anon10	file:	access:public
+__anon10::cS	calc.cpp	/^    double RgS,bS,cS,k2S;$/;"	m	struct:__anon10	file:	access:public
+__anon10::forceCM	calc.cpp	/^	double forceCM; \/\/ force on CMass (for 2 interacting dendrimers only)$/;"	m	struct:__anon10	file:	access:public
+__anon10::id	calc.cpp	/^    int    id;$/;"	m	struct:__anon10	file:	access:public
+__anon10::k2	calc.cpp	/^    double Rg,b,c,k2;$/;"	m	struct:__anon10	file:	access:public
+__anon10::k2C	calc.cpp	/^    double RgC,bC,cC,k2C;$/;"	m	struct:__anon10	file:	access:public
+__anon10::k2S	calc.cpp	/^    double RgS,bS,cS,k2S;$/;"	m	struct:__anon10	file:	access:public
+__anon10::laxis	calc.cpp	/^    VecR   laxis;$/;"	m	struct:__anon10	file:	access:public
+__anon10::moncoords	calc.cpp	/^	vector<VecR> moncoords;$/;"	m	struct:__anon10	file:	access:public
+__anon10::monforce	calc.cpp	/^	vector<VecR> monforce;\/\/ total force acting to monomer$/;"	m	struct:__anon10	file:	access:public
+__anon10::vforceCM	calc.cpp	/^	VecR   vforceCM;$/;"	m	struct:__anon10	file:	access:public
+__anon10::vforceCMtot	calc.cpp	/^	VecR   vforceCMtot;$/;"	m	struct:__anon10	file:	access:public
+__anon11::K	calc.cpp	/^    double K;$/;"	m	struct:__anon11	file:	access:public
+__anon11::L0	calc.cpp	/^    double L0;$/;"	m	struct:__anon11	file:	access:public
+__anon11::R	calc.cpp	/^    double R;$/;"	m	struct:__anon11	file:	access:public
+__anon11::interType	calc.cpp	/^    int    interType;$/;"	m	struct:__anon11	file:	access:public
+__anon11::type	calc.cpp	/^    char   type[3];$/;"	m	struct:__anon11	file:	access:public
+__anon12::RCut	calc.cpp	/^    double RCut;$/;"	m	struct:__anon12	file:	access:public
+__anon12::RLow	calc.cpp	/^    double RLow;$/;"	m	struct:__anon12	file:	access:public
+__anon12::a	calc.cpp	/^    double a;$/;"	m	struct:__anon12	file:	access:public
+__anon12::d	calc.cpp	/^    double d;$/;"	m	struct:__anon12	file:	access:public
+__anon12::eps	calc.cpp	/^    double eps;$/;"	m	struct:__anon12	file:	access:public
+__anon12::interType	calc.cpp	/^    int    interType;$/;"	m	struct:__anon12	file:	access:public
+__anon12::type	calc.cpp	/^    char   type[3];$/;"	m	struct:__anon12	file:	access:public
+__anon1::x	system.h	/^typedef struct{int x;} VecTest;$/;"	m	struct:__anon1	access:public
+__anon2::x	system.h	/^typedef struct {int x, y, z;}  VecI;$/;"	m	struct:__anon2	access:public
+__anon2::y	system.h	/^typedef struct {int x, y, z;}  VecI;$/;"	m	struct:__anon2	access:public
+__anon2::z	system.h	/^typedef struct {int x, y, z;}  VecI;$/;"	m	struct:__anon2	access:public
+__anon3::x	system.h	/^typedef struct {double x,y,z;} VecR;$/;"	m	struct:__anon3	access:public
+__anon3::y	system.h	/^typedef struct {double x,y,z;} VecR;$/;"	m	struct:__anon3	access:public
+__anon3::z	system.h	/^typedef struct {double x,y,z;} VecR;$/;"	m	struct:__anon3	access:public
+__anon4::count	system.h	/^    unsigned long int count;$/;"	m	struct:__anon4	access:public
+__anon4::sum	system.h	/^    double val,sum;$/;"	m	struct:__anon4	access:public
+__anon4::val	system.h	/^    double val,sum;$/;"	m	struct:__anon4	access:public
+__anon5::K	system.h	/^    double K;$/;"	m	struct:__anon5	access:public
+__anon5::L0	system.h	/^    double L0;$/;"	m	struct:__anon5	access:public
+__anon5::R	system.h	/^    double R;$/;"	m	struct:__anon5	access:public
+__anon5::interType	system.h	/^    int    interType;$/;"	m	struct:__anon5	access:public
+__anon5::type	system.h	/^    char   type[3];$/;"	m	struct:__anon5	access:public
+__anon6::RCut	system.h	/^    double RCut;$/;"	m	struct:__anon6	access:public
+__anon6::RLow	system.h	/^    double RLow;$/;"	m	struct:__anon6	access:public
+__anon6::a	system.h	/^    double a;$/;"	m	struct:__anon6	access:public
+__anon6::d	system.h	/^    double d;$/;"	m	struct:__anon6	access:public
+__anon6::eps	system.h	/^    double eps;$/;"	m	struct:__anon6	access:public
+__anon6::interType	system.h	/^    int    interType;$/;"	m	struct:__anon6	access:public
+__anon6::type	system.h	/^    char   type[3];$/;"	m	struct:__anon6	access:public
+__anon7::x	dummy.c	/^    double x,y,z;$/;"	m	struct:__anon7	file:	access:public
+__anon7::y	dummy.c	/^    double x,y,z;$/;"	m	struct:__anon7	file:	access:public
+__anon7::z	dummy.c	/^    double x,y,z;$/;"	m	struct:__anon7	file:	access:public
+__anon8::x	dummy.c	/^    int x,y,z;$/;"	m	struct:__anon8	file:	access:public
+__anon8::y	dummy.c	/^    int x,y,z;$/;"	m	struct:__anon8	file:	access:public
+__anon8::z	dummy.c	/^    int x,y,z;$/;"	m	struct:__anon8	file:	access:public
+__anon9::x	calc.cpp	/^    double x,y,z;$/;"	m	struct:__anon9	file:	access:public
+__anon9::y	calc.cpp	/^    double x,y,z;$/;"	m	struct:__anon9	file:	access:public
+__anon9::z	calc.cpp	/^    double x,y,z;$/;"	m	struct:__anon9	file:	access:public
+a	calc.cpp	/^	double eps,a,b,d;$/;"	l
+a	calc.cpp	/^    MatDoub a(gyrtensorsize,gyrtensorsize);$/;"	p	file:	signature:(gyrtensorsize,gyrtensorsize)
+a	calc.cpp	/^    double a;$/;"	m	struct:__anon12	file:	access:public
+a	energy.c	/^	double eps,a,b,d;$/;"	l
+a	system.h	/^    double a;$/;"	m	struct:__anon6	access:public
+acc	mc.c	/^    static long unsigned int att=0,acc=0;$/;"	l	file:
+acc	mcdend_v2.c	/^    static int att=0,acc=0;$/;"	l	file:
+acc_max	mc.c	/^	const double acc_min=0.3,acc_max=0.6;$/;"	l
+acc_min	mc.c	/^	const double acc_min=0.3,acc_max=0.6;$/;"	l
+accepted	mc.c	/^    int       displ,mtrial,dtrial,accepted;$/;"	l
+accepted	mc.c	/^    int    displ,mtrial,dtrial,accepted;$/;"	l
+accepted	mcdend_v2.c	/^    int  m,mtrial,accepted;$/;"	l
+accepted	umbrella.c	/^    int        displ,mtrial,accepted;$/;"	l
+accepted	umbrella.c	/^int    accepted = 0;$/;"	v
+accepted	widom.c	/^    int        displ,mtrial,accepted;$/;"	l
+adjustcycles	mc.c	/^    const int adjustcycles=100;$/;"	l
+adjustcycles	mc.c	/^    const int adjustcycles=10;$/;"	l
+alj	potential.c	/^static double alj(double r,double rlj){$/;"	f	file:	signature:(double r,double rlj)
+angle	calc.cpp	/^    double Rgsq, normadot, b, c, k2, angle;$/;"	l
+angleC	calc.cpp	/^    double RgsqC, bC, cC, k2C,angleC;$/;"	l
+angleS	calc.cpp	/^    double RgsqS, bS, cS, k2S,angleS;$/;"	l
+angle_central_fixed	calc.cpp	/^                    double angle_central_fixed = acos( FABS(dot_central_fixed) ) * 180 \/ M_PI ;$/;"	l
+angle_central_laxis	calc.cpp	/^                    double angle_central_laxis = acos( FABS(dot_central_laxis) ) * 180 \/ M_PI ;$/;"	l
+angle_laxis01	calc.cpp	/^                    double angle_laxis01       = acos( FABS(dot_product(ex0,ex1)) )     *180 \/M_PI;$/;"	l
+angle_laxis0_CMass	calc.cpp	/^                    double angle_laxis0_CMass  = acos( FABS(dot_product(vCMass0,ex0)) ) *180 \/M_PI;$/;"	l
+angle_laxis1_CMass	calc.cpp	/^                    double angle_laxis1_CMass  = acos( FABS(dot_product(vCMass1,ex1)) ) *180 \/M_PI;$/;"	l
+angle_laxis_fixed	calc.cpp	/^                    double angle_laxis_fixed   = acos( FABS(dot_laxis_fixed)   ) * 180 \/ M_PI ;$/;"	l
+at	calc.cpp	/^			  sumRg.at(dendid) += sqrt(Rgsq);$/;"	p	file:	signature:(dendid)
+at	calc.cpp	/^			  sumRgC.at(dendid) += sqrt(RgsqC);$/;"	p	file:	signature:(dendid)
+at	calc.cpp	/^			  sumRgS.at(dendid) += sqrt(RgsqS);$/;"	p	file:	signature:(dendid)
+at	calc.cpp	/^			sumsqRg.at(dendid) += (Rgsq);$/;"	p	file:	signature:(dendid)
+at	calc.cpp	/^			sumsqRgC.at(dendid) += (RgsqC);$/;"	p	file:	signature:(dendid)
+at	calc.cpp	/^			sumsqRgS.at(dendid) += (RgsqS);$/;"	p	file:	signature:(dendid)
+at	calc.cpp	/^                if (gen<G)  numofCoreMons.at(dendid) += 2 * (int) pow((F-1), gen);$/;"	p	file:	signature:(dendid)
+at	calc.cpp	/^                if (gen==G) numofShellMons.at(dendid)+= 2 * (int) pow((F-1), gen);$/;"	p	file:	signature:(dendid)
+at	calc.cpp	/^              sumb.at(dendid) += b\/Rgsq;$/;"	p	file:	signature:(dendid)
+at	calc.cpp	/^              sumbC.at(dendid) += bC\/RgsqC;$/;"	p	file:	signature:(dendid)
+at	calc.cpp	/^              sumbS.at(dendid) += bS\/Rgsq;$/;"	p	file:	signature:(dendid)
+at	calc.cpp	/^              sumc.at(dendid) += c\/Rgsq;$/;"	p	file:	signature:(dendid)
+at	calc.cpp	/^              sumcC.at(dendid) += cC\/RgsqC;$/;"	p	file:	signature:(dendid)
+at	calc.cpp	/^              sumcS.at(dendid) += cS\/Rgsq;$/;"	p	file:	signature:(dendid)
+at	calc.cpp	/^            sumsqb.at(dendid) += MSQR(b\/Rgsq);$/;"	p	file:	signature:(dendid)
+at	calc.cpp	/^            sumsqbC.at(dendid) += MSQR(bC\/RgsqC);$/;"	p	file:	signature:(dendid)
+at	calc.cpp	/^            sumsqbS.at(dendid) += MSQR(bS\/Rgsq);$/;"	p	file:	signature:(dendid)
+at	calc.cpp	/^            sumsqc.at(dendid) += MSQR(c\/Rgsq);$/;"	p	file:	signature:(dendid)
+at	calc.cpp	/^            sumsqcC.at(dendid) += MSQR(cC\/RgsqC);$/;"	p	file:	signature:(dendid)
+at	calc.cpp	/^            sumsqcS.at(dendid) += MSQR(cS\/Rgsq);$/;"	p	file:	signature:(dendid)
+atomtype	dendrimers.c	/^	int countmol,countatoms,countbonds,atomtype,bondtype;$/;"	l
+att	mc.c	/^    static long unsigned int att=0,acc=0;$/;"	l	file:
+att	mcdend_v2.c	/^    static int att=0,acc=0;$/;"	l	file:
+averEner	mc.c	/^						double averEner = sumEner\/(ncycle+1);$/;"	l
+averEner	mc.c	/^                double averEner = sumEner\/(ncycle+1);$/;"	l
+averRg	calc.cpp	/^vector<double> sumRg,sumsqRg,averRg;$/;"	v
+averRg	widom.c	/^double  averRg;$/;"	v
+averRg1	widom.c	/^double  averRg1,averRg2;$/;"	v
+averRg2	widom.c	/^double  averRg1,averRg2;$/;"	v
+averRgC	calc.cpp	/^vector<double> sumRgC,sumsqRgC,averRgC;$/;"	v
+averRgS	calc.cpp	/^vector<double> sumRgS,sumsqRgS,averRgS;$/;"	v
+averageHist	widom.c	/^double *averageHist,*averageHistSq,*errorbars,*pairpotential,*dumat;$/;"	v
+averageHistSq	widom.c	/^double *averageHist,*averageHistSq,*errorbars,*pairpotential,*dumat;$/;"	v
+b	calc.cpp	/^	double K,R,b,L0;$/;"	l
+b	calc.cpp	/^	double eps,a,b,d;$/;"	l
+b	calc.cpp	/^    double Rg,b,c,k2;$/;"	m	struct:__anon10	file:	access:public
+b	calc.cpp	/^    double Rgsq, normadot, b, c, k2, angle;$/;"	l
+b	energy.c	/^	double eps,a,b,d;$/;"	l
+b	system.h	/^	double  b,c,k2,Rgsq;$/;"	m	struct:strDendrimer	access:public
+bC	calc.cpp	/^    double RgC,bC,cC,k2C;$/;"	m	struct:__anon10	file:	access:public
+bC	calc.cpp	/^    double RgsqC, bC, cC, k2C,angleC;$/;"	l
+bS	calc.cpp	/^    double RgS,bS,cS,k2S;$/;"	m	struct:__anon10	file:	access:public
+bS	calc.cpp	/^    double RgsqS, bS, cS, k2S,angleS;$/;"	l
+beta_DU	widom.c	/^    double beta_DU;$/;"	l
+bin	mcdend_v2.c	/^                int bin;$/;"	l
+bin	mcdend_v2.c	/^    int interType,bin;$/;"	l
+bin	potential.c	/^    int bin;$/;"	l
+bin	potential.c	/^    int interType,bin;$/;"	l
+bond	system.h	/^    struct strMonomer **bond;$/;"	m	struct:strMonomer	typeref:struct:strMonomer::strMonomer	access:public
+bondInterType	system.h	/^    int    *bondInterType;$/;"	m	struct:strMonomer	access:public
+bonddraw	dendrimers.c	/^    int bonddraw = 1;$/;"	l
+bonded	mcdend_v2.c	/^    int    bonded=1;$/;"	l
+bondedenergy	energy.c	/^    double bondedenergy=0.0;$/;"	l
+bondrad	dendrimers.c	/^    double bondrad = 0.2;$/;"	l
+bondtype	dendrimers.c	/^	int countmol,countatoms,countbonds,atomtype,bondtype;$/;"	l
+bupos	system.h	/^    VecR   bupos;$/;"	m	struct:strMonomer	access:public
+c	calc.cpp	/^    double Rg,b,c,k2;$/;"	m	struct:__anon10	file:	access:public
+c	calc.cpp	/^    double Rgsq, normadot, b, c, k2, angle;$/;"	l
+c	mcdend_v2.c	/^    int n,c,cyz,numofCells;$/;"	l
+c	system.h	/^	double  b,c,k2,Rgsq;$/;"	m	struct:strDendrimer	access:public
+cC	calc.cpp	/^    double RgC,bC,cC,k2C;$/;"	m	struct:__anon10	file:	access:public
+cC	calc.cpp	/^    double RgsqC, bC, cC, k2C,angleC;$/;"	l
+cS	calc.cpp	/^    double RgS,bS,cS,k2S;$/;"	m	struct:__anon10	file:	access:public
+cS	calc.cpp	/^    double RgsqS, bS, cS, k2S,angleS;$/;"	l
+cc	mcdend_v2.c	/^    double cc;$/;"	l
+cellI	cellLists.c	/^	VecI cellI;$/;"	l
+cellI	cellLists.c	/^    VecI cellI;$/;"	l
+cellIndex	system.h	/^    int cellIndex; \/\/ position in hoc$/;"	m	struct:strMonomer	access:public
+cellInvSizeR	system.c	/^VecR    cellSizeR, cellInvSizeR;$/;"	v
+cellNI	system.c	/^VecI    cellNI;$/;"	v
+cellNYZ	system.c	/^int     cellNYZ;$/;"	v
+cellSizeR	system.c	/^VecR    cellSizeR, cellInvSizeR;$/;"	v
+cellTotalNumber	system.c	/^int     cellTotalNumber;$/;"	v
+cellenergy	energy.c	/^    double cellenergy, cellenergy2, totalenergy1, totalenergy2 ;$/;"	l
+cellenergy2	energy.c	/^    double cellenergy, cellenergy2, totalenergy1, totalenergy2 ;$/;"	l
+cells	system.c	/^struct strCell *cells=NULL;$/;"	v	typeref:struct:strCell
+centralB0	calc.cpp	/^                VecR centralB0,centralB1;$/;"	l
+centralB1	calc.cpp	/^                VecR centralB0,centralB1;$/;"	l
+centralbond	calc.cpp	/^    VecR    centralbond, largestAxis;\/\/ central bond vector ,coordinates of largest axis$/;"	l
+checkfreq	mc.c	/^	int    checkfreq=1;$/;"	l
+cindex	cellLists.c	/^    int      cindex, nei;$/;"	l
+cindex	cellLists.c	/^    int  cindex;$/;"	l
+cindex	cellLists.c	/^    int  cx,cy,cz,cindex;$/;"	l
+cindex	cellLists.c	/^    int nei, cindex;$/;"	l
+cindex	energy.c	/^    int      cindex, nei;$/;"	l
+cindex_new	cellLists.c	/^    int cindex_old,cindex_new;$/;"	l
+cindex_old	cellLists.c	/^    int cindex_old,cindex_new;$/;"	l
+close	calc.cpp	/^	outP2.close();$/;"	p	file:	signature:()
+close	calc.cpp	/^	outrun.close();$/;"	p	file:	signature:()
+close	calc.cpp	/^    fin.close();$/;"	p	file:	signature:()
+close	calc.cpp	/^    outCMass.close();$/;"	p	file:	signature:()
+close	calc.cpp	/^    outEigen.close();$/;"	p	file:	signature:()
+close	calc.cpp	/^    outHist.close();$/;"	p	file:	signature:()
+close	calc.cpp	/^    outMSD.close();$/;"	p	file:	signature:()
+close	calc.cpp	/^    outProps.close();$/;"	p	file:	signature:()
+close	calc.cpp	/^    outbc.close();$/;"	p	file:	signature:()
+colcounter	potential.c	/^	int colcounter;$/;"	l
+com0	umbrella.c	/^	VecR   com0 ,com1;$/;"	l
+com1	umbrella.c	/^	VecR   com0 ,com1;$/;"	l
+copycoords	umbrella.c	/^void copycoords(Dendrimer* pd,VecR *pos,int N){$/;"	f	signature:(Dendrimer* pd,VecR *pos,int N)
+copycoords	umbrella.c	/^void copycoords(Dendrimer*,VecR*,int);$/;"	p	file:	signature:(Dendrimer*,VecR*,int)
+count	calc.cpp	/^    static int count=0;$/;"	l	file:
+count	calc.cpp	/^    static long int count=0;$/;"	l	file:
+count	cellLists.c	/^    int count;$/;"	l
+count	initialize.c	/^    int count=0;$/;"	l
+count	mc.c	/^	static unsigned long int count=1;	$/;"	l	file:
+count	mc.c	/^    static unsigned long int count=1;$/;"	l	file:
+count	potential.c	/^	static int count = 0;$/;"	l	file:
+count	readInput.c	/^    int  count=0;$/;"	l
+count	system.h	/^    unsigned long int count;$/;"	m	struct:__anon4	access:public
+count	umbrella.c	/^    int count=0; \/\/ count parameters read$/;"	l
+count	widom.c	/^    int count=0; \/\/ count parameters read$/;"	l
+countTotalSteps	mc.c	/^    long unsigned int countTotalSteps=0;$/;"	l
+countatoms	dendrimers.c	/^	int countmol,countatoms,countbonds,atomtype,bondtype;$/;"	l
+countbonds	dendrimers.c	/^	int countmol,countatoms,countbonds,atomtype,bondtype;$/;"	l
+counter	dendrimers.c	/^    int counter;$/;"	l
+counter	mcdend_v2.c	/^    int counter;$/;"	l
+countframes	calc.cpp	/^	long long int countframes;$/;"	l
+countframes	calc.cpp	/^                            <<countframes+1<<"\\t";$/;"	l
+countframes	calc.cpp	/^                    outOrient<<setw(5)<<setprecision(0)<<noshowpoint<<noshowpos<<countframes+1<<"\\t";$/;"	l
+countmol	dendrimers.c	/^	int countmol,countatoms,countbonds,atomtype,bondtype;$/;"	l
+countmon	dendrimers.c	/^    int countmon;$/;"	l
+countmon	dendrimers.c	/^    static int countmon = 0;$/;"	l	file:
+countmon	mcdend_v2.c	/^    int    countmon,m,i,mnext,nbond,ngen,Ngf,Ngl;$/;"	l
+countmonomers	calc.cpp	/^    int dendid, mon, gen, countmonomers;$/;"	l
+curaccratio	mc.c	/^    double curaccratio, curstep;$/;"	l
+curaccratio	mcdend_v2.c	/^    double curaccratio, curstep;$/;"	l
+curfilenum	mc.c	/^	int          curfilenum=0,nextfilenum=0; $/;"	l
+curfilenum	widom.c	/^int          curfilenum=0,nextfilenum=0; $/;"	v
+curstep	mc.c	/^    double curaccratio, curstep;$/;"	l
+curstep	mcdend_v2.c	/^    double curaccratio, curstep;$/;"	l
+cx	cellLists.c	/^    int  cx,cy,cz,cindex;$/;"	l
+cy	cellLists.c	/^    int  cx,cy,cz,cindex;$/;"	l
+cyz	mcdend_v2.c	/^    int n,c,cyz,numofCells;$/;"	l
+cz	cellLists.c	/^    int  cx,cy,cz,cindex;$/;"	l
+d	calc.cpp	/^	double eps,a,b,d;$/;"	l
+d	calc.cpp	/^    VecDoub d(gyrtensorsize); \/\/ 1D array returning the eigen values of matrix$/;"	p	file:	signature:(gyrtensorsize)
+d	calc.cpp	/^    double d;$/;"	m	struct:__anon12	file:	access:public
+d	energy.c	/^	double eps,a,b,d;$/;"	l
+d	potential.c	/^	double d=pow(2.0,0.166);$/;"	l
+d	system.h	/^    double d;$/;"	m	struct:__anon6	access:public
+d1	calc.cpp	/^	int d1,d2;$/;"	l
+d2	calc.cpp	/^	int d1,d2;$/;"	l
+dC	calc.cpp	/^    VecDoub dC(gyrtensorsize),dS(gyrtensorsize);$/;"	p	file:	signature:(gyrtensorsize)
+dE	mc.c	/^    double    energyOld,energyNew,energyIntra,dE=0.0;$/;"	l
+dE	mc.c	/^    double energyOld,energyNew,dE;$/;"	l
+dE	mcdend_v2.c	/^    double energyOld,energyNew,dE;$/;"	l
+dE	umbrella.c	/^    double     energyOld,energyNew,dE=0.0;$/;"	l
+dE	umbrella.c	/^    double energyOld,energyNew,dE;$/;"	l
+dE	widom.c	/^    double     energyOld,energyNew,dE=0.0;$/;"	l
+dEnergySystem	MCdendeff.c	/^        double dEnergySystem = 0.0;$/;"	l
+dS	calc.cpp	/^    VecDoub dC(gyrtensorsize),dS(gyrtensorsize);$/;"	p	file:	signature:(gyrtensorsize)
+dbProp	system.h	/^} dbProp;$/;"	t	typeref:struct:__anon4
+deltaR	calc.cpp	/^    double deltaR = dprange\/dpsize;$/;"	l
+deltaR	calc.cpp	/^    double deltaR=dprange\/dpsize;$/;"	l
+deltaR	umbrella.c	/^	double rr,vol,dummy,dummybak,deltaR;$/;"	l
+deltaR	widom.c	/^double  deltaR;$/;"	v
+dend	energy.c	/^    int    dend, nbond;$/;"	l
+dendDist	MCdendeff.c	/^        double maxCDdist, dendDist;$/;"	l
+dendid	calc.cpp	/^                    <<countframes+1<<" "<<dendid<<"\\t";$/;"	l
+dendid	calc.cpp	/^            outEigen<<setw(3)<<setprecision(0)<<noshowpoint<<noshowpos<<fixed<<dendid<<"\\t";$/;"	l
+dendid	calc.cpp	/^            outProps<<setw(4)<<setprecision(0)<<noshowpoint<<noshowpos<<fixed<<dendid<<" ";$/;"	l
+dendid	calc.cpp	/^    int    gen,dendid;$/;"	l
+dendid	calc.cpp	/^    int dendid, mon, gen, countmonomers;$/;"	l
+dendid	cellLists.c	/^    int  dendid;$/;"	l
+dendid	cellLists.c	/^    int dendid;$/;"	l
+dendid	dendrimers.c	/^	int dendid,mon;$/;"	l
+dendid	dendrimers.c	/^    int dendid, mon;$/;"	l
+dendid	dendrimers.c	/^    int dendid;$/;"	l
+dendid	mc.c	/^    int  dendid,i;$/;"	l
+dendmoncoords	calc.cpp	/^	vector< vector<VecR> > dendmoncoords( numOfDendrimers, vector<VecR> (numOfMonomersInDend) );$/;"	p	file:	signature:( numOfDendrimers, vector<VecR> (numOfMonomersInDend) )
+dendrimer	system.c	/^struct strDendrimer *dendrimer;$/;"	v	typeref:struct:strDendrimer
+devEner	mc.c	/^						double devEner  = sqrt((sumsqEner\/(ncycle+1)) - SQR(averEner));$/;"	l
+devEner	mc.c	/^                double devEner  = sqrt((sumsqEner\/(ncycle+1)) - SQR(averEner));$/;"	l
+devRg	calc.cpp	/^    double devb,devc,devbC,devcC,devbS,devcS,devRg,devRgC,devRgS;$/;"	l
+devRgC	calc.cpp	/^    double devb,devc,devbC,devcC,devbS,devcS,devRg,devRgC,devRgS;$/;"	l
+devRgS	calc.cpp	/^    double devb,devc,devbC,devcC,devbS,devcS,devRg,devRgC,devRgS;$/;"	l
+devb	calc.cpp	/^    double devb,devc,devbC,devcC,devbS,devcS,devRg,devRgC,devRgS;$/;"	l
+devbC	calc.cpp	/^    double devb,devc,devbC,devcC,devbS,devcS,devRg,devRgC,devRgS;$/;"	l
+devbS	calc.cpp	/^    double devb,devc,devbC,devcC,devbS,devcS,devRg,devRgC,devRgS;$/;"	l
+devc	calc.cpp	/^    double devb,devc,devbC,devcC,devbS,devcS,devRg,devRgC,devRgS;$/;"	l
+devcC	calc.cpp	/^    double devb,devc,devbC,devcC,devbS,devcS,devRg,devRgC,devRgS;$/;"	l
+devcS	calc.cpp	/^    double devb,devc,devbC,devcC,devbS,devcS,devRg,devRgC,devRgS;$/;"	l
+dif	potential.c	/^    double dif;$/;"	l
+displ	mc.c	/^    int       displ,mtrial,dtrial,accepted;$/;"	l
+displ	mc.c	/^    int    displ,mtrial,dtrial,accepted;$/;"	l
+displ	umbrella.c	/^    int        displ,mtrial,accepted;$/;"	l
+displ	widom.c	/^    int        displ,mtrial,accepted;$/;"	l
+dot_central_fixed	calc.cpp	/^    double dot_central_laxis,dot_central_fixed,dot_laxis_fixed;$/;"	l
+dot_central_laxis	calc.cpp	/^    double dot_central_laxis,dot_central_fixed,dot_laxis_fixed;$/;"	l
+dot_laxis_fixed	calc.cpp	/^    double dot_central_laxis,dot_central_fixed,dot_laxis_fixed;$/;"	l
+dot_product	calc.cpp	/^double dot_product(const VecR& va,const VecR& vb){$/;"	f	signature:(const VecR& va,const VecR& vb)
+dpCount	mcdend_v2.c	/^    static int dpCount=0;$/;"	l	file:
+dpHistDendGen	calc.cpp	/^    vector< vector< vector<double> > > dpHistDendGen(numOfDendrimers, vector< vector<double> >((G+1), vector<double>(dpHistSize, 0)));$/;"	p	file:	signature:(numOfDendrimers, vector< vector<double> >((G+1), vector<double>(dpHistSize, 0)))
+dpHistSize	calc.cpp	/^    int dpHistSize = 1000;$/;"	l
+dpRange	calc.cpp	/^    double dpRange;$/;"	l
+dpRg	mcdend_v2.c	/^    static int dpRg=0;$/;"	l	file:
+dpsize	calc.cpp	/^    int  m, dpsize, mfirst, mlast, h;$/;"	l
+dpsize	calc.cpp	/^    int dpsize = hist.at(0).at(0).size();$/;"	l
+dr	MCdendeff.c	/^        VecR   dr;$/;"	l
+dr	calc.cpp	/^	VecR dr;$/;"	l
+dr	calc.cpp	/^                    VecR dr;double rsq;$/;"	l
+dr	calc.cpp	/^    VecR dr;$/;"	l
+dr	cellLists.c	/^    VecR     dr;$/;"	l
+dr	energy.c	/^	VecR dr;$/;"	l
+dr	energy.c	/^    VecR       dr;$/;"	l
+dr	energy.c	/^    VecR     dr;$/;"	l
+dr	energy.c	/^    VecR    dr;$/;"	l
+dr	energy.c	/^    VecR   dr;$/;"	l
+dr	energy.c	/^    VecR dr;$/;"	l
+dr	mcdend_v2.c	/^    VecR   dr;$/;"	l
+dr	mcdend_v2.c	/^    VecR   vecr,dr;$/;"	l
+dr	potential.c	/^	double dr=x[2]-x[1];$/;"	l
+dr	umbrella.c	/^    VecR vecr0, vecr1, ranvecr,dr;$/;"	l
+dr	widom.c	/^    VecR    dr;$/;"	l
+dr250	ran250.c	/^double dr250()$/;"	f
+dr250	ran250.h	/^double dr250();$/;"	p	signature:()
+dsize	calc.cpp	/^    int vrows,vcols,dsize;$/;"	l
+dtrial	mc.c	/^    int       displ,mtrial,dtrial,accepted;$/;"	l
+dtrial	mc.c	/^    int    displ,mtrial,dtrial,accepted;$/;"	l
+dtrial	umbrella.c	/^    int        mtrial,dtrial;$/;"	l
+dumat	widom.c	/^double *averageHist,*averageHistSq,*errorbars,*pairpotential,*dumat;$/;"	v
+dummy	calc.cpp	/^    double dummy=0.0;$/;"	l
+dummy	dendrimers.c	/^    char *dummy;$/;"	l
+dummy	mc.c	/^    double intraenergy,dummy;$/;"	l
+dummy	mcdend_v2.c	/^    double dummy=0.0;$/;"	l
+dummy	mcdend_v2.c	/^    int dummy;$/;"	l
+dummy	potential.c	/^    double dummy=0.0;$/;"	l
+dummy	umbrella.c	/^	double rr,vol,dummy,dummybak,deltaR;$/;"	l
+dummy	widom.c	/^    double dummy;$/;"	l
+dummyMSD	calc.cpp	/^    double dummyMSD=0.0;$/;"	l
+dummyProj	calc.cpp	/^			double dummyProj;$/;"	l
+dummyProj	energy.c	/^	double dummyProj;$/;"	l
+dummyRCut	readInput.c	/^				double dummyRCut = pow(2,0.1666);$/;"	l
+dummyX	calc.cpp	/^    double dummyX, dummyY, dummyZ;$/;"	l
+dummyY	calc.cpp	/^    double dummyX, dummyY, dummyZ;$/;"	l
+dummyZ	calc.cpp	/^    double dummyX, dummyY, dummyZ;$/;"	l
+dummybak	umbrella.c	/^	double rr,vol,dummy,dummybak,deltaR;$/;"	l
+dummydot	calc.cpp	/^					double dummydot = MSQR(dot_product(ex0,ex1));$/;"	l
+dummyexp	widom.c	/^	double dummyexp;$/;"	l
+dummyhist	calc.cpp	/^    double dummyhist;$/;"	l
+dummysqrt	widom.c	/^	double dummysqrt;$/;"	l
+dumnorma	calc.cpp	/^			double dumnorma = sqrt(dot_product(dr,dr));$/;"	l
+dumnorma	energy.c	/^			double dumnorma = VLen(dr);$/;"	l
+eAng	calc.cpp	/^    double eAng[3];$/;"	l
+elems	mc.c	/^	const short int elems = SQR(gyrsize);$/;"	l
+en	energy.c	/^    double en;$/;"	l
+en	mcdend_v2.c	/^    double en;$/;"	l
+endl	calc.cpp	/^	outForceFrame<<"1:frame 2:F01_x 3:F01_y 4:F01_z 5:F10_x 6:F10_y 7:F10_z "<<endl;$/;"	l
+endl	calc.cpp	/^	outP2<<"di dj P2[cos(theta)]"<<endl;$/;"	l
+endl	calc.cpp	/^	outrun<<"processing file:"<<infilename<<endl;$/;"	l
+endl	calc.cpp	/^    	    outForce<<"#1:dist  2:dist\/Rg 3:F01 4:F10 "<<endl;$/;"	l
+endl	calc.cpp	/^                                 <<endl;$/;"	l
+endl	calc.cpp	/^                             <<fabs(angle_laxis0_CMass-angle_laxis1_CMass)<<dummydot<<endl;$/;"	l
+endl	calc.cpp	/^                    <<b\/Rgsq<<" "<<c\/Rgsq<<" "<<k2<<" "<<Rgsq<<" "<<sqrt(Rgsq)<<" "<<angle<<endl;$/;"	l
+endl	calc.cpp	/^                 <<sumbS.at(dendid)\/countframes<<" "<<devbS<<" "<<sumcS.at(dendid)\/countframes<<" "<<devcS<<" "<<sumRgS.at(dendid)\/countframes<<" "<<devRgS<<" "<<endl;$/;"	l
+endl	calc.cpp	/^                "[ini_file_name in xyz format)] [output b c file] [distance] [num of frames] [dpHistSize] [dpRange])"<<endl;$/;"	l
+endl	calc.cpp	/^                cout<<"!!!!!!!!! CalcDP()::distance out of range"<<endl;$/;"	l
+endl	calc.cpp	/^               "15:b(S) 16:devb(S) 17:c(S)  18:devc(S) 19:Rg(S)  20:devRg(S) "<<endl;$/;"	l
+endl	calc.cpp	/^              "                             eZ                "<<endl;$/;"	l
+endl	calc.cpp	/^            <<"G"<<"\/"<<"F"<<"\/"<<"num of frames read"<<endl;$/;"	l
+endl	calc.cpp	/^            <<G<<"\/"<<F<<"\/"<<frames<<endl;$/;"	l
+endl	calc.cpp	/^            G<<"\/"<<F<<"\/"<<frames<<endl;$/;"	l
+endl	calc.cpp	/^            cout<<"Total monomers read("<<countmonomers<<")"<<"!= Total monomers in dendrimer("<<numOfMonomersInDend<<")"<<endl;$/;"	l
+endl	calc.cpp	/^            outCMass<<endl<<endl;$/;"	l
+endl	calc.cpp	/^            outEigen<<endl;$/;"	l
+endl	calc.cpp	/^            outEigen<<endl<<endl;$/;"	l
+endl	calc.cpp	/^            outProps<<endl<<endl;$/;"	l
+endl	calc.cpp	/^          <<"histrange"<<dpRange<<endl<<endl;         $/;"	l
+endl	calc.cpp	/^        cout<<"CalcMsdMon::error-> different sizes of coord arrays"<<endl;$/;"	l
+endl	calc.cpp	/^        cout<<"too few arguments"<<endl;$/;"	l
+endl	calc.cpp	/^        if (countframes==0) outMSD<<"#frame     dendid    MSD(dendid)"<<endl;$/;"	l
+endl	calc.cpp	/^        out<<endl<<endl;$/;"	l
+endl	calc.cpp	/^        outHist<<endl;$/;"	l
+endl	calc.cpp	/^    cout<<"**Testing Density Profile**"<<endl;$/;"	l
+endl	calc.cpp	/^    cout<<"Total Num of Monomers DP:%-8.2f\\n"<<dummy<<endl;$/;"	l
+endl	calc.cpp	/^    cout<<"Total Number of frames read:"<<countframes<<endl;$/;"	l
+endl	calc.cpp	/^    outCMass<<"#"<<endl<<"#"<<endl<<"#"<<endl;$/;"	l
+endl	calc.cpp	/^    outHist<<endl;$/;"	l
+energy	energy.c	/^    double energy = 0.0;$/;"	l
+energy	energy.c	/^    double energy =0.0;$/;"	l
+energyIntra	mc.c	/^    double    energyOld,energyNew,energyIntra,dE=0.0;$/;"	l
+energyNew	mc.c	/^    double    energyOld,energyNew,energyIntra,dE=0.0;$/;"	l
+energyNew	mc.c	/^    double energyOld,energyNew,dE;$/;"	l
+energyNew	mcdend_v2.c	/^    double energyOld,energyNew,dE;$/;"	l
+energyNew	umbrella.c	/^    double     energyOld,energyNew,dE=0.0;$/;"	l
+energyNew	umbrella.c	/^    double energyOld,energyNew,dE;$/;"	l
+energyNew	widom.c	/^    double     energyOld,energyNew,dE=0.0;$/;"	l
+energyOld	mc.c	/^    double    energyOld,energyNew,energyIntra,dE=0.0;$/;"	l
+energyOld	mc.c	/^    double energyOld,energyNew,dE;$/;"	l
+energyOld	mcdend_v2.c	/^    double energyOld,energyNew,dE;$/;"	l
+energyOld	umbrella.c	/^    double     energyOld,energyNew,dE=0.0;$/;"	l
+energyOld	umbrella.c	/^    double energyOld,energyNew,dE;$/;"	l
+energyOld	widom.c	/^    double     energyOld,energyNew,dE=0.0;$/;"	l
+energysystem1	energy.c	/^    double energysystem1 ;$/;"	l
+energysystem2	energy.c	/^    double energysystem2 ;$/;"	l
+energysystem3	energy.c	/^    double energysystem3 ;$/;"	l
+eps	calc.cpp	/^	double eps,a,b,d;$/;"	l
+eps	calc.cpp	/^    double eps;$/;"	m	struct:__anon12	file:	access:public
+eps	energy.c	/^	double eps,a,b,d;$/;"	l
+eps	system.h	/^    double eps;$/;"	m	struct:__anon6	access:public
+epsLJ	potential.c	/^	double epsLJ=1.0;$/;"	l
+errorbars	widom.c	/^double *averageHist,*averageHistSq,*errorbars,*pairpotential,*dumat;$/;"	v
+ex0	calc.cpp	/^                VecR ex0, ex1;            $/;"	l
+ex1	calc.cpp	/^                VecR ex0, ex1;            $/;"	l
+f1	umbrella.c	/^		double f1 = ((double) (HistSize-h) \/ (double) HistSize);$/;"	l
+f2	umbrella.c	/^		double f2 = ((double) h \/ (double) HistSize);$/;"	l
+f_prefix	mc.c	/^	const char  *f_prefix = "ptcls_"; $/;"	l
+f_prefix	widom.c	/^const char  *f_prefix = "pot_"; $/;"	v
+f_suffix	mc.c	/^	char f_suffix[50];$/;"	l
+f_suffix	mc.c	/^	const char  *f_suffix = ".dat"; $/;"	l
+f_suffix	widom.c	/^const char  *f_suffix = ".dat"; $/;"	v
+fcounter	umbrella.c	/^	static int fcounter=0;$/;"	l	file:
+fene	MCdendeff.c	/^        double morse,fene;$/;"	l
+fene	energy.c	/^    double fene = 0.0;$/;"	l
+fene	energy.c	/^    double morse,fene;$/;"	l
+fileIniConf	system.c	/^char fileIniConf[120];$/;"	v
+filePotential	system.c	/^char filePotential[120];$/;"	v
+filename	mcdend_v2.c	/^    char filename[30];$/;"	l
+filename	umbrella.c	/^	char filename[200];$/;"	l
+filename	widom.c	/^char    filename[100];$/;"	v
+filenameCMass	calc.cpp	/^    stringstream filenameCMass, filenameProps, filenameEigen, filenameOrient, filenameMSD,filenameP2,filenameForceFrame;$/;"	l
+filenameEigen	calc.cpp	/^    stringstream filenameCMass, filenameProps, filenameEigen, filenameOrient, filenameMSD,filenameP2,filenameForceFrame;$/;"	l
+filenameForce	calc.cpp	/^		stringstream filenameForce;$/;"	l
+filenameForceFrame	calc.cpp	/^    stringstream filenameCMass, filenameProps, filenameEigen, filenameOrient, filenameMSD,filenameP2,filenameForceFrame;$/;"	l
+filenameMSD	calc.cpp	/^    stringstream filenameCMass, filenameProps, filenameEigen, filenameOrient, filenameMSD,filenameP2,filenameForceFrame;$/;"	l
+filenameOrient	calc.cpp	/^    stringstream filenameCMass, filenameProps, filenameEigen, filenameOrient, filenameMSD,filenameP2,filenameForceFrame;$/;"	l
+filenameP2	calc.cpp	/^    stringstream filenameCMass, filenameProps, filenameEigen, filenameOrient, filenameMSD,filenameP2,filenameForceFrame;$/;"	l
+filenameP2dist	calc.cpp	/^		stringstream filenameP2dist;$/;"	l
+filenameProps	calc.cpp	/^    stringstream filenameCMass, filenameProps, filenameEigen, filenameOrient, filenameMSD,filenameP2,filenameForceFrame;$/;"	l
+filename_coeff	MCdendeff.c	/^		char filename_lmp[100], filename_coeff[100];$/;"	l
+filename_lmp	MCdendeff.c	/^		char filename_lmp[100], filename_coeff[100];$/;"	l
+fin	calc.cpp	/^    fstream fin;$/;"	l
+find_cmass	umbrella.c	/^void find_cmass(VecR *pos,VecR *com,int N){$/;"	f	signature:(VecR *pos,VecR *com,int N)
+find_cmass	umbrella.c	/^void find_cmass(VecR*,VecR*,int);$/;"	p	file:	signature:(VecR*,VecR*,int)
+first	dendrimers.c	/^    int first, numOfBonds;$/;"	l
+first	dendrimers.c	/^    int first;$/;"	l
+first	moves.c	/^    int first, last;$/;"	l
+first	system.h	/^    struct strMonomer *first;$/;"	m	struct:strCell	typeref:struct:strCell::strMonomer	access:public
+flut	potential.c	/^    double flut,flut1,flut2,t1,t2;$/;"	l
+flut1	potential.c	/^    double flut,flut1,flut2,t1,t2;$/;"	l
+flut2	potential.c	/^    double flut,flut1,flut2,t1,t2;$/;"	l
+fnBB	calc.cpp	/^FeneParams  fnCC,fnCS,fnBB;$/;"	v
+fnBB	system.c	/^FeneParams  fnCC,fnCS,fnBB;$/;"	v
+fnBonds	mcdend_v2.c	/^    char fnIniConfig[40],fnMC[40],fnEnergy[40],fnBonds[40],fnCMass[40];$/;"	l
+fnCC	calc.cpp	/^FeneParams  fnCC,fnCS,fnBB;$/;"	v
+fnCC	system.c	/^FeneParams  fnCC,fnCS,fnBB;$/;"	v
+fnCMass	mcdend_v2.c	/^    char fnIniConfig[40],fnMC[40],fnEnergy[40],fnBonds[40],fnCMass[40];$/;"	l
+fnCS	calc.cpp	/^FeneParams  fnCC,fnCS,fnBB;$/;"	v
+fnCS	system.c	/^FeneParams  fnCC,fnCS,fnBB;$/;"	v
+fnEnergy	mcdend_v2.c	/^    char fnIniConfig[40],fnMC[40],fnEnergy[40],fnBonds[40],fnCMass[40];$/;"	l
+fnIniConfig	mcdend_v2.c	/^    char fnIniConfig[40],fnMC[40],fnEnergy[40],fnBonds[40],fnCMass[40];$/;"	l
+fnMC	mcdend_v2.c	/^    char fnIniConfig[40],fnMC[40],fnEnergy[40],fnBonds[40],fnCMass[40];$/;"	l
+fname	mc.c	/^	char        *fname; \/\/ allocate space for filenames$/;"	l
+fname	widom.c	/^char        *fname; \/\/ allocate space for filenames$/;"	v
+fnameini	mc.c	/^	char         fnameini[120];$/;"	l
+fnameiniPBC	mc.c	/^	char         fnameiniPBC[120];$/;"	l
+force	calc.cpp	/^	double force,rr;$/;"	l
+force	calc.cpp	/^	double force;$/;"	l
+force	energy.c	/^	double force,rr;$/;"	l
+force	energy.c	/^	double force;$/;"	l
+forceCM	calc.cpp	/^	double forceCM; \/\/ force on CMass (for 2 interacting dendrimers only)$/;"	m	struct:__anon10	file:	access:public
+framenum	dendrimers.c	/^	static long int framenum=1;$/;"	l	file:
+frames	calc.cpp	/^long long int frames;$/;"	v
+func	system.h	/^    int     func;$/;"	m	struct:strDendrimer	access:public
+gen	calc.cpp	/^    int    gen,dendid;$/;"	l
+gen	calc.cpp	/^    int dendid, mon, gen, countmonomers;$/;"	l
+gen	calc.cpp	/^    int gen;$/;"	l
+gen	system.h	/^    int     gen;$/;"	m	struct:strDendrimer	access:public
+gen	system.h	/^    int    gen;$/;"	m	struct:strMonomer	access:public
+gyr	dendrimers.c	/^	double *gyr;$/;"	l
+gyrsize	dendrimers.c	/^	const int gyrsize=3;	$/;"	l
+gyrsize	mc.c	/^	const short int gyrsize=3;$/;"	l
+gyrtens	mc.c	/^	double *gyrtens;$/;"	l
+gyrtensorsize	calc.cpp	/^    const  int gyrtensorsize=3;$/;"	l
+gyrtensorsize	calc.cpp	/^    const int gyrtensorsize=3;$/;"	l
+h	calc.cpp	/^    int  m, dpsize, mfirst, mlast, h;$/;"	l
+h	mcdend_v2.c	/^    int    m,h,ngen;$/;"	l
+h	mcdend_v2.c	/^    int    m,h,t;$/;"	l
+histSize	widom.c	/^int     histSize;$/;"	v
+histfilename	calc.cpp	/^    stringstream histfilename;$/;"	l
+i	calc.cpp	/^		int i=0;$/;"	l
+i	mc.c	/^    int  dendid,i;$/;"	l
+i	mc.c	/^    int i,ncycle;$/;"	l
+i	mcdend_v2.c	/^    int    countmon,m,i,mnext,nbond,ngen,Ngf,Ngl;$/;"	l
+i	mcdend_v2.c	/^    int i,j;$/;"	l
+i	widom.c	/^    ULONG i,j;$/;"	l
+id	calc.cpp	/^    int    id;$/;"	m	struct:__anon10	file:	access:public
+id	system.h	/^    int     id;$/;"	m	struct:strDendrimer	access:public
+id	system.h	/^    int    id;$/;"	m	struct:strMonomer	access:public
+ii	calc.cpp	/^    int ii=1;$/;"	l
+inDend	system.h	/^    int    inDend;$/;"	m	struct:strMonomer	access:public
+indend	energy.c	/^    int indend;$/;"	l
+index	calc.cpp	/^    int index =0;$/;"	l
+index	system.h	/^    int index;$/;"	m	struct:strCell	access:public
+infile	calc.cpp	/^    std::ifstream infile;$/;"	l
+infilename	calc.cpp	/^    std::string   infilename, outfilename;$/;"	l
+iniDendDist	system.c	/^double iniDendDist;$/;"	v
+iniDist	calc.cpp	/^		outForce<<showpoint<<showpos<<setw(6)<<setprecision(3)<<iniDist<<" "<<iniDist\/((D.at(0).Rg+D.at(1).Rg)\/2.0)<<" ";$/;"	p	file:	signature:(D.at(0).Rg+D.at(1).Rg)/2.0
+iniDist	calc.cpp	/^	filenameForceFrame<<"F_fr"<<"G"<<G<<"F"<<F<<"d"<<iniDist<<".dat";$/;"	l
+iniDist	calc.cpp	/^    double  iniDist; \/\/ only for interactions between two dendrimers$/;"	l
+iniDist	calc.cpp	/^    filenameCMass<<"CMassn"<<numOfDendrimers<<"G"<<G<<"F"<<F<<"d"<<iniDist<<".dat";$/;"	l
+iniDist	calc.cpp	/^    filenameEigen<<"Eigenn"<<numOfDendrimers<<"G"<<G<<"F"<<F<<"d"<<iniDist<<".dat";$/;"	l
+iniDist	calc.cpp	/^    filenameMSD<<"MSDn"<<numOfDendrimers<<"G"<<G<<"F"<<F<<"d"<<iniDist<<".dat";$/;"	l
+iniDist	calc.cpp	/^    filenameOrient<<"Orientn"<<numOfDendrimers<<"G"<<G<<"F"<<F<<"d"<<iniDist<<".dat";$/;"	l
+iniDist	calc.cpp	/^    filenameP2<<"P2cos"<<numOfDendrimers<<"G"<<G<<"F"<<F<<"d"<<iniDist<<".dat";$/;"	l
+iniDist	calc.cpp	/^    filenameProps<<"Propsn"<<numOfDendrimers<<"G"<<G<<"F"<<F<<"d"<<iniDist<<".dat";$/;"	l
+inputparams	readInput.c	/^    const int inputparams = 30;$/;"	l
+interType	calc.cpp	/^    int    interType;$/;"	m	struct:__anon11	file:	access:public
+interType	calc.cpp	/^    int    interType;$/;"	m	struct:__anon12	file:	access:public
+interType	energy.c	/^	int      interType = -1;$/;"	l
+interType	energy.c	/^	int interType      = -1;$/;"	l
+interType	energy.c	/^	int interType = -1;$/;"	l
+interType	energy.c	/^	int interType =-1;$/;"	l
+interType	energy.c	/^	int interType=-1;$/;"	l
+interType	mcdend_v2.c	/^    int    interType;$/;"	l
+interType	mcdend_v2.c	/^    int interType,bin;$/;"	l
+interType	potential.c	/^	int    interType = -1;$/;"	l
+interType	potential.c	/^	int interType;$/;"	l
+interType	potential.c	/^    int interType,bin;$/;"	l
+interType	potential.c	/^    int interType;$/;"	l
+interType	system.h	/^    int    interType;$/;"	m	struct:__anon5	access:public
+interType	system.h	/^    int    interType;$/;"	m	struct:__anon6	access:public
+interType	widom.c	/^    int     interType =-1;$/;"	l
+intraenergy	mc.c	/^    double intraenergy,dummy;$/;"	l
+inv_rlj	potential.c	/^	double inv_rlj = 1.0\/rlj;$/;"	l
+isfirstrun	mc.c	/^	int    isfirstrun;$/;"	l
+j	mcdend_v2.c	/^    int    j,mnei,m,nbond,typecur,typenei;$/;"	l
+j	mcdend_v2.c	/^    int i,j;$/;"	l
+j	ran250.c	/^    int        j, k;$/;"	l
+j	ran250.c	/^    register int    j;$/;"	l
+j	widom.c	/^    ULONG i,j;$/;"	l
+k	ran250.c	/^    int        j, k;$/;"	l
+k2	calc.cpp	/^    double Rg,b,c,k2;$/;"	m	struct:__anon10	file:	access:public
+k2	calc.cpp	/^    double Rgsq, normadot, b, c, k2, angle;$/;"	l
+k2	system.h	/^	double  b,c,k2,Rgsq;$/;"	m	struct:strDendrimer	access:public
+k2C	calc.cpp	/^    double RgC,bC,cC,k2C;$/;"	m	struct:__anon10	file:	access:public
+k2C	calc.cpp	/^    double RgsqC, bC, cC, k2C,angleC;$/;"	l
+k2S	calc.cpp	/^    double RgS,bS,cS,k2S;$/;"	m	struct:__anon10	file:	access:public
+k2S	calc.cpp	/^    double RgsqS, bS, cS, k2S,angleS;$/;"	l
+largestAxis	calc.cpp	/^    VecR    centralbond, largestAxis;\/\/ central bond vector ,coordinates of largest axis$/;"	l
+last	moves.c	/^    int first, last;$/;"	l
+laxis	calc.cpp	/^    VecR   laxis;$/;"	m	struct:__anon10	file:	access:public
+limit	ran250.c	/^    register unsigned int new_rand, limit;$/;"	l
+line	dendrimers.c	/^    char line[300];$/;"	l
+line	potential.c	/^	char line[250];	$/;"	l
+lower	umbrella.c	/^int     lower,mid,upper;$/;"	v
+m	calc.cpp	/^    int  m, dpsize, mfirst, mlast, h;$/;"	l
+m	energy.c	/^    int    m,nbond,typecur,typenei;$/;"	l
+m	mcdend_v2.c	/^    int    countmon,m,i,mnext,nbond,ngen,Ngf,Ngl;$/;"	l
+m	mcdend_v2.c	/^    int    j,mnei,m,nbond,typecur,typenei;$/;"	l
+m	mcdend_v2.c	/^    int    m,h,ngen;$/;"	l
+m	mcdend_v2.c	/^    int    m,h,t;$/;"	l
+m	mcdend_v2.c	/^    int  m,mtrial,accepted;$/;"	l
+m	mcdend_v2.c	/^    int m;$/;"	l
+main	MCanneal.c	/^int main(int argc, char** argv) {$/;"	f	signature:(int argc, char** argv)
+main	MCdendeff.c	/^int main(int argc, char** argv) {$/;"	f	signature:(int argc, char** argv)
+main	MCinterdend.c	/^int main(int argc, char** argv) {$/;"	f	signature:(int argc, char** argv)
+main	calc.cpp	/^int main(int argc, char** argv) {$/;"	f	signature:(int argc, char** argv)
+main	dummy.c	/^int main(){$/;"	f
+main	iniconfig.c	/^int main(int argc, char** argv) {$/;"	f	signature:(int argc, char** argv)
+main	mcdend_v2.c	/^int main() {$/;"	f
+main	singledend.c	/^int main(int argc, char** argv) {$/;"	f	signature:(int argc, char** argv)
+main	umbrella.c	/^int main(int argc, char** argv) {$/;"	f	signature:(int argc, char** argv)
+main	widom.c	/^int main(int argc, char** argv) {$/;"	f	signature:(int argc, char** argv)
+mask	ran250.c	/^    unsigned int mask;$/;"	l
+mass	dendrimers.c	/^	double mass=1.0;$/;"	l
+maxCDdist	MCdendeff.c	/^        double maxCDdist, dendDist;$/;"	l
+maxRc	system.c	/^double  maxRc;$/;"	v
+mb	energy.c	/^    int mb=0;$/;"	l
+mfirst	calc.cpp	/^    int  m, dpsize, mfirst, mlast, h;$/;"	l
+mid	umbrella.c	/^int     lower,mid,upper;$/;"	v
+mlast	calc.cpp	/^    int  m, dpsize, mfirst, mlast, h;$/;"	l
+mlut	potential.c	/^    double mlut,mlut1,mlut2,t1,t2;$/;"	l
+mlut1	potential.c	/^    double mlut,mlut1,mlut2,t1,t2;$/;"	l
+mlut2	potential.c	/^    double mlut,mlut1,mlut2,t1,t2;$/;"	l
+mnei	mcdend_v2.c	/^    int    j,mnei,m,nbond,typecur,typenei;$/;"	l
+mnext	dendrimers.c	/^    int Ngf, Ngl, mnext, nbond;$/;"	l
+mnext	dendrimers.c	/^    int mnext, nbond, ngen, Ngf, Ngl;$/;"	l
+mnext	mcdend_v2.c	/^    int    countmon,m,i,mnext,nbond,ngen,Ngf,Ngl;$/;"	l
+mnext	mcdend_v2.c	/^    int Ngf,Ngl,mnext,nbond;  \/\/ number of first and last monomer of current generation$/;"	l
+mon	calc.cpp	/^    int dendid, mon, gen, countmonomers;$/;"	l
+mon	calc.cpp	/^    int mon;$/;"	l
+mon	cellLists.c	/^    int  mon;$/;"	l
+mon	cellLists.c	/^    int mon;$/;"	l
+mon	dendrimers.c	/^	int dendid,mon;$/;"	l
+mon	dendrimers.c	/^	int mon;$/;"	l
+mon	dendrimers.c	/^    int dendid, mon;$/;"	l
+mon	dendrimers.c	/^    int mon, nbond;$/;"	l
+mon	dendrimers.c	/^    int mon;$/;"	l
+mon	energy.c	/^    int mon;$/;"	l
+mon	widom.c	/^    int mon;$/;"	l
+mon1	calc.cpp	/^	int mon1,mon2;$/;"	l
+mon1	cellLists.c	/^    int      mon1, mon2;$/;"	l
+mon1	energy.c	/^	int mon1,mon2;$/;"	l
+mon1	energy.c	/^    int     mon1, mon2, nbond;$/;"	l
+mon1	energy.c	/^    int     mon1, mon2;$/;"	l
+mon1	widom.c	/^    int     mon1, mon2;$/;"	l
+mon2	calc.cpp	/^	int mon1,mon2;$/;"	l
+mon2	cellLists.c	/^    int      mon1, mon2;$/;"	l
+mon2	energy.c	/^	int mon1,mon2;$/;"	l
+mon2	energy.c	/^    int      mon2;$/;"	l
+mon2	energy.c	/^    int     mon1, mon2, nbond;$/;"	l
+mon2	energy.c	/^    int     mon1, mon2;$/;"	l
+mon2	widom.c	/^    int     mon1, mon2;$/;"	l
+monBondInterType	dendrimers.c	/^    int monBondInterType;$/;"	l
+moncoords	calc.cpp	/^	vector<VecR> moncoords;$/;"	m	struct:__anon10	file:	access:public
+moncoords	calc.cpp	/^    vector<VecR> moncoords(numOfMonomersInDend);$/;"	p	file:	signature:(numOfMonomersInDend)
+monforce	calc.cpp	/^	vector<VecR> monforce;\/\/ total force acting to monomer$/;"	m	struct:__anon10	file:	access:public
+monmark	dendrimers.c	/^    int monmark = 0;$/;"	l
+monnext	energy.c	/^    int    typem, monnext,typemnext;$/;"	l
+monnext	energy.c	/^    int monnext, typemnext;$/;"	l
+monomer	system.h	/^    struct strMonomer *monomer;$/;"	m	struct:strDendrimer	typeref:struct:strDendrimer::strMonomer	access:public
+monspc	dendrimers.c	/^    int monspc;$/;"	l
+morse	MCdendeff.c	/^        double morse,fene;$/;"	l
+morse	energy.c	/^    double morse =0.0;$/;"	l
+morse	energy.c	/^    double morse,fene;$/;"	l
+msb	ran250.c	/^    unsigned int msb;$/;"	l
+msd	calc.cpp	/^    vector<double> msd(numOfDendrimers,0.0);$/;"	p	file:	signature:(numOfDendrimers,0.0)
+msdCMass	calc.cpp	/^    vector<double> msdCMass(numOfDendrimers,0.0);$/;"	p	file:	signature:(numOfDendrimers,0.0)
+msdMon	calc.cpp	/^    vector<double> msdMon(numOfDendrimers,0.0);$/;"	p	file:	signature:(numOfDendrimers,0.0)
+mtrial	mc.c	/^    int       displ,mtrial,dtrial,accepted;$/;"	l
+mtrial	mc.c	/^    int    displ,mtrial,dtrial,accepted;$/;"	l
+mtrial	mcdend_v2.c	/^    int  m,mtrial,accepted;$/;"	l
+mtrial	umbrella.c	/^    int        displ,mtrial,accepted;$/;"	l
+mtrial	umbrella.c	/^    int        mtrial,dtrial;$/;"	l
+mtrial	widom.c	/^    int        displ,mtrial,accepted;$/;"	l
+myconst	calc.cpp	/^    double myconst, rupper,rlower; \/\/ variables for volume calculation$/;"	l
+myrand	ran250.c	/^static unsigned myrand()$/;"	f	file:
+myrand	ran250.c	/^static unsigned myrand();$/;"	p	file:
+myrint	cellLists.c	/^static double myrint(double x) {$/;"	f	file:	signature:(double x)
+mysrand	ran250.c	/^static void mysrand(unsigned newseed)$/;"	f	file:	signature:(unsigned newseed)
+mysrand	ran250.c	/^static void mysrand(unsigned newseed);$/;"	p	file:	signature:(unsigned newseed)
+n	mcdend_v2.c	/^    int n,c,cyz,numofCells;$/;"	l
+nbond	dendrimers.c	/^    int Ngf, Ngl, mnext, nbond;$/;"	l
+nbond	dendrimers.c	/^    int mnext, nbond, ngen, Ngf, Ngl;$/;"	l
+nbond	dendrimers.c	/^    int mon, nbond;$/;"	l
+nbond	energy.c	/^    int     mon1, mon2, nbond;$/;"	l
+nbond	energy.c	/^    int    dend, nbond;$/;"	l
+nbond	energy.c	/^    int    m,nbond,typecur,typenei;$/;"	l
+nbond	energy.c	/^    int nbond;$/;"	l
+nbond	mcdend_v2.c	/^    int    countmon,m,i,mnext,nbond,ngen,Ngf,Ngl;$/;"	l
+nbond	mcdend_v2.c	/^    int    j,mnei,m,nbond,typecur,typenei;$/;"	l
+nbond	mcdend_v2.c	/^    int Ngf,Ngl,mnext,nbond;  \/\/ number of first and last monomer of current generation$/;"	l
+ncycle	mc.c	/^    int i,ncycle;$/;"	l
+ncycle	umbrella.c	/^	ULONG      ncycle;$/;"	l
+ndend	energy.c	/^    int ndend, nmon;$/;"	l
+nei	cellLists.c	/^    int      cindex, nei;$/;"	l
+nei	cellLists.c	/^    int  neix, neiy, neiz, nei;$/;"	l
+nei	cellLists.c	/^    int nei, cindex;$/;"	l
+nei	energy.c	/^    int      cindex, nei;$/;"	l
+neighbours	system.h	/^    int neighbours[125];$/;"	m	struct:strCell	access:public
+neix	cellLists.c	/^    int  neix, neiy, neiz, nei;$/;"	l
+neiy	cellLists.c	/^    int  neix, neiy, neiz, nei;$/;"	l
+neiz	cellLists.c	/^    int  neix, neiy, neiz, nei;$/;"	l
+newNpos	mc.c	/^    VecR   *poldPBCpos, newPBCpos, *poldNpos,newNpos;$/;"	l
+newNpos	umbrella.c	/^    VecR      *poldPBCpos, newPBCpos, *poldNpos,newNpos;$/;"	l
+newPBCpos	mc.c	/^    VecR   *poldPBCpos, newPBCpos, *poldNpos,newNpos;$/;"	l
+newPBCpos	umbrella.c	/^    VecR      *poldPBCpos, newPBCpos, *poldNpos,newNpos;$/;"	l
+newPos	mcdend_v2.c	/^    VecR *oldPos,newPos;$/;"	l
+newPos	umbrella.c	/^    VecR      *poldPos,newPos;$/;"	l
+newPos	widom.c	/^    VecR      *poldPos,newPos;$/;"	l
+new_rand	ran250.c	/^    register unsigned int new_rand, limit;$/;"	l
+new_rand	ran250.c	/^    register unsigned int new_rand;$/;"	l
+next	system.h	/^    struct strMonomer *next;$/;"	m	struct:strMonomer	typeref:struct:strMonomer::strMonomer	access:public
+nextfilenum	mc.c	/^	int          curfilenum=0,nextfilenum=0; $/;"	l
+nextfilenum	widom.c	/^int          curfilenum=0,nextfilenum=0; $/;"	v
+ngen	dendrimers.c	/^    int mnext, nbond, ngen, Ngf, Ngl;$/;"	l
+ngen	mcdend_v2.c	/^    int    countmon,m,i,mnext,nbond,ngen,Ngf,Ngl;$/;"	l
+ngen	mcdend_v2.c	/^    int    m,h,ngen;$/;"	l
+nmon	energy.c	/^    int ndend, nmon;$/;"	l
+norm	calc.cpp	/^            double norm;$/;"	l
+normFac	calc.cpp	/^        outHist<<" "<<dummyhist*normFac;$/;"	l
+normFac	calc.cpp	/^    double r,vb,normFac;$/;"	l
+normFac	mcdend_v2.c	/^    double vb,normFac;$/;"	l
+norma01	calc.cpp	/^			double norma01,norma10;$/;"	l
+norma01	energy.c	/^	double norma01,norma10;$/;"	l
+norma10	calc.cpp	/^			double norma01,norma10;$/;"	l
+norma10	energy.c	/^	double norma01,norma10;$/;"	l
+normadot	calc.cpp	/^    double Rgsq, normadot, b, c, k2, angle;$/;"	l
+normadotvCMass0	calc.cpp	/^                    double normadotvCMass0, normadotvCMass1;$/;"	l
+normadotvCMass1	calc.cpp	/^                    double normadotvCMass0, normadotvCMass1;$/;"	l
+npos	system.h	/^    VecR   npos; \/\/ pointer uncorrected positions$/;"	m	struct:strMonomer	access:public
+numOfBonds	dendrimers.c	/^    int first, numOfBonds;$/;"	l
+numOfBonds	dendrimers.c	/^    int numOfBonds;$/;"	l
+numOfBonds	system.h	/^    int    numOfBonds;$/;"	m	struct:strMonomer	access:public
+numOfDendPairs	calc.cpp	/^    const int numOfDendPairs=numOfDendrimers*(numOfDendrimers-1)\/2;;$/;"	l
+numOfDendrimers	calc.cpp	/^int    numOfDendrimers, G, F, pottype;$/;"	v
+numOfDendrimers	system.c	/^int    numOfDendrimers;$/;"	v
+numOfElements	system.h	/^    int numOfElements;$/;"	m	struct:strCell	access:public
+numOfFramesFile	mc.c	/^							unsigned int numOfFramesFile;$/;"	l
+numOfFramesFile	mc.c	/^					unsigned int numOfFramesFile;$/;"	l
+numOfInParams	iniconfig.c	/^    int numOfInParams = 2;$/;"	l
+numOfIniConfigFiles	system.c	/^int    numOfIniConfigFiles;$/;"	v
+numOfMonGen	system.h	/^    int     *numOfMonGen;$/;"	m	struct:strDendrimer	access:public
+numOfMonomers	system.h	/^    int     numOfMonomers;$/;"	m	struct:strDendrimer	access:public
+numOfMonomersInDend	calc.cpp	/^    int    numOfMonomersInDend,numOfTotalMonomers;$/;"	l
+numOfMonomersInDend	dendrimers.c	/^	int numOfMonomersInDend = pD->numOfMonomers;$/;"	l
+numOfMonomersInDend	system.c	/^int    numOfMonomersInDend;$/;"	v
+numOfNeigh	system.h	/^    int numOfNeigh;$/;"	m	struct:strCell	access:public
+numOfTotalBonds	system.c	/^int	   numOfTotalBonds;$/;"	v
+numOfTotalMonomers	calc.cpp	/^    int    numOfMonomersInDend,numOfTotalMonomers;$/;"	l
+numOfTotalMonomers	system.c	/^int    numOfTotalMonomers;$/;"	v
+numOfTotalParams	umbrella.c	/^int     numOfTotalParams=16;$/;"	v
+numOfTotalParams	widom.c	/^int     numOfTotalParams=10;$/;"	v
+numOfXYZfiles	system.c	/^int    numOfXYZfiles;$/;"	v
+numofCells	mcdend_v2.c	/^    int n,c,cyz,numofCells;$/;"	l
+numofCoreMons	calc.cpp	/^vector<int>numofCoreMons (numOfDendrimers,0);$/;"	p	file:	signature:(numOfDendrimers,0)
+numofMonGen	calc.cpp	/^vector< vector<int> >  numofMonGen;$/;"	v
+numofShellMons	calc.cpp	/^vector<int>numofShellMons(numOfDendrimers,0);$/;"	p	file:	signature:(numOfDendrimers,0)
+numofmons	calc.cpp	/^    int numofmons = pvcoords.size();$/;"	l
+numtotmon	widom.c	/^    int numtotmon;$/;"	l
+ok	mcdend_v2.c	/^    int    ok=0;$/;"	l
+oldPos	mcdend_v2.c	/^    VecR *oldPos,newPos;$/;"	l
+open	calc.cpp	/^		outForce.open(filenameForce.str().c_str(),std::ios::app);$/;"	p	file:	signature:(filenameForce.str().c_str(),std::ios::app)
+open	calc.cpp	/^		outP2dist.open(filenameP2dist.str().c_str(),std::ios::app);$/;"	p	file:	signature:(filenameP2dist.str().c_str(),std::ios::app)
+open	calc.cpp	/^	outForceFrame.open(filenameForceFrame.str().c_str(),std::ios::out);$/;"	p	file:	signature:(filenameForceFrame.str().c_str(),std::ios::out)
+open	calc.cpp	/^    fin.open(filename.c_str(), ios::in);$/;"	p	file:	signature:(filename.c_str(), ios::in)
+open	calc.cpp	/^    infile.open(infilename.c_str(),std::ios::in);$/;"	p	file:	signature:(infilename.c_str(),std::ios::in)
+open	calc.cpp	/^    out.open(charfilename,std::ios::app);$/;"	p	file:	signature:(charfilename,std::ios::app)
+open	calc.cpp	/^    outCMass.open(filenameCMass.str().c_str(),std::ios::out);$/;"	p	file:	signature:(filenameCMass.str().c_str(),std::ios::out)
+open	calc.cpp	/^    outEigen.open(filenameEigen.str().c_str(),std::ios::out);$/;"	p	file:	signature:(filenameEigen.str().c_str(),std::ios::out)
+open	calc.cpp	/^    outHist.open(histfilename.str().c_str(),std::ios::out);$/;"	p	file:	signature:(histfilename.str().c_str(),std::ios::out)
+open	calc.cpp	/^    outMSD.open(filenameMSD.str().c_str(),std::ios::out);$/;"	p	file:	signature:(filenameMSD.str().c_str(),std::ios::out)
+open	calc.cpp	/^    outOrient.open(filenameOrient.str().c_str(),std::ios::out);$/;"	p	file:	signature:(filenameOrient.str().c_str(),std::ios::out)
+open	calc.cpp	/^    outP2.open(filenameP2.str().c_str(),std::ios::out);$/;"	p	file:	signature:(filenameP2.str().c_str(),std::ios::out)
+open	calc.cpp	/^    outProps.open(filenameProps.str().c_str(),std::ios::out);$/;"	p	file:	signature:(filenameProps.str().c_str(),std::ios::out)
+open	calc.cpp	/^    outbc.open(outfilename.c_str(),std::ios::app);$/;"	p	file:	signature:(outfilename.c_str(),std::ios::app)
+orderPair	calc.cpp	/^	vector< vector<int> > orderPair(numOfDendPairs,vector<int>(2,0));\/\/ order[pair][0]=dend0 of pair ; order[pair][1]=dend1 of pair; initialized in CalcP2$/;"	p	file:	signature:(numOfDendPairs,vector<int>(2,0))
+out	calc.cpp	/^    std::ofstream out;$/;"	l
+outCMass	calc.cpp	/^    std::ofstream outrun,outbc, outCMass, outProps, outEigen, outOrient, outMSD, outP2,outForceFrame;$/;"	l
+outEigen	calc.cpp	/^    std::ofstream outrun,outbc, outCMass, outProps, outEigen, outOrient, outMSD, outP2,outForceFrame;$/;"	l
+outForce	calc.cpp	/^		ofstream outForce;$/;"	l
+outForceFrame	calc.cpp	/^    std::ofstream outrun,outbc, outCMass, outProps, outEigen, outOrient, outMSD, outP2,outForceFrame;$/;"	l
+outHist	calc.cpp	/^    ofstream     outHist;$/;"	l
+outMSD	calc.cpp	/^    std::ofstream outrun,outbc, outCMass, outProps, outEigen, outOrient, outMSD, outP2,outForceFrame;$/;"	l
+outOrient	calc.cpp	/^    std::ofstream outrun,outbc, outCMass, outProps, outEigen, outOrient, outMSD, outP2,outForceFrame;$/;"	l
+outP2	calc.cpp	/^    std::ofstream outrun,outbc, outCMass, outProps, outEigen, outOrient, outMSD, outP2,outForceFrame;$/;"	l
+outP2dist	calc.cpp	/^		ofstream outP2dist;$/;"	l
+outProps	calc.cpp	/^    std::ofstream outrun,outbc, outCMass, outProps, outEigen, outOrient, outMSD, outP2,outForceFrame;$/;"	l
+outbc	calc.cpp	/^    std::ofstream outrun,outbc, outCMass, outProps, outEigen, outOrient, outMSD, outP2,outForceFrame;$/;"	l
+outfilename	calc.cpp	/^    std::string   infilename, outfilename;$/;"	l
+outfilename	umbrella.c	/^char    outfilename[100];$/;"	v
+outputCoords	calc.cpp	/^void outputCoords(const vector<VecR>& ,const char *);$/;"	p	file:	signature:(const vector<VecR>& ,const char *)
+outputCoords	calc.cpp	/^void outputCoords(const vector<VecR>& rvcoords,const char *charfilename){$/;"	f	signature:(const vector<VecR>& rvcoords,const char *charfilename)
+outrun	calc.cpp	/^    std::ofstream outrun,outbc, outCMass, outProps, outEigen, outOrient, outMSD, outP2,outForceFrame;$/;"	l
+pD	dendrimers.c	/^    Dendrimer *pD;$/;"	l
+pDp	mcdend_v2.c	/^    FILE  *pDp;$/;"	l
+pFile	dendrimers.c	/^	FILE *pFile;$/;"	l
+pFileDends	mc.c	/^    FILE *pFileDends;$/;"	l
+pFileDends	umbrella.c	/^	FILE *pFileDends       ;$/;"	l
+pFileEnergy	mc.c	/^    FILE *pFileEnergy;$/;"	l
+pFileEnergy	umbrella.c	/^	FILE *pFileEnergy      ;$/;"	l
+pFileEquilEnergy	mc.c	/^	FILE *pFileEquilEnergy;$/;"	l
+pFileGyrTens	mc.c	/^	FILE *pFileGyrTens;$/;"	l
+pFileGyrTens	umbrella.c	/^	FILE *pFileGyrTens     ;$/;"	l
+pFileIntraEnergy	mc.c	/^    FILE *pFileIntraEnergy;$/;"	l
+pFileIntraEnergy	umbrella.c	/^	FILE *pFileIntraEnergy ;$/;"	l
+pFileXYZ	mc.c	/^    FILE        *pFileXYZ;    $/;"	l
+pFileXYZ	mc.c	/^    FILE *pFileXYZ;    $/;"	l
+pFileXYZ	umbrella.c	/^    FILE *pFileXYZ         ;    $/;"	l
+pInFile	dendrimers.c	/^    FILE *pInFile;$/;"	l
+pInFile	readInput.c	/^    FILE *pInFile;$/;"	l
+pInFile	umbrella.c	/^    FILE *pInFile;$/;"	l
+pInFile	widom.c	/^    FILE *pInFile;$/;"	l
+pMrsPrms	mcdend_v2.c	/^    MorseParams *pMrsPrms;$/;"	l
+pOutFile	cellLists.c	/^    FILE *pOutFile;$/;"	l
+pOutFile	dendrimers.c	/^	FILE *pOutFile;$/;"	l
+pOutFile	potential.c	/^    FILE  *pOutFile=NULL;$/;"	l
+pOutFile	potential.c	/^    FILE *pOutFile;$/;"	l
+pOutFile	potential.c	/^    FILE *pOutFile=NULL;$/;"	l
+pTest	mcdend_v2.c	/^    FILE *pTest;$/;"	l
+pair	calc.cpp	/^int pair(int i,int j,int NN){$/;"	f	signature:(int i,int j,int NN)
+pairpotential	widom.c	/^double *averageHist,*averageHistSq,*errorbars,*pairpotential,*dumat;$/;"	v
+pb	dendrimers.c	/^	Monomer   *pm,*pb;$/;"	l
+pb	dendrimers.c	/^    Monomer *pm, *pb;$/;"	l
+pb	energy.c	/^    Monomer   *pb, *pmnext; \/\/ current and bonded monomer$/;"	l
+pb	energy.c	/^    Monomer   *pb;$/;"	l
+pb	energy.c	/^    Monomer *pm1, *pm2, *pb;$/;"	l
+pcell	cellLists.c	/^    Cell *pcell = cells + cellindex;$/;"	l
+pcell	cellLists.c	/^    Cell *pcell;$/;"	l
+pcell	cellLists.c	/^    Cell *pcell=cells+cellindex;\/\/ &cells[cellindex]$/;"	l
+pcell1	cellLists.c	/^    Cell    *pcell1,*pcell2;$/;"	l
+pcell1	energy.c	/^    Cell     *pcell1,*pcell2;$/;"	l
+pcell2	cellLists.c	/^    Cell    *pcell1,*pcell2;$/;"	l
+pcell2	energy.c	/^    Cell     *pcell1,*pcell2;$/;"	l
+pd	MCanneal.c	/^		Dendrimer *pd;$/;"	l
+pd	MCinterdend.c	/^		Dendrimer *pd;$/;"	l
+pd	cellLists.c	/^    Dendrimer *pd;$/;"	l
+pd	dendrimers.c	/^			Dendrimer *pd=dendrimer+dendid;$/;"	l
+pd	dendrimers.c	/^	Dendrimer *pd;$/;"	l
+pd	dendrimers.c	/^	Dendrimer* pd;$/;"	l
+pd	dendrimers.c	/^    Dendrimer *pd;$/;"	l
+pd	energy.c	/^    Dendrimer *pd;$/;"	l
+pd	initialize.c	/^    Dendrimer *pd=NULL;$/;"	l
+pd	mc.c	/^    Dendrimer *pd;$/;"	l
+pd	moves.c	/^        Dendrimer *pd = &dendrimer[pm->inDend];$/;"	l
+pd	moves.c	/^    Dendrimer *pd;$/;"	l
+pd	singledend.c	/^    Dendrimer *pd =dendrimer;$/;"	l
+pd	umbrella.c	/^    Dendrimer *pd;$/;"	l
+pd	widom.c	/^    Dendrimer *pd;$/;"	l
+pd1	MCdendeff.c	/^        Dendrimer *pd1=NULL;$/;"	l
+pd1	energy.c	/^    Dendrimer *pd1,*pd2;$/;"	l
+pd2	MCdendeff.c	/^        Dendrimer *pd2=NULL;$/;"	l
+pd2	energy.c	/^    Dendrimer *pd1,*pd2;$/;"	l
+pdnext	mc.c	/^    Dendrimer *pdnext;$/;"	l
+pdnext	umbrella.c	/^	Dendrimer *pdnext;	$/;"	l
+pf	MCdendeff.c	/^		FILE *pf;$/;"	l
+pf	singledend.c	/^	FILE *pf;$/;"	l
+pfBonds	initialize.c	/^    FILE *pfBonds=fopen("bonds.dat","w");$/;"	l
+pfene	energy.c	/^    FeneParams  *pfene = NULL;$/;"	l
+pfene	energy.c	/^    FeneParams *pfene;$/;"	l
+pfene	energy.c	/^    FeneParams *pfene=NULL;$/;"	l
+pfene	potential.c	/^    FeneParams *pfene;$/;"	l
+pfile	widom.c	/^    FILE *pfile;$/;"	l
+pfile	widom.c	/^FILE        *pfile;    $/;"	v
+pfn	energy.c	/^    FeneParams *pfn;$/;"	l
+pfn	mcdend_v2.c	/^    FeneParams *pfn;$/;"	l
+pfn	potential.c	/^    FeneParams *pfn;$/;"	l
+pinfile	potential.c	/^	FILE* pinfile;$/;"	l
+pm	cellLists.c	/^    Monomer   *pm;$/;"	l
+pm	cellLists.c	/^    struct strMonomer* pm;$/;"	l
+pm	dendrimers.c	/^				Monomer *pm=(pd->monomer)+mon;$/;"	l
+pm	dendrimers.c	/^	Monomer   *pm,*pb;$/;"	l
+pm	dendrimers.c	/^	Monomer *pm;$/;"	l
+pm	dendrimers.c	/^    Monomer *pm, *pb;$/;"	l
+pm	dendrimers.c	/^    Monomer *pm;$/;"	l
+pm	energy.c	/^    Monomer *pm;$/;"	l
+pm	mc.c	/^    Monomer   *pm;$/;"	l
+pm	mc.c	/^    Monomer *pm;$/;"	l
+pm	umbrella.c	/^    Monomer   *pm;$/;"	l
+pm	widom.c	/^    Monomer   *pm;$/;"	l
+pm1	energy.c	/^	Monomer *pm1,*pm2;$/;"	l
+pm1	energy.c	/^    Monomer *pm1, *pm2, *pb;$/;"	l
+pm1	energy.c	/^    Monomer *pm1, *pm2;$/;"	l
+pm2	energy.c	/^	Monomer *pm1,*pm2;$/;"	l
+pm2	energy.c	/^    Monomer *pm1, *pm2, *pb;$/;"	l
+pm2	energy.c	/^    Monomer *pm1, *pm2;$/;"	l
+pmnei	energy.c	/^    Monomer *pmnei;$/;"	l
+pmnext	energy.c	/^    Monomer   *pb, *pmnext; \/\/ current and bonded monomer$/;"	l
+pmnext	energy.c	/^    Monomer *pmnext;$/;"	l
+pmnext	moves.c	/^    Monomer   *pmnext;$/;"	l
+pmon	MCdendeff.c	/^        struct strMonomer* pmon;$/;"	l
+pmon	cellLists.c	/^    Monomer *pmon;$/;"	l
+pmon	energy.c	/^    struct strMonomer* pmon;$/;"	l
+pmon1	cellLists.c	/^    Monomer *pmon1 ,*pmon2;$/;"	l
+pmon2	cellLists.c	/^    Monomer *pmon1 ,*pmon2;$/;"	l
+pmon2	energy.c	/^    Monomer  *pmon2;$/;"	l
+pmorse	potential.c	/^    MorseParams *pmorse;$/;"	l
+pmrs	calc.cpp	/^	MorseParams* pmrs;$/;"	l
+pmrs	cellLists.c	/^    MorseParams *pmrs;$/;"	l
+pmrs	energy.c	/^	MorseParams* pmrs;$/;"	l
+pmrs	energy.c	/^    MorseParams *pmrs  = NULL;$/;"	l
+pmrs	energy.c	/^    MorseParams *pmrs;$/;"	l
+pmrs	energy.c	/^    MorseParams* pmrs = NULL;$/;"	l
+pmrs	energy.c	/^    MorseParams* pmrs =NULL;$/;"	l
+pmrs	mcdend_v2.c	/^    MorseParams *pmrs;$/;"	l
+pmrs	widom.c	/^    MorseParams *pmrs;$/;"	l
+pnext	cellLists.c	/^    struct strMonomer *pprevious,*pnext;$/;"	l
+poldNpos	mc.c	/^    VecR   *poldPBCpos, newPBCpos, *poldNpos,newNpos;$/;"	l
+poldNpos	umbrella.c	/^    VecR      *poldPBCpos, newPBCpos, *poldNpos,newNpos;$/;"	l
+poldPBCpos	mc.c	/^    VecR   *poldPBCpos, newPBCpos, *poldNpos,newNpos;$/;"	l
+poldPBCpos	umbrella.c	/^    VecR      *poldPBCpos, newPBCpos, *poldNpos,newNpos;$/;"	l
+poldPos	umbrella.c	/^    VecR      *poldPos,newPos;$/;"	l
+poldPos	widom.c	/^    VecR      *poldPos,newPos;$/;"	l
+pos	system.h	/^    VecR   pos;$/;"	m	struct:strMonomer	access:public
+pos0	umbrella.c	/^	VecR *pos0 = (VecR*)malloc(numOfMonomersInDend*sizeof(VecR));$/;"	l
+pos1	umbrella.c	/^	VecR *pos1 = (VecR*)malloc(numOfMonomersInDend*sizeof(VecR));	$/;"	l
+pot	potential.c	/^	double pot[N_TYPE_FENE];$/;"	l
+pot	potential.c	/^	double pot[N_TYPE_MORSE];$/;"	l
+potexact	potential.c	/^	double potexact[N_TYPE_FENE];$/;"	l
+potexact	potential.c	/^	double potexact[N_TYPE_MORSE];$/;"	l
+pottype	calc.cpp	/^int    numOfDendrimers, G, F, pottype;$/;"	v
+poutbackfile	umbrella.c	/^	FILE *poutfile,*poutbackfile; $/;"	l
+poutfile	umbrella.c	/^	FILE *poutfile,*poutbackfile; $/;"	l
+pprevious	cellLists.c	/^    struct strMonomer *pprevious,*pnext;$/;"	l
+pprevious	cellLists.c	/^    struct strMonomer *pprevious;$/;"	l
+previous	system.h	/^    struct strMonomer *previous;$/;"	m	struct:strMonomer	typeref:struct:strMonomer::strMonomer	access:public
+propCounter	mcdend_v2.c	/^    static int propCounter=1;$/;"	l	file:
+pvecr	calc.cpp	/^        VecR *pvecr,tmpvcr;$/;"	l
+quatRot	calc.cpp	/^    Quat   quatRot;$/;"	l
+r	calc.cpp	/^    double r,vb,normFac;$/;"	l
+r	calc.cpp	/^    double r,vb;$/;"	l
+r	calc.cpp	/^    outHist<<setw(13)<<setprecision(6)<<scientific<<r;$/;"	l
+r	energy.c	/^    double r,r2;$/;"	l
+r	mcdend_v2.c	/^    double r,r2;$/;"	l
+r	mcdend_v2.c	/^    double r,rg;$/;"	l
+r	mcdend_v2.c	/^    double r,vb;$/;"	l
+r	mcdend_v2.c	/^    double rr,r,rg;$/;"	l
+r	widom.c	/^    double r;$/;"	l
+r2	energy.c	/^    double r,r2;$/;"	l
+r2	mcdend_v2.c	/^    double r,r2;$/;"	l
+r2	mcdend_v2.c	/^    double radius,tol,r2;$/;"	l
+r250	ran250.c	/^unsigned int r250()$/;"	f
+r250	ran250.h	/^unsigned int r250(void);$/;"	p	signature:(void)
+r250_buffer	ran250.c	/^static unsigned int r250_buffer[250] = {$/;"	v	file:
+r250_index	ran250.c	/^static int r250_index = 0;$/;"	v	file:
+r250_init	ran250.c	/^void r250_init(int seed)$/;"	f	signature:(int seed)
+r250_init	ran250.h	/^void r250_init(int seed);$/;"	p	signature:(int seed)
+r250n	ran250.c	/^unsigned int r250n(unsigned n)$/;"	f	signature:(unsigned n)
+r250n	ran250.h	/^unsigned int r250n(unsigned n);$/;"	p	signature:(unsigned n)
+rNext	system.h	/^    double  rNext;  \/\/ distance of next monomer$/;"	m	struct:strDendrimer	access:public
+rad	system.h	/^    double rad; \/\/ radius for vmd$/;"	m	struct:strMonomer	access:public
+radius	calc.cpp	/^    double radius;$/;"	l
+radius	dendrimers.c	/^    double radius;$/;"	l
+radius	mcdend_v2.c	/^    double radius,tol,r2;$/;"	l
+radius	mcdend_v2.c	/^    double radius;$/;"	l
+radius	moves.c	/^    double radius;$/;"	l
+radius	umbrella.c	/^	double radius,rr,rr_n;$/;"	l
+radius	umbrella.c	/^double radius;$/;"	v
+radius	widom.c	/^    double radius;$/;"	l
+ran1	calc.cpp	/^    double ran1, ran2, ransq, ranh;$/;"	l
+ran1	mcdend_v2.c	/^    double ran1,ran2,ransq,ranh;$/;"	l
+ran1	moves.c	/^    double ran1, ran2, ransq, ranh;$/;"	l
+ran2	calc.cpp	/^    double ran1, ran2, ransq, ranh;$/;"	l
+ran2	mcdend_v2.c	/^    double ran1,ran2,ransq,ranh;$/;"	l
+ran2	moves.c	/^    double ran1, ran2, ransq, ranh;$/;"	l
+ranh	calc.cpp	/^    double ran1, ran2, ransq, ranh;$/;"	l
+ranh	mcdend_v2.c	/^    double ran1,ran2,ransq,ranh;$/;"	l
+ranh	moves.c	/^    double ran1, ran2, ransq, ranh;$/;"	l
+raninterval	umbrella.c	/^static double raninterval(double dblmin,double dblmax){$/;"	f	file:	signature:(double dblmin,double dblmax)
+raninterval	umbrella.c	/^static double raninterval(double,double);$/;"	p	file:	signature:(double,double)
+ransq	calc.cpp	/^    double ran1, ran2, ransq, ranh;$/;"	l
+ransq	mcdend_v2.c	/^    double ran1,ran2,ransq,ranh;$/;"	l
+ransq	moves.c	/^    double ran1, ran2, ransq, ranh;$/;"	l
+ranvecr	umbrella.c	/^    VecR vecr0, vecr1, ranvecr,dr;$/;"	l
+rbin	mcdend_v2.c	/^                double weight,rbin;$/;"	l
+rbin	potential.c	/^    double weight,rbin;$/;"	l
+readfreq	calc.cpp	/^    int readfreq=1; \/\/ read ever readfreqframe$/;"	l
+readfromarray	potential.c	/^double readfromarray(double r,double x[],double y[],const int numlines){$/;"	f	signature:(double r,double x[],double y[],const int numlines)
+readfromarray	system.h	/^double readfromarray(double ,double [],double [],const int);$/;"	p	signature:(double ,double [],double [],const int)
+readtoarray	potential.c	/^void readtoarray(const char infilename[],double x[],double y[],int *numlines){$/;"	f	signature:(const char infilename[],double x[],double y[],int *numlines)
+readtoarray	system.h	/^void   readtoarray(const char [],double [],double [],int*);$/;"	p	signature:(const char [],double [],double [],int*)
+ref	dummy.c	/^    VecR ref={3.0,3.0,3.0};$/;"	l
+refCMass	calc.cpp	/^    vector<VecR> refCMass(numOfDendrimers);$/;"	p	file:	signature:(numOfDendrimers)
+refcoords	calc.cpp	/^    vector< vector<VecR> > refcoords(numOfDendrimers,vector<VecR> (numOfMonomersInDend));$/;"	p	file:	signature:(numOfDendrimers,vector<VecR> (numOfMonomersInDend))
+resize	calc.cpp	/^		D.at(dd).monforce.resize(numOfMonomersInDend);$/;"	p	file:	signature:(numOfMonomersInDend)
+resize	calc.cpp	/^	  sumRg.resize(numOfDendrimers,0.0);$/;"	p	file:	signature:(numOfDendrimers,0.0)
+resize	calc.cpp	/^	  sumRgC.resize(numOfDendrimers,0.0);$/;"	p	file:	signature:(numOfDendrimers,0.0)
+resize	calc.cpp	/^	  sumRgS.resize(numOfDendrimers,0.0);$/;"	p	file:	signature:(numOfDendrimers,0.0)
+resize	calc.cpp	/^	 averRg.resize(numOfDendrimers,0.0);$/;"	p	file:	signature:(numOfDendrimers,0.0)
+resize	calc.cpp	/^	 averRgC.resize(numOfDendrimers,0.0);$/;"	p	file:	signature:(numOfDendrimers,0.0)
+resize	calc.cpp	/^	 averRgS.resize(numOfDendrimers,0.0);$/;"	p	file:	signature:(numOfDendrimers,0.0)
+resize	calc.cpp	/^	numofCoreMons.resize(numOfDendrimers); $/;"	p	file:	signature:(numOfDendrimers)
+resize	calc.cpp	/^	numofShellMons.resize(numOfDendrimers); $/;"	p	file:	signature:(numOfDendrimers)
+resize	calc.cpp	/^	sumsqRg.resize(numOfDendrimers,0.0);$/;"	p	file:	signature:(numOfDendrimers,0.0)
+resize	calc.cpp	/^	sumsqRgC.resize(numOfDendrimers,0.0);$/;"	p	file:	signature:(numOfDendrimers,0.0)
+resize	calc.cpp	/^	sumsqRgS.resize(numOfDendrimers,0.0);$/;"	p	file:	signature:(numOfDendrimers,0.0)
+resize	calc.cpp	/^      sumb.resize(numOfDendrimers,0.0);$/;"	p	file:	signature:(numOfDendrimers,0.0)
+resize	calc.cpp	/^      sumbC.resize(numOfDendrimers,0.0);$/;"	p	file:	signature:(numOfDendrimers,0.0)
+resize	calc.cpp	/^      sumbS.resize(numOfDendrimers,0.0);$/;"	p	file:	signature:(numOfDendrimers,0.0)
+resize	calc.cpp	/^      sumc.resize(numOfDendrimers,0.0);$/;"	p	file:	signature:(numOfDendrimers,0.0)
+resize	calc.cpp	/^      sumcC.resize(numOfDendrimers,0.0);$/;"	p	file:	signature:(numOfDendrimers,0.0)
+resize	calc.cpp	/^      sumcS.resize(numOfDendrimers,0.0);$/;"	p	file:	signature:(numOfDendrimers,0.0)
+resize	calc.cpp	/^    numofMonGen.resize(numOfDendrimers);$/;"	p	file:	signature:(numOfDendrimers)
+resize	calc.cpp	/^    sumsqb.resize(numOfDendrimers,0.0);$/;"	p	file:	signature:(numOfDendrimers,0.0)
+resize	calc.cpp	/^    sumsqbC.resize(numOfDendrimers,0.0);$/;"	p	file:	signature:(numOfDendrimers,0.0)
+resize	calc.cpp	/^    sumsqbS.resize(numOfDendrimers,0.0);$/;"	p	file:	signature:(numOfDendrimers,0.0)
+resize	calc.cpp	/^    sumsqc.resize(numOfDendrimers,0.0);$/;"	p	file:	signature:(numOfDendrimers,0.0)
+resize	calc.cpp	/^    sumsqcC.resize(numOfDendrimers,0.0);$/;"	p	file:	signature:(numOfDendrimers,0.0)
+resize	calc.cpp	/^    sumsqcS.resize(numOfDendrimers,0.0);$/;"	p	file:	signature:(numOfDendrimers,0.0)
+result	MCdendeff.c	/^        double result = 0.0;$/;"	l
+result	calc.cpp	/^	double 	result=0.0;$/;"	l
+result	calc.cpp	/^	double result=0.0;$/;"	l
+result	calc.cpp	/^	int result=-1;$/;"	l
+result	calc.cpp	/^    double result =   (va.x)*(vb.x)+(va.y)*(vb.y)+(va.z)*(vb.z);$/;"	l
+result	cellLists.c	/^    double   result=0.0;$/;"	l
+result	dendrimers.c	/^    int result = FALSE;$/;"	l
+result	energy.c	/^	double 	result=0.0;$/;"	l
+result	energy.c	/^    double   result=0.0;$/;"	l
+result	energy.c	/^    double  result, rsq;$/;"	l
+result	energy.c	/^    double  rsq, result;$/;"	l
+result	energy.c	/^    double result = 0.0;$/;"	l
+result	energy.c	/^    double result =0.0;$/;"	l
+result	energy.c	/^    double rsq, result =0.0;$/;"	l
+result	energy.c	/^    double rsq,result;$/;"	l
+result	widom.c	/^    double  rsq, result;$/;"	l
+rg	dendrimers.c	/^    double rg, rg2;$/;"	l
+rg	mcdend_v2.c	/^    double r,rg;$/;"	l
+rg	mcdend_v2.c	/^    double rr,r,rg;$/;"	l
+rg	widom.c	/^    double rg, rg2;$/;"	l
+rg2	calc.cpp	/^    double rg2=0.0;$/;"	l
+rg2	dendrimers.c	/^    double rg, rg2;$/;"	l
+rg2	widom.c	/^    double rg, rg2;$/;"	l
+rgcount	dendrimers.c	/^    static long int rgcount = 0;$/;"	l	file:
+ri	umbrella.c	/^	int    ri;$/;"	l
+ri	umbrella.c	/^    int ri;$/;"	l
+ri	widom.c	/^    int ri;$/;"	l
+right	calc.cpp	/^                    outOrient<<right;$/;"	l
+rinvrlj	potential.c	/^	double rinvrlj = r * inv_rlj;$/;"	l
+rlower	calc.cpp	/^    double myconst, rupper,rlower; \/\/ variables for volume calculation$/;"	l
+rmax	potential.c	/^	double rmax=x[numlines-1];$/;"	l
+rmax	potential.c	/^    double rsq,rmin,rmax;$/;"	l
+rmax	widom.c	/^double  rmin,rmax;$/;"	v
+rmin	potential.c	/^	double rmin=x[0];$/;"	l
+rmin	potential.c	/^    double rsq,rmin,rmax;$/;"	l
+rmin	widom.c	/^double  rmin,rmax;$/;"	v
+rotmat	calc.cpp	/^    RMat   rotmat;$/;"	l
+rr	calc.cpp	/^			double rr =MSQR(vCM01.x)+MSQR(vCM01.y)+MSQR(vCM01.z);$/;"	l
+rr	calc.cpp	/^	double force,rr;$/;"	l
+rr	energy.c	/^	double force,rr;$/;"	l
+rr	mcdend_v2.c	/^    double rr,r,rg;$/;"	l
+rr	umbrella.c	/^	double radius,rr,rr_n;$/;"	l
+rr	umbrella.c	/^	double rr,vol,dummy,dummybak,deltaR;$/;"	l
+rr_n	umbrella.c	/^	double radius,rr,rr_n;$/;"	l
+rsq	calc.cpp	/^                    VecR dr;double rsq;$/;"	l
+rsq	calc.cpp	/^    double rsq;$/;"	l
+rsq	cellLists.c	/^    double   rsq;$/;"	l
+rsq	energy.c	/^    double   rsq;$/;"	l
+rsq	energy.c	/^    double  result, rsq;$/;"	l
+rsq	energy.c	/^    double  rsq, result;$/;"	l
+rsq	energy.c	/^    double rsq, result =0.0;$/;"	l
+rsq	energy.c	/^    double rsq,result;$/;"	l
+rsq	energy.c	/^    double rsq;    \/\/ squared distance$/;"	l
+rsq	mcdend_v2.c	/^    double rsq;$/;"	l
+rsq	potential.c	/^        double rsq;$/;"	l
+rsq	potential.c	/^    double rsq,rmin,rmax;$/;"	l
+rsq	widom.c	/^    double  rsq, result;$/;"	l
+rupper	calc.cpp	/^    double myconst, rupper,rlower; \/\/ variables for volume calculation$/;"	l
+seed	calc.cpp	/^    long int seed = 30982;$/;"	l
+seed	ran250.c	/^static unsigned long seed=1;$/;"	v	file:
+seed	system.c	/^unsigned  int seed;$/;"	v
+set_to_zero	widom.c	/^    double set_to_zero = pairpotential[histSize-2];$/;"	l
+setf	calc.cpp	/^                    outOrient.setf(ios::fixed);$/;"	p	file:	signature:(ios::fixed)
+sline	calc.cpp	/^    std::string   sline;$/;"	l
+step	mcdend_v2.c	/^    static int step=1;$/;"	l	file:
+strCell	system.h	/^struct strCell{$/;"	s
+strCell::first	system.h	/^    struct strMonomer *first;$/;"	m	struct:strCell	typeref:struct:strCell::strMonomer	access:public
+strCell::index	system.h	/^    int index;$/;"	m	struct:strCell	access:public
+strCell::neighbours	system.h	/^    int neighbours[125];$/;"	m	struct:strCell	access:public
+strCell::numOfElements	system.h	/^    int numOfElements;$/;"	m	struct:strCell	access:public
+strCell::numOfNeigh	system.h	/^    int numOfNeigh;$/;"	m	struct:strCell	access:public
+strDendrimer	system.h	/^struct strDendrimer{$/;"	s
+strDendrimer::CMass	system.h	/^    VecR    CMass;$/;"	m	struct:strDendrimer	access:public
+strDendrimer::Rg	system.h	/^    dbProp  Rg;$/;"	m	struct:strDendrimer	access:public
+strDendrimer::Rg2	system.h	/^    dbProp  Rg2;$/;"	m	struct:strDendrimer	access:public
+strDendrimer::Rgsq	system.h	/^	double  b,c,k2,Rgsq;$/;"	m	struct:strDendrimer	access:public
+strDendrimer::b	system.h	/^	double  b,c,k2,Rgsq;$/;"	m	struct:strDendrimer	access:public
+strDendrimer::c	system.h	/^	double  b,c,k2,Rgsq;$/;"	m	struct:strDendrimer	access:public
+strDendrimer::func	system.h	/^    int     func;$/;"	m	struct:strDendrimer	access:public
+strDendrimer::gen	system.h	/^    int     gen;$/;"	m	struct:strDendrimer	access:public
+strDendrimer::id	system.h	/^    int     id;$/;"	m	struct:strDendrimer	access:public
+strDendrimer::k2	system.h	/^	double  b,c,k2,Rgsq;$/;"	m	struct:strDendrimer	access:public
+strDendrimer::monomer	system.h	/^    struct strMonomer *monomer;$/;"	m	struct:strDendrimer	typeref:struct:strDendrimer::strMonomer	access:public
+strDendrimer::numOfMonGen	system.h	/^    int     *numOfMonGen;$/;"	m	struct:strDendrimer	access:public
+strDendrimer::numOfMonomers	system.h	/^    int     numOfMonomers;$/;"	m	struct:strDendrimer	access:public
+strDendrimer::rNext	system.h	/^    double  rNext;  \/\/ distance of next monomer$/;"	m	struct:strDendrimer	access:public
+strMonomer	system.h	/^struct strMonomer{$/;"	s
+strMonomer::bond	system.h	/^    struct strMonomer **bond;$/;"	m	struct:strMonomer	typeref:struct:strMonomer::strMonomer	access:public
+strMonomer::bondInterType	system.h	/^    int    *bondInterType;$/;"	m	struct:strMonomer	access:public
+strMonomer::bupos	system.h	/^    VecR   bupos;$/;"	m	struct:strMonomer	access:public
+strMonomer::cellIndex	system.h	/^    int cellIndex; \/\/ position in hoc$/;"	m	struct:strMonomer	access:public
+strMonomer::gen	system.h	/^    int    gen;$/;"	m	struct:strMonomer	access:public
+strMonomer::id	system.h	/^    int    id;$/;"	m	struct:strMonomer	access:public
+strMonomer::inDend	system.h	/^    int    inDend;$/;"	m	struct:strMonomer	access:public
+strMonomer::next	system.h	/^    struct strMonomer *next;$/;"	m	struct:strMonomer	typeref:struct:strMonomer::strMonomer	access:public
+strMonomer::npos	system.h	/^    VecR   npos; \/\/ pointer uncorrected positions$/;"	m	struct:strMonomer	access:public
+strMonomer::numOfBonds	system.h	/^    int    numOfBonds;$/;"	m	struct:strMonomer	access:public
+strMonomer::pos	system.h	/^    VecR   pos;$/;"	m	struct:strMonomer	access:public
+strMonomer::previous	system.h	/^    struct strMonomer *previous;$/;"	m	struct:strMonomer	typeref:struct:strMonomer::strMonomer	access:public
+strMonomer::rad	system.h	/^    double rad; \/\/ radius for vmd$/;"	m	struct:strMonomer	access:public
+strMonomer::trialpos	system.h	/^	VecR   trialpos;$/;"	m	struct:strMonomer	access:public
+strMonomer::type	system.h	/^    int    type;$/;"	m	struct:strMonomer	access:public
+strMonomer::uniqid	system.h	/^    int    uniqid;$/;"	m	struct:strMonomer	access:public
+sum	system.h	/^    double val,sum;$/;"	m	struct:__anon4	access:public
+sumEner	mc.c	/^    double sumEner, sumsqEner;$/;"	l
+sumRg	calc.cpp	/^vector<double> sumRg,sumsqRg,averRg;$/;"	v
+sumRgC	calc.cpp	/^vector<double> sumRgC,sumsqRgC,averRgC;$/;"	v
+sumRgS	calc.cpp	/^vector<double> sumRgS,sumsqRgS,averRgS;$/;"	v
+sumb	calc.cpp	/^vector<double> sumb,sumbC,sumbS ;$/;"	v
+sumbC	calc.cpp	/^vector<double> sumb,sumbC,sumbS ;$/;"	v
+sumbS	calc.cpp	/^vector<double> sumb,sumbC,sumbS ;$/;"	v
+sumc	calc.cpp	/^vector<double> sumc,sumcC,sumcS;$/;"	v
+sumcC	calc.cpp	/^vector<double> sumc,sumcC,sumcS;$/;"	v
+sumcS	calc.cpp	/^vector<double> sumc,sumcC,sumcS;$/;"	v
+sumsqEner	mc.c	/^    double sumEner, sumsqEner;$/;"	l
+sumsqRg	calc.cpp	/^vector<double> sumRg,sumsqRg,averRg;$/;"	v
+sumsqRgC	calc.cpp	/^vector<double> sumRgC,sumsqRgC,averRgC;$/;"	v
+sumsqRgS	calc.cpp	/^vector<double> sumRgS,sumsqRgS,averRgS;$/;"	v
+sumsqb	calc.cpp	/^vector<double> sumsqb,sumsqbC,sumsqbS;$/;"	v
+sumsqbC	calc.cpp	/^vector<double> sumsqb,sumsqbC,sumsqbS;$/;"	v
+sumsqbS	calc.cpp	/^vector<double> sumsqb,sumsqbC,sumsqbS;$/;"	v
+sumsqc	calc.cpp	/^vector<double> sumsqc,sumsqcC,sumsqcS;$/;"	v
+sumsqcC	calc.cpp	/^vector<double> sumsqc,sumsqcC,sumsqcS;$/;"	v
+sumsqcS	calc.cpp	/^vector<double> sumsqc,sumsqcC,sumsqcS;$/;"	v
+sym	calc.cpp	/^    Symmeig sym(a,true);$/;"	p	file:	signature:(a,true)
+t	mcdend_v2.c	/^    int    m,h,t;$/;"	l
+t1	potential.c	/^    double flut,flut1,flut2,t1,t2;$/;"	l
+t1	potential.c	/^    double mlut,mlut1,mlut2,t1,t2;$/;"	l
+t2	potential.c	/^    double flut,flut1,flut2,t1,t2;$/;"	l
+t2	potential.c	/^    double mlut,mlut1,mlut2,t1,t2;$/;"	l
+tempBox	MCanneal.c	/^		VecI tempBox ={130,130,130};$/;"	l
+tempBox	MCinterdend.c	/^		VecI tempBox ={120,120,120};$/;"	l
+tempP2	calc.cpp	/^   	double tempP2;$/;"	l
+temp_fname	mc.c	/^	char temp_fname[120];$/;"	l
+tempforce	energy.c	/^	VecR tempforce;$/;"	l
+test	dummy.c	/^    VecR test;$/;"	l
+testTotalForce	calc.cpp	/^double testTotalForce(vector<Dend> & D);$/;"	p	file:	signature:(vector<Dend> & D)
+testTotalForce	calc.cpp	/^double testTotalForce(vector<Dend> & D){$/;"	f	signature:(vector<Dend> & D)
+tf	calc.cpp	/^	VecR tf={0.0,0.0,0.0};$/;"	l
+time	initialize.c	/^        r250_init(time(NULL));$/;"	p	file:
+time_cur	umbrella.c	/^	time_t time_start,time_cur;$/;"	l
+time_diff	umbrella.c	/^	double time_diff;$/;"	l
+time_start	umbrella.c	/^	time_t time_start,time_cur;$/;"	l
+tmp	potential.c	/^	char *tmp;$/;"	l
+tmpvcr	calc.cpp	/^        VecR *pvecr,tmpvcr;$/;"	l
+tol	mcdend_v2.c	/^    double radius,tol,r2;$/;"	l
+totaldends	dendrimers.c	/^	int totaldends=0;$/;"	l
+totalenergy1	energy.c	/^    double cellenergy, cellenergy2, totalenergy1, totalenergy2 ;$/;"	l
+totalenergy2	energy.c	/^    double cellenergy, cellenergy2, totalenergy1, totalenergy2 ;$/;"	l
+totalmons	dendrimers.c	/^	int totalmons=0;$/;"	l
+trialpos	system.h	/^	VecR   trialpos;$/;"	m	struct:strMonomer	access:public
+tvecr	moves.c	/^    VecR tvecr;$/;"	l
+tvecr	umbrella.c	/^					VecR tvecr;$/;"	l
+tvecr	widom.c	/^    VecR tvecr;$/;"	l
+type	calc.cpp	/^    char   type[3];$/;"	m	struct:__anon11	file:	access:public
+type	calc.cpp	/^    char   type[3];$/;"	m	struct:__anon12	file:	access:public
+type	system.h	/^    char   type[3];$/;"	m	struct:__anon5	access:public
+type	system.h	/^    char   type[3];$/;"	m	struct:__anon6	access:public
+type	system.h	/^    int    type;$/;"	m	struct:strMonomer	access:public
+typecur	energy.c	/^    int    m,nbond,typecur,typenei;$/;"	l
+typecur	mcdend_v2.c	/^    int    j,mnei,m,nbond,typecur,typenei;$/;"	l
+typem	energy.c	/^    int    typem,  typemnext;$/;"	l
+typem	energy.c	/^    int    typem, monnext,typemnext;$/;"	l
+typem	energy.c	/^    int typem;$/;"	l
+typem1	calc.cpp	/^	int typem1,typem2;$/;"	l
+typem1	cellLists.c	/^    int      typem1, typem2;$/;"	l
+typem1	energy.c	/^	int typem1,typem2;$/;"	l
+typem1	energy.c	/^    int      typem1, typem2;$/;"	l
+typem1	energy.c	/^    int     typem1, typem2;;$/;"	l
+typem1	energy.c	/^    int     typem1,typem2;$/;"	l
+typem1	widom.c	/^    int     typem1,typem2;$/;"	l
+typem2	calc.cpp	/^	int typem1,typem2;$/;"	l
+typem2	cellLists.c	/^    int      typem1, typem2;$/;"	l
+typem2	energy.c	/^	int typem1,typem2;$/;"	l
+typem2	energy.c	/^    int      typem1, typem2;$/;"	l
+typem2	energy.c	/^    int     typem1, typem2;;$/;"	l
+typem2	energy.c	/^    int     typem1,typem2;$/;"	l
+typem2	widom.c	/^    int     typem1,typem2;$/;"	l
+typemnext	energy.c	/^    int    typem,  typemnext;$/;"	l
+typemnext	energy.c	/^    int    typem, monnext,typemnext;$/;"	l
+typemnext	energy.c	/^    int monnext, typemnext;$/;"	l
+typenei	energy.c	/^    int    m,nbond,typecur,typenei;$/;"	l
+typenei	mcdend_v2.c	/^    int    j,mnei,m,nbond,typecur,typenei;$/;"	l
+uniqid	system.h	/^    int    uniqid;$/;"	m	struct:strMonomer	access:public
+upper	umbrella.c	/^int     lower,mid,upper;$/;"	v
+v	calc.cpp	/^    MatDoub v(gyrtensorsize,gyrtensorsize);\/\/ 2D array where columns are the eigenvectors$/;"	p	file:	signature:(gyrtensorsize,gyrtensorsize)
+vC	calc.cpp	/^	MatDoub vC(gyrtensorsize,gyrtensorsize),vS(gyrtensorsize,gyrtensorsize);$/;"	p	file:	signature:(gyrtensorsize,gyrtensorsize)
+vCM01	calc.cpp	/^			VecR vCM01,vCM10;$/;"	l
+vCM01	energy.c	/^	VecR vCM01,vCM10;$/;"	l
+vCM10	calc.cpp	/^			VecR vCM01,vCM10;$/;"	l
+vCM10	energy.c	/^	VecR vCM01,vCM10;$/;"	l
+vCMass0	calc.cpp	/^    VecR CMass0, CMass1, vCMass0, vCMass1;$/;"	l
+vCMass1	calc.cpp	/^    VecR CMass0, CMass1, vCMass0, vCMass1;$/;"	l
+vS	calc.cpp	/^	MatDoub vC(gyrtensorsize,gyrtensorsize),vS(gyrtensorsize,gyrtensorsize);$/;"	p	file:	signature:(gyrtensorsize,gyrtensorsize)
+val	system.h	/^    double val,sum;$/;"	m	struct:__anon4	access:public
+vb	calc.cpp	/^        outHist<<setw(13)<<setprecision(6)<<scientific<<r<<" "<<vb;$/;"	l
+vb	calc.cpp	/^    double r,vb,normFac;$/;"	l
+vb	calc.cpp	/^    double r,vb;$/;"	l
+vb	mcdend_v2.c	/^    double r,vb;$/;"	l
+vb	mcdend_v2.c	/^    double vb,normFac;$/;"	l
+vci	cellLists.c	/^    VecI vci;$/;"	l
+vcols	calc.cpp	/^    int vrows,vcols,dsize;$/;"	l
+vecr	MCanneal.c	/^		VecR vecr;$/;"	l
+vecr	MCinterdend.c	/^		VecR vecr;$/;"	l
+vecr	dendrimers.c	/^    VecR vecr;$/;"	l
+vecr	mcdend_v2.c	/^    VecR   vecr,dr;$/;"	l
+vecr	mcdend_v2.c	/^    VecR   vecr;$/;"	l
+vecr	moves.c	/^    VecR vecr;$/;"	l
+vecr	singledend.c	/^    VecR       vecr={0.0,0.0,0.0};$/;"	l
+vecr0	umbrella.c	/^    VecR vecr0, vecr1, ranvecr,dr;$/;"	l
+vecr0	widom.c	/^    VecR vecr0 = {0.0,0.0,0.0};$/;"	l
+vecr1	umbrella.c	/^    VecR vecr0, vecr1, ranvecr,dr;$/;"	l
+vecr1	widom.c	/^    VecR vecr1;$/;"	l
+vecrt	initialize.c	/^    VecR vecrt={0.0, 0.0, 0.0};$/;"	l
+vfixed	calc.cpp	/^                VecR vfixed={1.0,0.0,0.0};$/;"	l
+vforceCM	calc.cpp	/^	VecR   vforceCM;$/;"	m	struct:__anon10	file:	access:public
+vforceCMtot	calc.cpp	/^	VecR   vforceCMtot;$/;"	m	struct:__anon10	file:	access:public
+vol	umbrella.c	/^	double rr,vol,dummy,dummybak,deltaR;$/;"	l
+vrows	calc.cpp	/^    int vrows,vcols,dsize;$/;"	l
+w	umbrella.c	/^double w; \/\/ w=f[U(o)]\/F[U(n)]  multiplitcation factor for acceptance rule$/;"	v
+weight	mcdend_v2.c	/^                double weight,rbin;$/;"	l
+weight	potential.c	/^    double weight,rbin;$/;"	l
+wn	umbrella.c	/^	double wn,wo; \/\/ rewighting factors$/;"	l
+wo	umbrella.c	/^	double wn,wo; \/\/ rewighting factors$/;"	l
+x	calc.cpp	/^    double x,y,z;$/;"	m	struct:__anon9	file:	access:public
+x	dendrimers.c	/^    double x, y, z;$/;"	l
+x	dummy.c	/^    double x,y,z;$/;"	m	struct:__anon7	file:	access:public
+x	dummy.c	/^    int x,y,z;$/;"	m	struct:__anon8	file:	access:public
+x	system.h	/^typedef struct {double x,y,z;} VecR;$/;"	m	struct:__anon3	access:public
+x	system.h	/^typedef struct {int x, y, z;}  VecI;$/;"	m	struct:__anon2	access:public
+x	system.h	/^typedef struct{int x;} VecTest;$/;"	m	struct:__anon1	access:public
+x2	calc.cpp	/^    double  x2,xy,xz,y2,yz,z2;\/\/ gyration tensor elements$/;"	l
+x2	dendrimers.c	/^	double 	x2=0.0,xy=0.0,xz=0.0,y2=0.0,yz=0.0,z2=0.0;$/;"	l
+xcol	umbrella.c	/^	double *xcol,*ycol;	$/;"	l
+xmax	potential.c	/^	double xmax;$/;"	l
+xx	cellLists.c	/^    int xx;$/;"	l
+xy	calc.cpp	/^    double  x2,xy,xz,y2,yz,z2;\/\/ gyration tensor elements$/;"	l
+xy	dendrimers.c	/^	double 	x2=0.0,xy=0.0,xz=0.0,y2=0.0,yz=0.0,z2=0.0;$/;"	l
+xz	calc.cpp	/^    double  x2,xy,xz,y2,yz,z2;\/\/ gyration tensor elements$/;"	l
+xz	dendrimers.c	/^	double 	x2=0.0,xy=0.0,xz=0.0,y2=0.0,yz=0.0,z2=0.0;$/;"	l
+y	calc.cpp	/^    double x,y,z;$/;"	m	struct:__anon9	file:	access:public
+y	dendrimers.c	/^    double x, y, z;$/;"	l
+y	dummy.c	/^    double x,y,z;$/;"	m	struct:__anon7	file:	access:public
+y	dummy.c	/^    int x,y,z;$/;"	m	struct:__anon8	file:	access:public
+y	system.h	/^typedef struct {double x,y,z;} VecR;$/;"	m	struct:__anon3	access:public
+y	system.h	/^typedef struct {int x, y, z;}  VecI;$/;"	m	struct:__anon2	access:public
+y2	calc.cpp	/^    double  x2,xy,xz,y2,yz,z2;\/\/ gyration tensor elements$/;"	l
+y2	dendrimers.c	/^	double 	x2=0.0,xy=0.0,xz=0.0,y2=0.0,yz=0.0,z2=0.0;$/;"	l
+ycol	umbrella.c	/^	double *xcol,*ycol;	$/;"	l
+yz	calc.cpp	/^    double  x2,xy,xz,y2,yz,z2;\/\/ gyration tensor elements$/;"	l
+yz	dendrimers.c	/^	double 	x2=0.0,xy=0.0,xz=0.0,y2=0.0,yz=0.0,z2=0.0;$/;"	l
+z	calc.cpp	/^    double x,y,z;$/;"	m	struct:__anon9	file:	access:public
+z	dendrimers.c	/^    double x, y, z;$/;"	l
+z	dummy.c	/^    double x,y,z;$/;"	m	struct:__anon7	file:	access:public
+z	dummy.c	/^    int x,y,z;$/;"	m	struct:__anon8	file:	access:public
+z	system.h	/^typedef struct {double x,y,z;} VecR;$/;"	m	struct:__anon3	access:public
+z	system.h	/^typedef struct {int x, y, z;}  VecI;$/;"	m	struct:__anon2	access:public
+z2	calc.cpp	/^    double  x2,xy,xz,y2,yz,z2;\/\/ gyration tensor elements$/;"	l
+z2	dendrimers.c	/^	double 	x2=0.0,xy=0.0,xz=0.0,y2=0.0,yz=0.0,z2=0.0;$/;"	l

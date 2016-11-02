@@ -1,0 +1,34 @@
+#!/bin/bash
+ARGS=4
+if [ $# -ne "$ARGS" ]
+then
+	echo "1:Simulation number 2:num of dendrimers 3: boxsize 4:restart"
+exit
+fi
+SIMNUM=$1
+NUMDENDRIMERS=$2
+BOXSIZE=$3
+RESTART=$4
+RUNDIR=$HOME/Runs/NEW108/rho0.224
+if [[ ! (-d $RUNDIR) ]];then mkdir -p "$RUNDIR";fi
+if [ "$HOSTNAME" == 'liquid16' ] ;then
+    ./runinter.sh ${NUMDENDRIMERS} ${BOXSIZE} ${RESTART} ${RUNDIR}
+elif [ "$HOSTNAME" == 'hal.smt' ];then
+	JOBNAME=rho0.224_r${SIMNUM}_${NUMDENDRIMERS}_${BOXSIZE}
+  qsub                               \
+    -S /bin/bash                     \
+    -cwd                             \
+    -q dodeca.q@compute-0-6.local    \
+    -N ${JOBNAME}                    \
+	-V                               \
+    -M ioannis.georgiou@tuwien.ac.at \
+    -m e                             \
+    -e ${RUNDIR}/${JOBNAME}.e        \
+	-pe mpich 10                     \
+    -o ${RUNDIR}/${JOBNAME}.o        \
+    -p -12                           \
+    -b y                             \
+    ./runinter.sh ${NUMDENDRIMERS} ${BOXSIZE} ${RESTART} ${RUNDIR} ${SIMNUM}
+else
+	echo "Wrong host names"
+fi

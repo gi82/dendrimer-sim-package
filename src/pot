@@ -1,0 +1,91 @@
+
+void PotentialSetup(int dt){
+	// 1->7   : correspond to Bianca's models
+	// 12     : like D7 but cuttoff and shifted
+	// 30->   : customs models mostly for testing purposes
+	strcpy(fnCC.type,"CC"); strcpy(fnCS.type,"CS"); strcpy(fnBB.type,"BB");
+	strcpy(MrsCC.type,"CC");strcpy(MrsCS.type,"CS");strcpy(MrsSS.type,"SS");
+    if (dt==1){
+        MrsCC.interType = CC ;MrsCC.eps = 0.714;MrsCC.a = 6.40;MrsCC.d = 1.00; MrsCC.RLow = 0.3; MrsCC.RCut = 2.4;
+        MrsCS.interType = CS ;MrsCS.eps = 0.014;MrsCS.a = 19.2;MrsCS.d = 1.25; MrsCS.RLow = 0.8; MrsCS.RCut = 2.4;
+        MrsSS.interType = SS ;MrsSS.eps = 0.014;MrsSS.a = 19.2;MrsSS.d = 1.50; MrsSS.RLow = 1.0; MrsSS.RCut = 2.4;
+        fnCC.interType  = CC ;fnCC.K = 40.0; fnCC.L0 = 1.8750; fnCC.R = 0.3750;
+        fnCS.interType  = CS ;fnCS.K = 20.0; fnCS.L0 = 3.7500; fnCS.R = 0.7500;
+        fnBB.interType  = BB ;fnBB.K = 40.0; fnBB.L0 = 2.8125; fnBB.R = 0.5625;
+    }
+    else if (dt==2){
+        MrsCC.interType = CC ;MrsCC.eps = 0.714;MrsCC.a = 6.40;MrsCC.d = 1.00; MrsCC.RLow = 0.0; MrsCC.RCut = 2.8;
+        MrsCS.interType = CS ;MrsCS.eps = 0.014;MrsCS.a = 19.2;MrsCS.d = 1.25; MrsCS.RLow = 0.0; MrsCS.RCut = 2.8;
+        MrsSS.interType = SS ;MrsSS.eps = 0.014;MrsSS.a = 19.2;MrsSS.d = 1.50; MrsSS.RLow = 0.0; MrsSS.RCut = 2.8;
+        fnCC.interType  = CC ;fnCC.K = 40.0; fnCC.L0 = 1.8750; fnCC.R = 0.3750;
+        fnCS.interType  = CS ;fnCS.K = 20.0; fnCS.L0 = 3.7500; fnCS.R = 0.7500;
+        fnBB.interType  = BB ;fnBB.K = 40.0; fnBB.L0 = 1.875; fnBB.R = 0.3750;
+    }
+    else if (dt==3){
+        MrsCC.interType = CC ;MrsCC.eps = 0.714;MrsCC.a = 6.40;MrsCC.d = 1.00; MrsCC.RLow = 0.45; MrsCC.RCut = 2.6;
+        MrsCS.interType = CS ;MrsCS.eps = 0.014;MrsCS.a = 19.2;MrsCS.d = 1.50; MrsCS.RLow = 1.25; MrsCS.RCut = 2.6;
+        MrsSS.interType = SS ;MrsSS.eps = 0.014;MrsSS.a = 19.2;MrsSS.d = 2.00; MrsSS.RLow = 1.70; MrsSS.RCut = 2.6;
+        fnCC.interType  = CC ;fnCC.K = 80.0; fnCC.L0 = 1.8750; fnCC.R = 0.3750;
+        fnCS.interType  = CS ;fnCS.K = 20.0; fnCS.L0 = 3.75; fnCS.R = 0.7500;
+        fnBB.interType  = BB ;fnBB.K = 80.0; fnBB.L0 = 2.8125; fnBB.R = 0.5625;
+    }
+    else if (dt==4){
+        MrsCC.interType = CC ;MrsCC.eps = 0.714;MrsCC.a = 6.40;MrsCC.d = 1.00; MrsCC.RLow = 0.45; MrsCC.RCut = 2.6;
+        MrsCS.interType = CS ;MrsCS.eps = 0.014;MrsCS.a = 19.2;MrsCS.d = 1.50; MrsCS.RLow = 1.25; MrsCS.RCut = 2.6;
+        MrsSS.interType = SS ;MrsSS.eps = 0.014;MrsSS.a = 19.2;MrsSS.d = 2.00; MrsSS.RLow = 1.70; MrsSS.RCut = 2.6;
+        fnCC.interType  = CC ;fnCC.K = 40.0; fnCC.L0 = 1.8750; fnCC.R = 0.3750;
+        fnCS.interType  = CS ;fnCS.K = 20.0; fnCS.L0 = 3.75; fnCS.R = 0.7500;
+        fnBB.interType  = BB ;fnBB.K = 40.0; fnBB.L0 = 2.8125; fnBB.R = 0.5625;
+    }
+    else if (dt==5){
+        MrsCC.interType = CC ;MrsCC.eps = 0.714;MrsCC.a = 4.8;MrsCC.d = 1.00; MrsCC.RLow = 0.25; MrsCC.RCut = 2.7;
+        MrsCS.interType = CS ;MrsCS.eps = 0.014;MrsCS.a = 19.2;MrsCS.d = 1.50; MrsCS.RLow = 1.2; MrsCS.RCut = 2.7;
+        MrsSS.interType = SS ;MrsSS.eps = 0.014;MrsSS.a = 19.2;MrsSS.d = 2.00; MrsSS.RLow = 1.7; MrsSS.RCut = 2.7;
+        fnCC.interType  = CC ;fnCC.K = 40.0; fnCC.L0 = 1.8750; fnCC.R = 0.3750;
+        fnCS.interType  = CS ;fnCS.K = 20.0; fnCS.L0 = 3.7500; fnCS.R = 0.7500;
+        fnBB.interType  = BB ;fnBB.K = 40.0; fnBB.L0 = 2.8125; fnBB.R = 0.5625;
+    }
+    else if (dt==6){
+        MrsCC.interType = CC ;MrsCC.eps = 0.714;MrsCC.a = 6.40;MrsCC.d = 1.00; MrsCC.RLow = 0.45; MrsCC.RCut = 2.7;
+        MrsCS.interType = CS ;MrsCS.eps = 0.014;MrsCS.a = 19.2;MrsCS.d = 1.50; MrsCS.RLow = 1.25; MrsCS.RCut = 2.7;
+        MrsSS.interType = SS ;MrsSS.eps = 0.014;MrsSS.a = 19.2;MrsSS.d = 2.00; MrsSS.RLow = 1.70; MrsSS.RCut = 2.7;
+        fnCC.interType  = CC ;fnCC.K = 40.0; fnCC.L0 = 1.8750; fnCC.R = 0.3750;
+        fnCS.interType  = CS ;fnCS.K = 20.0; fnCS.L0 = 3.7500; fnCS.R = 0.7500;
+        fnBB.interType  = BB ;fnBB.K = 40.0; fnBB.L0 = 1.8750; fnBB.R = 0.375;
+    }
+
+    else if (dt==7){
+        MrsCC.interType = CC ;MrsCC.eps = 0.714;MrsCC.a = 6.40;MrsCC.d = 1.00; MrsCC.RLow = 0.0; MrsCC.RCut = 2.8;
+        MrsCS.interType = CS ;MrsCS.eps = 0.014;MrsCS.a = 19.2;MrsCS.d = 1.25; MrsCS.RLow = 0.0; MrsCS.RCut = 2.8;
+        MrsSS.interType = SS ;MrsSS.eps = 0.014;MrsSS.a = 19.2;MrsSS.d = 1.50; MrsSS.RLow = 0.0; MrsSS.RCut = 2.8;
+        fnCC.interType  = CC ;fnCC.K = 40.0; fnCC.L0 = 1.8750; fnCC.R = 0.3750;
+        fnCS.interType  = CS ;fnCS.K = 20.0; fnCS.L0 = 2.8125; fnCS.R = 0.5625;
+        fnBB.interType  = BB ;fnBB.K = 40.0; fnBB.L0 = 1.8750; fnBB.R = 0.3750;
+    }
+	else if (dt==11){
+        MrsCC.interType = CC ;MrsCC.eps = 0.014;MrsCC.a = 19.2;MrsCC.d = 1.02; MrsCC.RLow = 0.3; MrsCC.RCut = 2.4;
+        MrsCS.interType = CS ;MrsCS.eps = 0.014;MrsCS.a = 19.2;MrsCS.d = 1.25; MrsCS.RLow = 0.8; MrsCS.RCut = 2.4;
+        MrsSS.interType = SS ;MrsSS.eps = 0.014;MrsSS.a = 19.2;MrsSS.d = 1.50; MrsSS.RLow = 1.0; MrsSS.RCut = 2.4;
+        fnCC.interType  = CC ;fnCC.K = 40.0; fnCC.L0 = 1.8750; fnCC.R = 0.3750;
+        fnCS.interType  = CS ;fnCS.K = 20.0; fnCS.L0 = 2.8125; fnCS.R = 0.5625;
+        fnBB.interType  = BB ;fnBB.K = 40.0; fnBB.L0 = 1.8750; fnBB.R = 0.3750;
+	}
+	else if (dt==12){
+        MrsCC.interType = CC ;MrsCC.eps = 0.714;MrsCC.a = 6.40;MrsCC.d = 1.00; MrsCC.RLow = 0.3; MrsCC.RCut = 1.0;
+        MrsCS.interType = CS ;MrsCS.eps = 0.014;MrsCS.a = 19.2;MrsCS.d = 1.25; MrsCS.RLow = 0.8; MrsCS.RCut = 2.4;
+        MrsSS.interType = SS ;MrsSS.eps = 0.014;MrsSS.a = 19.2;MrsSS.d = 1.50; MrsSS.RLow = 1.0; MrsSS.RCut = 2.4;
+        fnCC.interType  = CC ;fnCC.K = 40.0; fnCC.L0 = 1.8750; fnCC.R = 0.3750;
+        fnCS.interType  = CS ;fnCS.K = 20.0; fnCS.L0 = 2.8125; fnCS.R = 0.5625;
+        fnBB.interType  = BB ;fnBB.K = 40.0; fnBB.L0 = 1.8750; fnBB.R = 0.3750;
+	}
+    else if (dt==30){
+		// Similar to D7 but MrsCC.eps = 0.014 instead of 0.714
+        MrsCC.interType = CC ;MrsCC.eps = 0.014;MrsCC.a = 6.40;MrsCC.d = 1.00; MrsCC.RLow = 0.0; MrsCC.RCut = 2.8;
+        MrsCS.interType = CS ;MrsCS.eps = 0.014;MrsCS.a = 19.2;MrsCS.d = 1.25; MrsCS.RLow = 0.0; MrsCS.RCut = 2.8;
+        MrsSS.interType = SS ;MrsSS.eps = 0.014;MrsSS.a = 19.2;MrsSS.d = 1.50; MrsSS.RLow = 0.0; MrsSS.RCut = 2.8;
+        fnCC.interType  = CC ;fnCC.K = 40.0; fnCC.L0 = 1.8750; fnCC.R = 0.3750;
+        fnCS.interType  = CS ;fnCS.K = 20.0; fnCS.L0 = 2.8125; fnCS.R = 0.5625;
+        fnBB.interType  = BB ;fnBB.K = 40.0; fnBB.L0 = 1.8750; fnBB.R = 0.3750;
+    }
+}
+
