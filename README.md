@@ -33,7 +33,7 @@ All of the dendrimer monomers separated by a distance r interact via a Morse pot
 
 or via a Lennard-Jones potential (please see -LJ==1 directive)
 
-Optimizations (using pre-processor derectives)
+Optimizations (using pre-processor directives)
 -----------------------------------------------
 
 - LJ  When set to 1 the Morse Potential will be employed to imitate the Lennard-Jones interaction. See a detailed description here: http://www.znaturforsch.com/aa/v58a/s58a0615.pdf
