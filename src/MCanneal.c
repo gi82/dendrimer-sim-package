@@ -20,7 +20,7 @@ int main(int argc, char** argv) {
 
     Initialize();
 //  if restart then DON'T TOUCH THE BOX SIZE
-//  When both initail config & restart are used
+//  When both initail config & restart are used 
 //  system changes box size
     if (Restart==0){
 		VecR vecr;
