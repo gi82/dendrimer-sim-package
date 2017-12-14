@@ -16,7 +16,7 @@ The build system requires the gnu version of the unix Make-utility.
 Compile using the -std=c99 options
 
 - cd to the src/ directory
-- type make [option] where option: single, inter, anneal, widom, umbrella, eff. The resulting executables (single, inter, anneal, widom, umbrella, umbrellabias, eff) k will be installed in the run directory 
+- type make [option] where option: single, inter, anneal, widom, umbrella, eff. The resulting executables (single, inter, anneal, widom, umbrella, umbrellabias, eff) will be generated in the run directory 
 
 The chemical bonds between monomers of a single dendimers were modeled via the finite extensible nonlinear elastic (FENE) potential defined as
 
