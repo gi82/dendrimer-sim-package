@@ -19,8 +19,8 @@ Compile using the -std=c99 options
 - type make [option] where option: single, inter, anneal, widom, umbrella, eff. The resulting executables (single, inter, anneal, widom, umbrella, umbrellabias, eff) will be generated in the run directory 
 
 The chemical bonds between monomers of a single dendimers were modeled via the finite extensible nonlinear elastic (FENE) potential defined as
-<img src="https://latex.codecogs.com/gif.latex?O_t=\text { Onset event at time bin } t " /> 
 
+![equation](http://latex.codecogs.com/gif.latex?O_t%3D%5Ctext%20%7B%20Onset%20event%20at%20time%20bin%20%7D%20t)
 
 \beta \Phi_{\mu \nu }^\text{FENE}(r) = 
 -K_{\mu \nu }R_{\mu\nu }^2\ln\!
