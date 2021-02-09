@@ -21,19 +21,20 @@ Compile using the -std=c99 options
 The chemical bonds between monomers of a single dendimers were modeled via the finite extensible nonlinear elastic (FENE) potential defined as
 
 
-
-$'\beta \Phi_{\mu \nu }^\text{FENE}(r) = 
+'''math
+\beta \Phi_{\mu \nu }^\text{FENE}(r) = 
 -K_{\mu \nu }R_{\mu\nu }^2\ln\!
 \left(1-\left( \frac{r-l _{\mu\nu}^0}{R_{\mu \nu}}\right)^2\right)'$
+'''
 
 
 All of the dendrimer monomers separated by a distance r interact via a Morse potential:
-
+'''math
 \beta \Phi_{\mu \nu }^\mathrm{Morse}(r) = \varepsilon_{\mu \nu } 
 \left\lbrace 
 \left[ \exp\left({-\alpha_{\mu \nu}\left(  r{-}d_{\mu \nu} \right)}\right) -1 \right]^2  - 1 
 \right\rbrace.
-
+'''
 or via a Lennard-Jones potential (please see -LJ==1 directive)
 
 Optimizations (using pre-processor directives)
