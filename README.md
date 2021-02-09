@@ -20,7 +20,8 @@ Compile using the -std=c99 options
 
 The chemical bonds between monomers of a single dendimers were modeled via the finite extensible nonlinear elastic (FENE) potential defined as
 
-https://latex.codecogs.com/gif.latex?\beta&space;\Phi_{\mu&space;\nu&space;}^\text{FENE}(r)&space;=&space;-K_{\mu&space;\nu&space;}R_{\mu\nu&space;}^2\ln\!&space;\left(1-\left(&space;\frac{r-l&space;_{\mu\nu}^0}{R_{\mu&space;\nu}}\right)^2\right)'
+<img src="https://latex.codecogs.com/gif.latex?\beta&space;\Phi_{\mu&space;\nu&space;}^\text{FENE}(r)&space;=&space;-K_{\mu&space;\nu&space;}R_{\mu\nu&space;}^2\ln\!&space;\left(1-\left(&space;\frac{r-l&space;_{\mu\nu}^0}{R_{\mu&space;\nu}}\right)^2\right)" />
+
 $
 \beta \Phi_{\mu \nu }^\text{FENE}(r) = 
 -K_{\mu \nu }R_{\mu\nu }^2\ln\!
