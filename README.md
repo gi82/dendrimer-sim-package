@@ -19,38 +19,31 @@ Compile using the -std=c99 options
 - type make [option] where option: single, inter, anneal, widom, umbrella, eff. The resulting executables (single, inter, anneal, widom, umbrella, umbrellabias, eff) will be generated in the run directory 
 
 The chemical bonds between monomers of a single dendimers were modeled via the finite extensible nonlinear elastic (FENE) potential defined as
-
+<br/>
 <img src="https://latex.codecogs.com/gif.latex?\beta&space;\Phi_{\mu&space;\nu&space;}^\text{FENE}(r)&space;=&space;-K_{\mu&space;\nu&space;}R_{\mu\nu&space;}^2\ln\!&space;\left(1-\left(&space;\frac{r-l&space;_{\mu\nu}^0}{R_{\mu&space;\nu}}\right)^2\right)" />
-
  <!--- $\beta \Phi_{\mu \nu }^\text{FENE}(r) = 
 -K_{\mu \nu }R_{\mu\nu }^2\ln\!
 \left(1-\left( \frac{r-l _{\mu\nu}^0}{R_{\mu \nu}}\right)^2\right)'$--->
-
-
-
 All of the dendrimer monomers separated by a distance r interact via a Morse potential:
-
+<br/>
 <img src="https://latex.codecogs.com/gif.latex?\beta&space;\Phi_{\mu&space;\nu&space;}^\mathrm{Morse}(r)&space;=&space;\varepsilon_{\mu&space;\nu&space;}&space;\left\lbrace&space;\left[&space;\exp\left({-\alpha_{\mu&space;\nu}\left(&space;r{-}d_{\mu&space;\nu}&space;\right)}\right)&space;-1&space;\right]^2&space;-&space;1&space;\right\rbrace" />
 <!---\beta \Phi_{\mu \nu }^\mathrm{Morse}(r) = \varepsilon_{\mu \nu } 
 \left\lbrace 
 \left[ \exp\left({-\alpha_{\mu \nu}\left(  r{-}d_{\mu \nu} \right)}\right) -1 \right]^2  - 1 
 \right\rbrace--->
-
 or via a Lennard-Jones potential (please see -LJ==1 directive)
-
 Optimizations (using pre-processor directives)
 -----------------------------------------------
+- LJ: when set to 1 the Morse Potential will be employed to imitate the Lennard-Jones interaction. See a detailed description here: http://www.znaturforsch.com/aa/v58a/s58a0615.pdf
 
-- LJ  When set to 1 the Morse Potential will be employed to imitate the Lennard-Jones interaction. See a detailed description here: http://www.znaturforsch.com/aa/v58a/s58a0615.pdf
+- USE_CELL_LIST: set to 1 to enable linked-list cells. The simulation box is then divided into small cells of equal size. Each cell size is set to the cut-off length of the Morse potential.
 
-- USE_CELL_LIST  Set to 1 to enable linked-list cells. The simulation box is then divided into small cells of equal size. Each cell size is set to the cut-off length of the Morse potential.
+- CELL_SEC_NEI: set to 1 to include interaction of second neighboring cells (not needed)
 
-- CELL_SEC_NEI  Set to 1 to include interaction of second neighboring cells (not needed)
+- USE_PBC: set to 1 to apply the Periodic Boundary Conditions "PBC". The simulation box is then surrounded by its translational images in the three directions of space.
 
-- USE_PBC Set to 1 to apply the Periodic Boundary Conditions "PBC". The simulation box is then surrounded by its translational images in the three directions of space.
-
-- LUT_FENE Use tabulated potentials for FENE interaction 
-- LUT_MORSE Use tabulated potential for MORSE interaction 
+- LUT_FENE: use tabulated potentials for FENE interaction 
+- LUT_MORSE: use tabulated potential for MORSE interaction 
 
 
 Executables:
