@@ -20,11 +20,12 @@ Compile using the -std=c99 options
 
 The chemical bonds between monomers of a single dendimers were modeled via the finite extensible nonlinear elastic (FENE) potential defined as
 
-![equation](http://latex.codecogs.com/gif.latex?O_t%3D%5Ctext%20%7B%20Onset%20event%20at%20time%20bin%20%7D%20t)
 
+```math
 \beta \Phi_{\mu \nu }^\text{FENE}(r) = 
 -K_{\mu \nu }R_{\mu\nu }^2\ln\!
 \left(1-\left( \frac{r-l _{\mu\nu}^0}{R_{\mu \nu}}\right)^2\right)
+```
 
 All of the dendrimer monomers separated by a distance r interact via a Morse potential:
 
