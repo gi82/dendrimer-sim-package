@@ -32,16 +32,13 @@ All of the dendrimer monomers separated by a distance r interact via a Morse pot
 \left[ \exp\left({-\alpha_{\mu \nu}\left(  r{-}d_{\mu \nu} \right)}\right) -1 \right]^2  - 1 
 \right\rbrace--->
 or via a Lennard-Jones potential (please see -LJ==1 directive)
+<br/>
 Optimizations (using pre-processor directives)
 -----------------------------------------------
 - LJ: when set to 1 the Morse Potential will be employed to imitate the Lennard-Jones interaction. See a detailed description here: http://www.znaturforsch.com/aa/v58a/s58a0615.pdf
-
 - USE_CELL_LIST: set to 1 to enable linked-list cells. The simulation box is then divided into small cells of equal size. Each cell size is set to the cut-off length of the Morse potential.
-
 - CELL_SEC_NEI: set to 1 to include interaction of second neighboring cells (not needed)
-
 - USE_PBC: set to 1 to apply the Periodic Boundary Conditions "PBC". The simulation box is then surrounded by its translational images in the three directions of space.
-
 - LUT_FENE: use tabulated potentials for FENE interaction 
 - LUT_MORSE: use tabulated potential for MORSE interaction 
 
