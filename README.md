@@ -29,12 +29,12 @@ The chemical bonds between monomers of a single dendimers were modeled via the f
 
 
 All of the dendrimer monomers separated by a distance r interact via a Morse potential:
-'''math
-\beta \Phi_{\mu \nu }^\mathrm{Morse}(r) = \varepsilon_{\mu \nu } 
+<img src="https://latex.codecogs.com/gif.latex?\beta&space;\Phi_{\mu&space;\nu&space;}^\mathrm{Morse}(r)&space;=&space;\varepsilon_{\mu&space;\nu&space;}&space;\left\lbrace&space;\left[&space;\exp\left({-\alpha_{\mu&space;\nu}\left(&space;r{-}d_{\mu&space;\nu}&space;\right)}\right)&space;-1&space;\right]^2&space;-&space;1&space;\right\rbrace" />
+<!---\beta \Phi_{\mu \nu }^\mathrm{Morse}(r) = \varepsilon_{\mu \nu } 
 \left\lbrace 
 \left[ \exp\left({-\alpha_{\mu \nu}\left(  r{-}d_{\mu \nu} \right)}\right) -1 \right]^2  - 1 
-\right\rbrace.
-'''
+\right\rbrace--->
+
 or via a Lennard-Jones potential (please see -LJ==1 directive)
 
 Optimizations (using pre-processor directives)
