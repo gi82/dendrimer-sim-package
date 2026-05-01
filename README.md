@@ -197,10 +197,14 @@ To combine umbrella sampling windows into a single continuous effective potentia
 
 ## Citation
 
-If you use this package in academic work, please cite the original PhD thesis and any associated publications. The Morse-to-LJ mapping used in this package is described in:
+If you use this package in academic work, please cite the original PhD thesis and any associated publications:
+
+> Ioannis Georgiou: Simulations of Soft Matter Systems (https://repositum.tuwien.at/handle/20.500.12708/4571)
 
 
-> Z. Naturforsch. **58a**, 615 (2003) — Morse potential as a Lennard-Jones substitute.
+The Morse-to-LJ mapping used in this package is described in:
+
+> Teik-Cheng Lim: The Relationship between Lennard-Jones (12-6) and Morse Potential Functions
 
 ***
 
