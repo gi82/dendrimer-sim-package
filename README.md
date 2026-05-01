@@ -2,6 +2,7 @@
 <br/>
 <br/>
 A Monte Carlo simulation package written in C for studying classical mechanical models of dendritic liquids. Originally developed as part of a PhD in computational physics, the package supports single-dendrimer characterization, bulk liquid simulations, effective interaction calculations, and free-energy methods.
+<br/>
 <img src="img/G2_G4_G10.png" title="Simulation snapshots of the amphiphilic dendrimer model simulated using this package"  width="500">
 <br/>
 
@@ -23,69 +24,190 @@ A Monte Carlo simulation package written in C for studying classical mechanical 
 
 ***
 
+
+## Overview
+
+The package implements single-processor Monte Carlo (MC) simulations of amphiphilic dendrimers modeled as coarse-grained bead-spring molecules. Key capabilities:
+
+- Monte Carlo simulations of single dendrimers and dendrimer liquids
+- Simulated annealing for structural equilibration
+- Effective pair interaction extraction via multiple methods:
+  - Force integration
+  - Umbrella sampling
+  - Biased umbrella sampling (tabulated potential)
+  - Widom particle insertion
+- Periodic boundary conditions (PBC)
+- Linked-list cell decomposition for O(N) neighbor search
+- Lookup table (LUT) acceleration for FENE and Morse potentials
+- Flexible compile-time configuration via preprocessor directives
+
+***
+
+## Physics Model
+
+### Bond Potential — FENE
+
+Chemical bonds between monomers within a single dendrimer are modeled via the **Finite Extensible Nonlinear Elastic (FENE)** potential:
+
+$$U_\mathrm{FENE}(r) = -\frac{1}{2} k R_0^2 \ln\!\left[1 - \left(\frac{r}{R_0}\right)^2\right]$$
+
+where $k$ is the spring constant and $R_0$ is the maximum extensibility.
+
+### Non-Bonded Potential — Morse
+
+All dendrimer monomers separated by distance $r$ interact via the **Morse** potential (default):
+
+$$U_\mathrm{Morse}(r) = \epsilon \left[e^{-2\alpha(r - r_0)} - 2\,e^{-\alpha(r - r_0)}\right]$$
+
+where $\epsilon$ is the well depth, $r_0$ the equilibrium distance, and $\alpha$ controls the range of the interaction.
+
+For a detailed description of using the Morse potential to approximate Lennard-Jones interactions, see:  
+[Z. Naturforsch. 58a, 615 (2003)](http://www.znaturforsch.com/aa/v58a/s58a0615.pdf)
+
+### Non-Bonded Potential — Lennard-Jones (optional)
+
+When compiled with `-DLJ=1`, the standard 12-6 **Lennard-Jones** potential is used instead of Morse:
+
+$$U_\mathrm{LJ}(r) = 4\epsilon \left[\left(\frac{\sigma}{r}\right)^{12} - \left(\frac{\sigma}{r}\right)^{6}\right]$$
+
+All quantities are expressed in **reduced units** (energy in units of $\epsilon$, length in units of $\sigma$).
+
+***
+
+## Prerequisites
+
+| Requirement | Version |
+|---|---|
+| C compiler | GCC 4.8+ or Clang 3.5+ (C99 support required) |
+| GNU Make | 3.81+ |
+| OS | Linux / macOS (POSIX) |
+
+No external libraries are required.
+
+***
+
+## Building the Code
+
+```bash
+git clone https://github.com/gi82/dendrimer-sim-package.git
+cd dendrimer-sim-package/src
+make [target]
+```
+
+Available make targets:
+
+| Target | Description |
+|---|---|
+| `single` | Single dendrimer simulation |
+| `inter` | Dendrimer liquid simulation |
+| `anneal` | Dendrimer liquid with simulated annealing |
+| `widom` | Widom particle insertion |
+| `umbrella` | Umbrella sampling |
+| `umbrellabias` | Biased umbrella sampling with tabulated potential |
+| `eff` | Effective interaction via force integration |
+
+All resulting executables are placed in the `run/` directory.
+
+**Example — build with PBC and cell lists enabled:**
+
+```bash
+make single CFLAGS="-std=c99 -O2 -DUSE_PBC=1 -DUSE_CELL_LIST=1"
+```
+
+***
+
+## Executables
+
+All executables reside in `run/`. Use the bundled scripts in that directory to set parameters and launch runs.
+
+| Executable | Purpose |
+|---|---|
+| `single` | Characterize a single isolated dendrimer (radius of gyration, structure factor) |
+| `inter` | Simulate a bulk dendrimer liquid at a given density and temperature |
+| `anneal` | Equilibrate a dendrimer liquid via simulated annealing (slow temperature decrease) |
+| `eff` | Extract the dendrimer–dendrimer effective interaction using the force integration method |
+| `umbrella` | Compute the effective interaction via umbrella sampling (PMF along center-of-mass separation) |
+| `umbrellabias` | Run biased umbrella sampling using a pre-tabulated external potential |
+| `widom` | Compute excess chemical potential / effective interactions via Widom insertion |
+
+***
+
+## Compile-Time Options
+
+Configure the simulation physics and performance via preprocessor directives passed to the compiler (`-DFLAG=value`):
+
+| Flag | Values | Description |
+|---|---|---|
+| `LJ` | `0` (default) / `1` | `0` = Morse potential; `1` = Lennard-Jones potential |
+| `USE_PBC` | `0` / `1` | Enable periodic boundary conditions. The box is surrounded by its translational images in all three spatial directions |
+| `USE_CELL_LIST` | `0` / `1` | Enable linked-list cell decomposition. The simulation box is divided into cubic cells of size equal to the Morse cutoff, reducing neighbor search to O(N) |
+| `CELL_SEC_NEI` | `0` / `1` | Include second-neighbor cells in the cell list (usually unnecessary — improves accuracy at the cost of performance) |
+| `LUT_FENE` | `0` / `1` | Use a pre-computed lookup table for the FENE potential (speeds up bond-force evaluation) |
+| `LUT_MORSE` | `0` / `1` | Use a pre-computed lookup table for the Morse potential |
+
+**Recommended production flags:**
+
+```bash
+-DUSE_PBC=1 -DUSE_CELL_LIST=1 -DLUT_FENE=1 -DLUT_MORSE=1
+```
+
+***
+
+## Input Files
+
+Each executable reads a plain-text input file from `run/`. Parameters include:
+
+- Number of dendrimers and dendrimer generation
+- Temperature, density, and box dimensions
+- Potential parameters (ε, σ, α, r₀, k, R₀)
+- Number of MC steps, equilibration steps, and sampling frequency
+- Random seed
+
+Refer to the example input files in `run/` for the full parameter list and formatting.
+
+***
+
+## Output
+
+Simulations write to the `run/` directory:
+
+| File | Content |
+|---|---|
+| `energy.dat` | Total, bonded, and non-bonded energy per MC step |
+| `rg.dat` | Radius of gyration as a function of MC step |
+| `rdf.dat` | Radial distribution function g(r) |
+| `snapshot_*.vtk` | VTK-format coordinate snapshots for visualization (e.g., OVITO, ParaView) |
+| `effpot.dat` | Effective pair interaction U(r) (eff, umbrella, widom executables) |
+
+***
+
+## Effective Interactions
+
+Four independent methods are implemented for computing the dendrimer–dendrimer effective potential U(r):
+
+1. **Force integration** (`eff`): Integrates the mean force between two dendrimers as a function of their center-of-mass separation.
+2. **Umbrella sampling** (`umbrella`): Applies a harmonic biasing potential at each separation window and recovers the PMF via WHAM.
+3. **Biased umbrella sampling** (`umbrellabias`): Uses a tabulated external potential to flatten the PMF landscape, improving sampling efficiency.
+4. **Widom insertion** (`widom`): Inserts a ghost dendrimer and computes the excess chemical potential.
+
+To combine umbrella sampling windows into a single continuous effective potential, use the companion tool:  
+[combine-umbrella-windows](https://github.com/gi82/combine-umbrella-windows)
+
+***
+
+## Citation
+
+If you use this package in academic work, please cite the original PhD thesis and any associated publications. The Morse-to-LJ mapping used in this package is described in:
+
+
+> Z. Naturforsch. **58a**, 615 (2003) — Morse potential as a Lennard-Jones substitute.
+
+***
+
+## License
+
+This project is made available for academic and research use. Contact the author for licensing inquiries.
 Contains: 
 
 Monte Carlo simulations on single processor 
-
-Compiling:
-----------
-
-The code is ansi standard C and must be compiled from source. 
-The build system requires the gnu version of the unix Make-utility.
-Compile using the -std=c99 options
-
-- cd to the src/ directory
-- type make [option] where option: single, inter, anneal, widom, umbrella, eff. The resulting executables (single, inter, anneal, widom, umbrella, umbrellabias, eff) will be generated in the run directory 
-
-The chemical bonds between monomers of a single dendimers were modeled via the finite extensible nonlinear elastic (FENE) potential defined as
-<br/>
-<img src="https://latex.codecogs.com/gif.latex?\beta&space;\Phi_{\mu&space;\nu&space;}^\text{FENE}(r)&space;=&space;-K_{\mu&space;\nu&space;}R_{\mu\nu&space;}^2\ln\!&space;\left(1-\left(&space;\frac{r-l&space;_{\mu\nu}^0}{R_{\mu&space;\nu}}\right)^2\right)" />
- <!--- $\beta \Phi_{\mu \nu }^\text{FENE}(r) = 
--K_{\mu \nu }R_{\mu\nu }^2\ln\!
-\left(1-\left( \frac{r-l _{\mu\nu}^0}{R_{\mu \nu}}\right)^2\right)'$--->
-All of the dendrimer monomers separated by a distance r interact via a Morse potential:
-<br/>
-<br/>
-<img src="https://latex.codecogs.com/gif.latex?\beta&space;\Phi_{\mu&space;\nu&space;}^\mathrm{Morse}(r)&space;=&space;\varepsilon_{\mu&space;\nu&space;}&space;\left\lbrace&space;\left[&space;\exp\left({-\alpha_{\mu&space;\nu}\left(&space;r{-}d_{\mu&space;\nu}&space;\right)}\right)&space;-1&space;\right]^2&space;-&space;1&space;\right\rbrace" />
-<!---\beta \Phi_{\mu \nu }^\mathrm{Morse}(r) = \varepsilon_{\mu \nu } 
-\left\lbrace 
-\left[ \exp\left({-\alpha_{\mu \nu}\left(  r{-}d_{\mu \nu} \right)}\right) -1 \right]^2  - 1 
-\right\rbrace--->
-or via a Lennard-Jones potential (please see -LJ==1 directive)
-<br/>
-Optimizations (using pre-processor directives)
------------------------------------------------
-- LJ: when set to 1 the Morse Potential will be employed to imitate the Lennard-Jones interaction. See a detailed description here: http://www.znaturforsch.com/aa/v58a/s58a0615.pdf
-- USE_CELL_LIST: set to 1 to enable linked-list cells. The simulation box is then divided into small cells of equal size. Each cell size is set to the cut-off length of the Morse potential.
-- CELL_SEC_NEI: set to 1 to include interaction of second neighboring cells (not needed)
-- USE_PBC: set to 1 to apply the Periodic Boundary Conditions "PBC". The simulation box is then surrounded by its translational images in the three directions of space.
-- LUT_FENE: use tabulated potentials for FENE interaction 
-- LUT_MORSE: use tabulated potential for MORSE interaction 
-
-
-Executables:
----------------
-
-All executable are located inside the run/ folder.
-Use the relevant scripts to run the program
-
-- single: Simulation of a single dendrimer
-- inter: Simulation of a dendimer liquid
-- anneal: Simulation of a dednrimer liquid using simulated annealing
-- Effective interactions
-<br/>
-<br/>
-<img src="img/pairpotG4D7D12-eps-converted-to.png" title="Comparison of effective interactions" width="350">
-<img src="img/snap_D7_D12_two_inter.png" title="Snapshot of two interactivg dendrimers and for two different type of interactions" width="350">
-<br/>
-<br/>
- * eff: Extract effective interaction between two dendrimers using the force integration method
- * umbrella: Effective interaction calculation using the umbrella sampling method
- * umbrellabias: Calculate the effective interaction using a tabulated potential
- * widom: Widom particle insertion method for calculating effective interactions
- * Use script provided in https://github.com/gi82/combine-umbrella-windows to combine the results for the effectve interaction produced by the umbrella simulation
-
-
-
-
 
