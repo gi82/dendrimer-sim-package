@@ -176,7 +176,7 @@ Simulations write to the `run/` directory:
 | `energy.dat` | Total, bonded, and non-bonded energy per MC step |
 | `rg.dat` | Radius of gyration as a function of MC step |
 | `rdf.dat` | Radial distribution function g(r) |
-| `snapshot_*.vtk` | VTK-format coordinate snapshots for visualization (e.g., OVITO, ParaView) |
+| `snapshot_*.vtk` | VTK-format coordinate snapshots for visualization (e.g. ParaView) |
 | `effpot.dat` | Effective pair interaction U(r) (eff, umbrella, widom executables) |
 
 ***
