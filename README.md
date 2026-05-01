@@ -1,7 +1,7 @@
 # dendrimer-sim-package
-<br/>
-<br/>
+
 A Monte Carlo simulation package written in C for studying classical mechanical models of dendritic liquids. Originally developed as part of a PhD in computational physics, the package supports single-dendrimer characterization, bulk liquid simulations, effective interaction calculations, and free-energy methods.
+<br/>
 <br/>
 <img src="img/G2_G4_G10.png" title="Simulation snapshots of the amphiphilic dendrimer model simulated using this package"  width="500">
 <br/>
