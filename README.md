@@ -49,17 +49,17 @@ The package implements single-processor Monte Carlo (MC) simulations of amphiphi
 
 Chemical bonds between monomers within a single dendrimer are modeled via the **Finite Extensible Nonlinear Elastic (FENE)** potential:
 
-$$U_\mathrm{FENE}(r) = -\frac{1}{2} k R_0^2 \ln\!\left[1 - \left(\frac{r}{R_0}\right)^2\right]$$
+$$U_\mathrm{FENE}(r) = -K_1 R_1^2 \ln\!\left(1 - \left(\frac{r - r_{01}}{R_1}\right)^2\right)$$
 
-where $k$ is the spring constant and $R_0$ is the maximum extensibility.
+where $K_1$ is the spring constant, $R_1$ is the maximum extensibility, and $r_{01}$ is the equilibrium bond length.
 
 ### Non-Bonded Potential — Morse
 
 All dendrimer monomers separated by distance $r$ interact via the **Morse** potential (default):
 
-$$U_\mathrm{Morse}(r) = \epsilon \left[e^{-2\alpha(r - r_0)} - 2\,e^{-\alpha(r - r_0)}\right]$$
+$$U_\mathrm{Morse}(r) = \epsilon \left[\left(e^{-a(r-d)} - 1\right)^2 - 1\right]$$
 
-where $\epsilon$ is the well depth, $r_0$ the equilibrium distance, and $\alpha$ controls the range of the interaction.
+where $\epsilon$ is the well depth with minimum value $-\epsilon$ at $r = d$, $d$ is the equilibrium bond distance, and $a$ controls the range/curvature of the well.
 
 For a detailed description of using the Morse potential to approximate Lennard-Jones interactions, see:  
 [Z. Naturforsch. 58a, 615 (2003)](http://www.znaturforsch.com/aa/v58a/s58a0615.pdf)
